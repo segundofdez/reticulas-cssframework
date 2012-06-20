@@ -1,0 +1,101 @@
+/**
+ * RETICULAS CSSFRAMEWORK - fixed.less
+ *
+ * @description     Make your own fixed grid - TESTING!!
+ *
+ * @version         1.0
+ *
+ * @License 		MIT License
+ *
+ * @link            http://reticulas.com
+ * @info            http://vidagrafica.com - http://sond3.com
+ *
+ * =======================================================================
+ *
+ * Copyright (c) 2012, Segundo Fdez (@vidagrafica) - hello@reticulas.com
+ * http://reticulas.com | http://vidagrafica.com | http://sond3.com
+
+   Permission is hereby granted, free of charge, to any person obtaining a
+   copy of this software and associated documentation files (the "Software"),
+   to deal in the Software without restriction, including without limitation
+   the rights to use, copy, modify, merge, publish, distribute, sublicense,
+   and/or sell copies of the Software, and to permit persons to whom the
+   Software is furnished to do so, subject to the following conditions:
+
+   The above copyright notice and this permission notice shall be included in
+   all copies or substantial portions of the Software.
+
+   THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+   IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+   FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL
+   THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+   LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+   FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
+   DEALINGS IN THE SOFTWARE.
+*/
+
+*{
+	/* 
+	Older Webkit
+	Older FF
+	IE8
+	CSS3 
+	*/
+	-webkit-box-sizing: border-box;
+	   -moz-box-sizing: border-box;
+		-ms-box-sizing: border-box;
+			box-sizing: border-box;
+}
+
+/* Grid Config
+----------------------------------------------------------------------------- */
+
+// #page
+@total-width: 100%;
+
+// TEST GRID
+@column-width: 130;
+@gutter-width: 30;
+@columns: 6;
+
+// base grid wrapper width (px)
+@wrapper: (@column-width*@columns) + (@gutter-width*@columns)*1px;
+
+/* GRID
+---------------------------------------------------------*/
+
+.wrapper{ 
+	display: block;
+	clear:both;
+	width:100%;
+	//overflow:hidden;
+	
+	max-width:@wrapper;
+	
+	margin-right: auto;
+	margin-left: auto;
+	.clearfix;	
+}
+
+.row(@columns:@columns) {
+	display: block;
+	width:100%;
+	max-width: @wrapper*(((@gutter-width+@column-width)*@columns) / @wrapper);
+	//margin: 0 -((@gutter-width*.5)*1px);
+	margin:0;
+	.clearfix;
+}
+
+.column(@x,@columns:@columns) {
+	display: inline;
+	float: left;
+	width:100%;
+	max-width: @wrapper*((((@gutter-width+@column-width)*@x)-@gutter-width) / @wrapper);
+	margin: 0 ((@gutter-width*.5)*1px);
+}
+
+.inner { 
+	padding-left:((@gutter-width*.5)*1px);
+	padding-right:((@gutter-width*.5)*1px);
+}
+
