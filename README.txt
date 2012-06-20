@@ -1,7 +1,7 @@
 Reticulas-cssframework
 
 Reticulas css framework allows faster work using cascading style sheets.
-Html5 and Css3 support.
+Html5 - Css3 support and (IE8+).
 
 Licence:
 Distributed under the MIT license http://www.opensource.org/licenses/mit-license.php
