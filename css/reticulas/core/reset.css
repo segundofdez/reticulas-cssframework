@@ -107,7 +107,7 @@ applet {
 	outline:0;
 	background:transparent;
 	*/
-	}
+}
 
 /* HTML5 DISPLAY-ROLE RESET FOR OLDER BROWSERS */
 
@@ -122,10 +122,10 @@ figure, figcaption,
 
 /* 1.9 Interactive elements
 ----------------------------------------------------------------------------- */
-details, menu		{ display: block;}
+details, menu     { display: block;}
 
-ol, ul				{ list-style: none;}
-blockquote, q 		{ quotes: none;}
+ol, ul            { list-style: none;}
+blockquote, q     { quotes: none;}
 
 blockquote:before,
 blockquote:after,
