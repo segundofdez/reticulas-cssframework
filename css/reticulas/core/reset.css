@@ -97,16 +97,16 @@ details, summary, menu,
 /* OBSOLETE FEATURES
 ----------------------------------------------------------------------------- */
 applet {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font: inherit;
-	vertical-align: baseline;
-	/*
-	outline:0;
-	background:transparent;
-	*/
+   margin: 0;
+   padding: 0;
+   border: 0;
+   font-size: 100%;
+   font: inherit;
+   vertical-align: baseline;
+   /*
+   outline:0;
+   background:transparent;
+   */
 }
 
 /* HTML5 DISPLAY-ROLE RESET FOR OLDER BROWSERS */
