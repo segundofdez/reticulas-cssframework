@@ -59,30 +59,30 @@ body {
 
 /* 2.2 Essential module - Hipertext
 ----------------------------------------------------------------------------- */
-a				{ color: #09C; text-decoration: none;}
+a              { color: #09C; text-decoration: none;}
 a:hover,
-a:focus			{ color: #000; text-decoration: underline;}
+a:focus        { color: #000; text-decoration: underline;}
 a:hover, 
-a:active		{ outline: 0; }
+a:active       { outline: 0; }
 
 /* 2.3 Essential module - List
 ----------------------------------------------------------------------------- */
-dl				{ margin: 0 0 1.375em 0;}
-dl dt			{ font-weight: bold;}
-dd				{ margin-left: 1.5em;}
+dl             { margin: 0 0 1.375em 0;}
+dl dt          { font-weight: bold;}
+dd             { margin-left: 1.5em;}
 
-ul, ol			{ margin: 0 1.5em 1.375em 1.5em;}
-ul				{ list-style-type: disc;}
-ol				{ list-style-type: decimal;}
-li ul, li ol	{ margin: 0 1.5em;}
+ul, ol         { margin: 0 1.5em 1.375em 1.5em;}
+ul             { list-style-type: disc;}
+ol             { list-style-type: decimal;}
+li ul, li ol   { margin: 0 1.5em;}
 
 /* 2.4 Essential module - Text
 ----------------------------------------------------------------------------- */
 abbr,
-acronym			{ border-bottom: 1px dotted #666;}
-address			{ margin: 0 0 1.375em 0; font-style: italic;}
+acronym        { border-bottom: 1px dotted #666;}
+address        { margin: 0 0 1.375em 0; font-style: italic;}
 
-blockquote		{ font-style:italic; margin:1.375em; color:#666;}
+blockquote     { font-style:italic; margin:1.375em; color:#666;}
 
 /* tt - deleted in reset.css. Not Supported in HTML 5. */
 /* cite */
@@ -93,8 +93,8 @@ pre {
 	word-wrap: break-word;
 }
 pre, code,
-tt, var			{ font: 1em/1.375em 'andale mono', 'lucida console', monospace;}
-code, tt, var	{ line-height: 1em;}
+tt, var        { font: 1em/1.375em 'andale mono', 'lucida console', monospace;}
+code, tt, var  { line-height: 1em;}
 
 /*
 pre, code, 
@@ -109,11 +109,11 @@ kbd, samp {
 /* samp */
 /* span */
 
-dfn, em			{ font-style: italic;}
-dfn				{ font-weight: bold;}
+dfn, em        { font-style: italic;}
+dfn            { font-weight: bold;}
 
 h1,h2,h3,
-h4,h5,h6		{ font-weight: normal; position: relative;}
+h4,h5,h6       { font-weight: normal; position: relative;}
 
 h1	{ font-size: 3.875em; /*62px*/ top: 10px; line-height: 1.0644em; margin-bottom: 44px;}
 h2	{ font-size: 2.750em; /*44px*/ top: 26px; line-height: .9999em;  margin-bottom: 44px;}
@@ -125,27 +125,26 @@ h6	{ font-size:  .750em; /*12px*/ top: 24px; line-height: 1.8328em; margin-botto
 h1:first-child,
 h2:first-child,
 h3:first-child,
-h4:first-child	{ margin-top: 0;}
+h4:first-child { margin-top: 0;}
 
 h1 img, h2 img,
 h3 img, h4 img,
-h5 img, h6 img	{ margin:0;}
+h5 img, h6 img { margin:0;}
 
-p				{ margin:0 0 1.375em 0;} /*include word-wrap: break-word;???*/
-p img.left		{ margin:0.32em 1.5em 1.2em 0; padding:0; float:left;}
-p img.right		{ margin:0.32em 0 1.2em 1.5em; float:right;}
+p              { margin:0 0 1.375em 0;} /*include word-wrap: break-word;?*/
+p img.left     { margin:0.32em 1.5em 1.2em 0; padding:0; float:left;}
+p img.right    { margin:0.32em 0 1.2em 1.5em; float:right;}
 
-b, strong		{ font-weight:bold;}
+b, strong      { font-weight:bold;}
 
-small			{ font-size: 0.813em; /*13px*/}
-
+small          { font-size: 0.813em; /*13px*/}
 
 /* 2.5 Extension modules text - Presentation
 ----------------------------------------------------------------------------- */
-sup, sub		{ font-size: 75%; line-height:0; position: relative; vertical-align: baseline;}
+sup, sub       { font-size: 75%; line-height:0; position: relative; vertical-align: baseline;}
 
-sup				{ top: -0.5em;}
-sub				{ bottom: -0.25em;}
+sup            { top: -0.5em;}
+sub            { bottom: -0.25em;}
 
 hr { 
 	display: block; 
@@ -158,14 +157,17 @@ hr {
 
 /* 2.6 Extension modules text - Edition
 ----------------------------------------------------------------------------- */
-del				{ color:#666;}
-ins				{ background-color:#F5E498;}
+del            { color:#666;}
+ins            { background-color:#F5E498;}
 
 /* 2.7 Table Module
 ----------------------------------------------------------------------------- */
-table			{ margin-bottom:1.375em; margin-top:1em; width:100%;}
-caption			{ background: #333; color:#FFF; font-weight:bold;}
-th				{ font-weight:bold;}
-thead th		{ background:#CCC;}
-th,td,caption	{ padding:3px 5px; border:1px solid #444;}
-tfoot			{ font-style: italic;}
+table          { margin-bottom:1.375em; margin-top:1em; width:100%;}
+caption        { background: #333; color:#FFF; font-weight:bold;}
+th             { font-weight:bold;}
+thead th       { background:#CCC;}
+th,td,caption  { padding:3px 5px; border:1px solid #444;}
+tfoot          { font-style: italic;}
+
+
+
