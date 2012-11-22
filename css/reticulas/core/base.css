@@ -4,6 +4,8 @@
  * @description     Basics adjustments:
  *                  text, list, table.
  *                  Default value browser 16px (100 * 16px = 16px)
+ *					Based on Nicolas gallaghe work:
+ *                  http://necolas.github.com/normalize.css/
  *
  * @version         1.0
  *
@@ -52,7 +54,7 @@ body {
 
 	/* Improved handling of kerning pairs and ligatures in modern */
 	text-rendering: optimizeLegibility;
-	}
+}
 
 /* 2.2 Essential module - Hipertext
 ----------------------------------------------------------------------------- */
@@ -88,7 +90,7 @@ pre {
 	white-space: pre; 
 	white-space: pre-wrap; 
 	word-wrap: break-word;
-	}
+}
 pre, code,
 tt, var			{ font: 1em/1.375em 'andale mono', 'lucida console', monospace;}
 code, tt, var	{ line-height: 1em;}
@@ -151,7 +153,7 @@ hr {
 	border-top: 1px solid #ccc; 
 	margin: 1.375em 0; 
 	padding: 0; 
-	}
+}
 
 /* 2.6 Extension modules text - Edition
 ----------------------------------------------------------------------------- */
