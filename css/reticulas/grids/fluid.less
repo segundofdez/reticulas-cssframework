@@ -98,16 +98,7 @@
 
 /* GRID
 ---------------------------------------------------------*/
-/*
-.row(@columns: @columns) {
-	display: block;
-	float:left;
-	width: @fluid-module-width*@columns;
-	//margin: 0 -@fluid-gutter-width*(@variationround*1%);
-	margin:0 -@variationround;
-	//.clearfix;
-}
-*/
+
 .row(@r) {
 	display: block;
 	float:left;
@@ -140,8 +131,4 @@
 
 .push(@offset:1) {
 	margin-left: (@total-width*(((@gutter-width+@column-width)*@offset) / @gridsystem-width)) + @fluid-gutter-width;
-}
-
-.pull(@offset:1) {
-	margin-right: @total-width*(((@gutter-width+@column-width)*@offset) / @gridsystem-width) + @fluid-gutter-width;
 }
