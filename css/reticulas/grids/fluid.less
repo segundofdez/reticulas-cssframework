@@ -1,19 +1,19 @@
 /**
  * RETICULAS CSSFRAMEWORK - fluid.less
  *
- * @description     Make your own fluid grid - TESTING!!
+ * @description     Make your own fluid grid - WORKING TO IMPROVE GRID SYSTEM!!
  *
- * @version         1.0
+ * @version         1.5
  *
  * @License 		MIT License
  *
- * @link            http://reticulas.com
- * @info            http://vidagrafica.com - http://sond3.com
+ * @link            http://cssframework.reticulas.com
+ * @info            http://segundofdez.com - @segundo_fdez | http://sond3.com - @sond3
  *
  * =======================================================================
  *
- * Copyright (c) 2012, Segundo Fdez (@vidagrafica) - hello@reticulas.com
- * http://reticulas.com | http://vidagrafica.com | http://sond3.com
+ * Copyright (c) 2013, Segundo Fdez (@segundo_fdez) - hello@reticulas.com
+ * http://cssframework.reticulas.com | http://segundofdez.com | http://sond3.com
 
    Permission is hereby granted, free of charge, to any person obtaining a
    copy of this software and associated documentation files (the "Software"),
@@ -44,13 +44,6 @@
 	-moz-box-sizing: border-box;
 	-ms-box-sizing: border-box;
 	box-sizing: border-box;
-
-	/*
-	-webkit-transition:all .2s linear;
-	-moz-transition:all .2s linear;
-	-o-transition:all .2s linear;
-	transition:all .2s linear;
-	*/
 }
 
 /* Grid Config
@@ -85,7 +78,8 @@
 @fluid-module-width: @fluid-column-width + @variation*2;
 
 
-.wrapper{ 
+.wrapper,
+.wrappernested{ 
 	display: block;
 	clear:both;
 	width:100%;
@@ -97,6 +91,11 @@
 	margin-left: auto;
 	.clearfix;	
 }
+
+.wrappernested{ 
+	max-width: @wrappernested;
+}
+
 
 /* GRID
 ---------------------------------------------------------*/
@@ -115,8 +114,8 @@
 	float:left;
 	width: (@fluid-module-width*@r);
 	//margin: 0 -@fluid-gutter-width*(@variationround*1%);
-	margin:0;
-	//.clearfix;
+	//margin:0;
+	.clearfix;
 }
 
 
@@ -142,8 +141,4 @@
 
 .push(@offset:1) {
 	margin-left: (@total-width*(((@gutter-width+@column-width)*@offset) / @gridsystem-width)) + @variation;
-}
-
-.pull(@offset:1) {
-	margin-right: @total-width*(((@gutter-width+@column-width)*@offset) / @gridsystem-width) + @variation;
 }

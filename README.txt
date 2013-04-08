@@ -1,13 +1,16 @@
 Reticulas cssframework
 
-Reticulas css framework allows faster work using cascading style sheets.
+Reticulas css framework is a library​ that allows to work faster using css.
 Html5 and Css3 support.
+
+More Info:
+http://cssframework.reticulas.com
 
 Reticulas cssframework Licence:
 Distributed under the MIT license, http://www.opensource.org/licenses/mit-license.php
 
-2009-2012.
-Copyright (c) Segundo Fdez (http://vidagrafica.com) - @vidagrafica | Sond3 (http://sond3.com) - @sond3 
+2009-2013.
+Copyright (c) Segundo Fdez (http://segundofdez.com) - @segundo_fdez | Sond3 (http://sond3.com) - @sond3 
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
 The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
