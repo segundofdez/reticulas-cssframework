@@ -58,24 +58,23 @@
 @columns: 12;
 
 // base grid wrapper width as a number
-//@gridsystem-width: (@column-width*@columns) + (@gutter-width*@columns);
 @gridsystem-width:(@column-width*@columns) + (@gutter-width*@columns);
 
-// gutter width as a number
-//@variation: parseInt(@total-width*((@gutter-width*.5)/@gridsystem-width));
-@variation: @total-width*((@gutter-width*.5)/@gridsystem-width);
+// gutter width %
+// DELETE @variation: parseInt(@total-width*((@gutter-width*.5)/@gridsystem-width));
 
-// gutter width round without decimals
-//@variationround: parseInt(round(@total-width*((@gutter-width*.5)/@gridsystem-width)));
-@variationround: round(@total-width*((@gutter-width*.5)/@gridsystem-width));
+// gutter width round without decimals %
+// DELETE @variationround: parseInt(round(@total-width*((@gutter-width*.5)/@gridsystem-width)));
+//@fluid-gutter-width-round: round(@total-width*((@gutter-width*.5)/@gridsystem-width));
 
 // wrapper width (px)
 @wrapper: (@column-width*@columns) + (@gutter-width*@columns)*1px;
 
+@wrappernested: @wrapper + @gutter-width;
 // %
-@fluid-column-width: (@total-width/@columns) - @variation*2;
+@fluid-column-width: (@total-width/@columns) - @fluid-gutter-width*2;
 @fluid-gutter-width:  @total-width*((@gutter-width*.5)/@gridsystem-width);
-@fluid-module-width: @fluid-column-width + @variation*2;
+@fluid-module-width: @fluid-column-width + @fluid-gutter-width*2;
 
 
 .wrapper,
@@ -122,9 +121,9 @@
 .column(@n, @columns: @columns) {
 	display: inline;
 	float: left;
-	width:  (@fluid-module-width*@n) - (@variationround*2);
-	margin-left: @variationround*1%;
-	margin-right: @variationround*1%;
+	width:  (@fluid-module-width*@n) - (@fluid-gutter-width*2);
+	margin-left: @fluid-gutter-width;
+	margin-right: @fluid-gutter-width;
 }
 
 .inner { 
@@ -134,11 +133,15 @@
 
 //Solve  padding problem on diferents indents
 .innerwrapper {
-	padding-left:@total-width*(((@gutter-width*.5)/@gridsystem-width)/@variation);
-	padding-right:@total-width*(((@gutter-width*.5)/@gridsystem-width)/@variation);
+	padding-left:@total-width*(((@gutter-width*.5)/@gridsystem-width)/@fluid-gutter-width);
+	padding-right:@total-width*(((@gutter-width*.5)/@gridsystem-width)/@fluid-gutter-width);
 }
 
 
 .push(@offset:1) {
-	margin-left: (@total-width*(((@gutter-width+@column-width)*@offset) / @gridsystem-width)) + @variation;
+	margin-left: (@total-width*(((@gutter-width+@column-width)*@offset) / @gridsystem-width)) + @fluid-gutter-width;
+}
+
+.pull(@offset:1) {
+	margin-right: @total-width*(((@gutter-width+@column-width)*@offset) / @gridsystem-width) + @fluid-gutter-width;
 }
