@@ -1,0 +1,8 @@
+{
+	"config": {
+		"vendor-dir": "reticulas/libraries"
+   },
+   "require": {
+    "leafo/lessphp": "v0.4.0"
+  }
+}
