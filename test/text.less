@@ -1,8 +1,7 @@
 /**
- * RETICULAS CSSFRAMEWORK - extended/reticulas.less
+ * RETICULAS CSSFRAMEWORK - extended/text.less
  *
- * @description     Modifies or extends core content
- *                  with classes or IDs - RETICULAS.COM
+ * @description     test for text
  *
  * @copyright       Copyright (C) 2013, Sond3
  * @info            http://segundofdez.com - @segundo_fdez | http://sond3.com - @sond3
@@ -20,24 +19,40 @@
 
 */
 
+/* See baseline */
+.baseline { background-image:url(../css/reticulas/core/baseline-22.gif); background-position:0 -5px;}
+
 /* REDEFINE - Identifier defined within the folder reticulas
 ----------------------------------------------------------- */
 
 /* Fix baseline problem with strong and em - include in base  */
-strong, em { line-height:1em;} 
+//strong, em { line-height:1em;}
+
+body{
+	.baseline;
+}
+
 
 a { color:@color-link;}
 
+
+// TEST NEW FEATURES
+h1{
+	margin-bottom: 0;
+}
+h2, h3, h4, h5, h6{
+	margin-bottom: @baseline;
+}
 /* COMMON
 ----------------------------------------------------------- */
 
 #page {
-	width:@total-width;
+	//width:@total-width;
 	color:@color;
-	.baseline;
 	.clearfix;
+	.row(6);
+	.boxcenter();
 }
-
 
 /* IMAGES
 ----------------------------------------------------------- */
@@ -59,28 +74,28 @@ a { color:@color-link;}
 ----------------------------------------------------------- */
 /*
 
-@media only screen and (max-width: 1680px), 
+@media only screen and (max-width: 1680px),
 only screen and (max-device-width: 1680px){
 
 }
 
-@media only screen and (max-width: 1280px), 
+@media only screen and (max-width: 1280px),
 only screen and (max-device-width: 1280px){
 
 }
 
-@media only screen and (max-width: 1024px), 
+@media only screen and (max-width: 1024px),
 only screen and (max-device-width: 1024px){
 
 }
 
-@media only screen and (max-width: 640px), 
+@media only screen and (max-width: 640px),
 only screen and (max-device-width: 640px){
 
 }
 
 // Smartphone - portrait and land
-@media only screen and (min-device-width: 320px) 
+@media only screen and (min-device-width: 320px)
 and (max-device-width : 480px) {
 
 }
@@ -96,21 +111,21 @@ and (max-device-width : 480px) {
 }
 
 // iPad - portrait and land
-@media only screen and (min-device-width: 768px) 
+@media only screen and (min-device-width: 768px)
 and (max-device-width: 1024px) {
 
 }
 
 // iPad - land
-@media only screen and (min-device-width: 768px) 
-and (max-device-width: 1024px) 
+@media only screen and (min-device-width: 768px)
+and (max-device-width: 1024px)
 and (orientation: landscape) {
 
 }
 
 // iPad - portrait
-@media only screen and (min-device-width: 768px) 
-and (max-device-width: 1024px) 
+@media only screen and (min-device-width: 768px)
+and (max-device-width: 1024px)
 and (orientation: portrait) {
 
 }
