@@ -48,31 +48,32 @@
 .enormous		{ font-size: 3.875em;/*62px*/ top: 10px; line-height: 1.0644em; margin-bottom:44px;}
 
 
-/* 4.2 Colors: Grey scale
+/* 4.2 Text colors: Grey scale
 ----------------------------------------------------------------------------- */
-.white  		{ color:#FFF;}
-.lightgrey		{ color:#CCC;}
-.mediumgrey		{ color:#999;}
-.darkgrey		{ color:#666;}
-.almostblack	{ color:#333;}
-.black			{ color:#000;}
+.white  		{ color: @color-white;}
+.light			{ color: @color-light;}
+.lightgrey		{ color: @color-lightgrey;}
+.mediumgrey		{ color: @color-mediumgrey;}
+.darkgrey		{ color: @color-darkgrey;}
+.almostblack	{ color: @color-almostblack;}
+.black			{ color: @color-black;}
 
-/* Background colors. Gray scale
+/* 4.2.1 Background colors: Grey scale
 ----------------------------------------------------------------------------- */
-.backwhite       { background-color:#FFF;}
-.backlightgrey1  { background-color:#F5F5F5;}
-.backlightgrey2  { background-color:#CCC;}
-.backmediumgrey  { background-color:#999;}
-.backdarkgrey    { background-color:#666;}
-.backalmostblack { background-color:#333;}
-.backblack       { background-color:#000;}
+.backwhite       { background-color: @color-white;}
+.backlight       { background-color: @color-light;}
+.backlightgrey   { background-color: @color-lightgrey;}
+.backmediumgrey  { background-color: @color-mediumgrey;}
+.backdarkgrey    { background-color: @color-darkgrey;}
+.backalmostblack { background-color: @color-almostblack;}
+.backblack       { background-color: @color-black;}
 
 /* 4.3 Text align
 ----------------------------------------------------------------------------- */
-.textalignr 	{ text-align:right;}
-.textalignl 	{ text-align:left;}
-.textalignj 	{ text-align:justify;}
-.textalignc 	{ text-align:center;}
+.textalignr 	{ text-align: right;}
+.textalignl 	{ text-align: left;}
+.textalignj 	{ text-align: justify;}
+.textalignc 	{ text-align: center;}
 
 /* 4.4 Notices
 ----------------------------------------------------------------------------- */
@@ -82,9 +83,9 @@
 	margin-bottom:12px; /* baseline adjust */
 	padding:7px 10px;
 }
-.emphasized 	{ background:#f7f716; color:#5b5b0a;}
-.correct 		{ background:#75ea8e; color:#0e6339;}
-.erased  		{ background:#d31313; color:#fce5e5;}
+.emphasized 	{ background-color: #f7f716; color: @color-emphasized;}
+.correct 		{ background-color: #75ea8e; color: @color-correct;}
+.erased  		{ background-color: #d31313; color: @color-erased;}
 
 /* 4.5 Decoration
 ----------------------------------------------------------------------------- */
@@ -125,13 +126,26 @@
    pass as #HEX number( #top-color, #bottom-color)
 */
 .gradient(@bcolor:#999, @tcolor:#CCC) {
-  background-color: @bcolor;
-  background: -webkit-gradient(linear, left top, left bottom, from(@bcolor), to(@tcolor)); /* Saf4+, Chrome */
-  background: -webkit-linear-gradient(bottom, @bcolor, @tcolor); /* Chrome 10+, Saf5.1+, iOS 5+ */
-  background:    -moz-linear-gradient(bottom, @bcolor, @tcolor); /* FF3.6 */
-  background:     -ms-linear-gradient(bottom, @bcolor, @tcolor); /* IE10 */
-  background:      -o-linear-gradient(bottom, @bcolor, @tcolor); /* Opera 11.10+ */
-  background:         linear-gradient(to bottom, @bcolor, @tcolor);
+	background-color: @bcolor;
+	background: -webkit-gradient(linear, left top, left bottom, from(@bcolor), to(@tcolor)); /* Saf4+, Chrome */
+	background: -webkit-linear-gradient(bottom, @bcolor, @tcolor); /* Chrome 10+, Saf5.1+, iOS 5+ */
+	background:    -moz-linear-gradient(bottom, @bcolor, @tcolor); /* FF3.6 */
+	background:     -ms-linear-gradient(bottom, @bcolor, @tcolor); /* IE10 */
+	background:      -o-linear-gradient(bottom, @bcolor, @tcolor); /* Opera 11.10+ */
+	background:         linear-gradient(to bottom, @bcolor, @tcolor);
+}
+
+/*
+   Gradient radial
+   .gradient-radial(#999, #CCC);
+   pass as #HEX number( #color-in, #color-out)
+*/
+.gradient-radial(@color-in: @color; @color-out: @color-alt) {
+	background-image: -webkit-gradient(radial, center center, 0, center center, 460, from(@color-in), to(@color-out));
+	background-image: -webkit-radial-gradient(circle, @color-in, @color-out);
+	background-image: -moz-radial-gradient(circle, @color-in, @color-out);
+	background-image: radial-gradient(circle, @color-in, @color-out);
+	background-repeat: no-repeat;
 }
 
 /*
@@ -139,10 +153,11 @@
   .shadow( 0,0,5,5,#999);
    pass as a number and #HEX number( @shadow-x, @shadow-y, @gaussianx, @gaussiany, #shadow-color)
 */
-.shadow(@sx:0px, @sy:0px, @gx:5px, @gy:4px, @scolor:#B2D4F4) {
-  -webkit-box-shadow: @sx*1px @sy*1px @gx*1px @gy*1px @scolor; /* Saf3-4, iOS 4.0.2 - 4.2, Android 2.3+ */
-     -moz-box-shadow: @sx*1px @sy*1px @gx*1px @gy*1px @scolor; /* FF3.5 - 3.6 */
-          box-shadow: @sx*1px @sy*1px @gx*1px @gy*1px @scolor; /* Opera 10.5, IE9, FF4+, Chrome 6+, iOS 5 */
+.shadow( @h-shadow:0px, @v-shadow:0px, @blur-shadow:10px, @spread-shadow:0px, @color-shadow:fadeout(@color,20) ){
+	-moz-box-shadow: @h-shadow  @v-shadow @blur-shadow @spread-shadow @color-shadow;
+	-webkit-box-shadow: @h-shadow  @v-shadow @blur-shadow @spread-shadow @color-shadow;
+	-o-box-shadow: @h-shadow  @v-shadow @blur-shadow @spread-shadow @color-shadow;
+	box-shadow: @h-shadow  @v-shadow @blur-shadow @spread-shadow @color-shadow;
 }
 
 /* 4.6 User interface
@@ -162,14 +177,14 @@
 			display:block;
 			margin-top:0px;
 			padding:7px 15px 3px;
-			color: @tabcolor;
+			color: @color-tab;
 			.round-corners(8,8,0,0);
 		}
 		>a:hover ,
 		a:focus {
-			background-color: @tabbk;
+			background-color: @color-tab-bk;
 			text-decoration:none;
-			color: @tabcolor-a;
+			color: @color-tab-alt;
 		}
 	}
 	>li.active {
@@ -178,10 +193,10 @@
 			border: 1px solid #999;
 			border-bottom: 1px solid #FFF;
 			background-color:transparent;
-			color: @tabcolor-a;
+			color: @color-tab-alt;
 
 			&:hover{
-				color:@tabcolor;
+				color:@color-tab;
 				background-color:transparent;
 			}
 		}
@@ -267,7 +282,7 @@
 				}
 				&.active a {
 					margin:0;
-					background-color:@tabbk-a;
+					background-color:@color-tab-bk-alt;
 				}
 
 				&:first-child {
@@ -291,11 +306,11 @@
 			>a{
 				.round(10);
 				margin-top:0px;
-				background-color:@tabbk;
+				background-color:@color-tab-bk;
 
 
 				&:hover{
-					background-color: @tabbk-a;
+					background-color: @color-tab-bk-alt;
 				}
 			}
 
@@ -303,11 +318,11 @@
 				a {
 					margin-left:-1px;
 					border: none;
-					background-color: @tabbk-a;
+					background-color: @color-tab-bk-alt;
 
 					&:hover{
-						background-color: @tabcolor;
-						color:@tabbk;
+						background-color: @color-tab;
+						color:@color-tab-bk;
 					}
 				}
 			}
@@ -331,11 +346,11 @@
 			a {
 				border-right: 1px solid #999;
 				border-left: 1px solid #999;
-				background-color: @tabbk;
+				background-color: @color-tab-bk;
 
 				&:hover{
-					background-color: @tabbk-a;
-					color:@tabcolor-a;
+					background-color: @color-tab-bk-alt;
+					color:@color-tab-alt;
 				}
 			}
 		}
@@ -353,7 +368,6 @@
 	vertical-align: middle;
 	.gradient();
 	.round(5);
-	//color:@tabcolor;
 
 	&:hover {
 		text-decoration:none;
@@ -377,7 +391,7 @@
 			display: block;
 			padding: 6px 0 3px 45px;
 			position: relative;
-			background-color: @tabbk;
+			background-color: @color-tab-bk;
 			&:after{
 				position: absolute;
 				top: 50%;
@@ -389,7 +403,7 @@
 				height: 0;
 				margin-top: -50px;
 				border-bottom: 50px solid transparent;
-				border-left: 30px solid @tabbk;
+				border-left: 30px solid @color-tab-bk;
 				border-top: 50px solid transparent;
 			}
 			&:before{
@@ -407,9 +421,9 @@
 				border-top: 50px solid transparent;
 			}
 			&:hover {
-				background-color: @tabbk-a;
+				background-color: @color-tab-bk-alt;
 				text-decoration:none;
-				color:@tabcolor-a;
+				color:@color-tab-alt;
 				/*
 				-webkit-transition:all .0s linear;
 				-moz-transition:all .0s linear;
@@ -418,7 +432,7 @@
 				*/
 			}
 			&:hover:after {
-				border-left-color: @tabbk-a !important;
+				border-left-color: @color-tab-bk-alt !important;
 			}
 		}
 		&:first-child a{

@@ -1,0 +1,12 @@
+ CHANGES
+ ✔ Update class .shadow(); @done (13-11-20 00:23)
+ ✔ Add new radial gradient >.gradient-radial(#color-in, #color-out); @done (13-11-20 00:27)
+ ✔ Add variables grey scale colors @done (13-11-20 00:57)
+ ✔ Add new color @color-light: #F5F5F5; @done (13-11-20 00:57)
+ ✔ Change .backlightgrey1(); > .backlight(); @done (13-11-20 00:57)
+ ✔ Change .backlightgrey2(); >.backlightgrey(); @done (13-11-20 00:57)
+ ✔ Add notices color on variables @done (13-11-20 01:17)
+ ✔ Change @tabcolor > @color-tab @done (13-11-20 01:22)
+ ✔ Change @tabcolor-a > @color-tab-alt @done (13-11-20 01:23)
+ ✔ Change @tabbk > @color-tab-bk @done (13-11-20 01:25)
+ ✔ Change @tabbk-a > @color-tab-bk-alt @done (13-11-20 01:26)
