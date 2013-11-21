@@ -35,6 +35,14 @@ body{
 
 a { color:@color-link;}
 
+ul{
+	margin-left:0;
+	margin-right: 0;
+	li{
+		list-style-type: none;
+	}
+}
+
 
 // TEST NEW FEATURES
 h1{
@@ -50,7 +58,7 @@ h2, h3, h4, h5, h6{
 	//width:@total-width;
 	color:@color;
 	.clearfix;
-	.row(6);
+	.row(8);
 	.boxcenter();
 }
 h2{
@@ -65,6 +73,42 @@ h2{
 
 /* MODULES
 ----------------------------------------------------------- */
+// Equal Round
+.round{
+	.correct();
+	.round();
+}
+
+// Round corners
+.round-corners{
+	.correct();
+	.round-corners();
+}
+
+// Vertical gradient
+.gradient-vertical{
+	padding:@baseline;
+	.gradient-vertical();
+}
+
+// Horizontal gradient
+.gradient-horizontal{
+	padding:@baseline;
+	.gradient-horizontal();
+}
+
+// Radial gradient
+.gradient-radial{
+	padding:@baseline;
+	.gradient-radial();
+}
+
+// Box shadow
+.shadow{
+	padding:@baseline;
+	.shadow();
+}
+
 
 /* STATES
 ----------------------------------------------------------- */

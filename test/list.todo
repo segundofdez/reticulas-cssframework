@@ -1,12 +1,33 @@
- CHANGES
- ✔ Update class .shadow(); @done (13-11-20 00:23)
- ✔ Add new radial gradient >.gradient-radial(#color-in, #color-out); @done (13-11-20 00:27)
- ✔ Add variables grey scale colors @done (13-11-20 00:57)
+UPDATES:
+ ✔ Update class .shadow(@shadow-x, @shadow-y, @gaussian-x, @spread, #shadow-color); @done (13-11-20 00:23)
+ ✔ Update variables grey scale colors @done (13-11-20 00:57)
+ ✔ Update notices color on variables @done (13-11-20 01:17)
+
+ENHANCEMENT:
+ ✔ Enhancement new colors on notices @done (13-11-20 21:28)
+ ✔ Enhancement on tabs @done (13-11-21 02:02)
+
+NEW:
  ✔ Add new color @color-light: #F5F5F5; @done (13-11-20 00:57)
- ✔ Change .backlightgrey1(); > .backlight(); @done (13-11-20 00:57)
- ✔ Change .backlightgrey2(); >.backlightgrey(); @done (13-11-20 00:57)
- ✔ Add notices color on variables @done (13-11-20 01:17)
+ ✔ Add new color @color-emphasized; @done (13-11-20 23:29)
+ ✔ Add new color @color-correct; @done (13-11-20 23:29)
+ ✔ Add new color @color-erased; @done (13-11-20 23:29)
+ ✔ Add new color @bg-emphasized; @done (13-11-20 21:20)
+ ✔ Add new color @bg-correct; @done (13-11-20 21:20)
+ ✔ Add new color @bg-erased; @done (13-11-20 21:20)
+ ✔ Add new .gradient-radial( #color-in, #color-out); @done (13-11-20 23:14)
+ ✔ Add new .gradient-horizontal(#color-left, #color-right); @done (13-11-20 23:45)
+
+CHANGES:
  ✔ Change @tabcolor > @color-tab @done (13-11-20 01:22)
  ✔ Change @tabcolor-a > @color-tab-alt @done (13-11-20 01:23)
- ✔ Change @tabbk > @color-tab-bk @done (13-11-20 01:25)
- ✔ Change @tabbk-a > @color-tab-bk-alt @done (13-11-20 01:26)
+ ✔ Change @tabbk > @color-tab-bg @done (13-11-20 01:25)
+ ✔ Change @tabbk-a > @color-tab-bg-alt @done (13-11-20 01:26)
+ ✔ Change .backwhite(); > .bg-white(); @done (13-11-20 21:15)
+ ✔ Change .backlightgrey1(); > .bg-light(); @done (13-11-20 21:15)
+ ✔ Change .backlightgrey2(); > .bg-lightgrey(); @done (13-11-20 21:15)
+ ✔ Change .backmediumgrey(); > .bg-mediumgrey(); @done (13-11-20 21:15)
+ ✔ Change .backdarkgrey(); > .bg-darkgrey(); @done (13-11-20 21:15)
+ ✔ Change .backalmostblack(); > .bg-almostblack(); @done (13-11-20 21:15)
+ ✔ Change .backblack(); > .bg-black(); @done (13-11-20 21:15)
+ ✔ Change .gradient(); > .gradient-vertical(#top-color, #bottom-color); @done (13-11-20 23:00)

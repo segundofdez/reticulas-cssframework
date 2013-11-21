@@ -3,7 +3,7 @@
  *
  * @description     Extend base.css with some interface elements
  *
- * @version         1.5
+ * @version         2.0
  *
  * @License         MIT License
  *
@@ -34,77 +34,133 @@
    DEALINGS IN THE SOFTWARE.
 */
 
-/* 4. INTERFACE */
+/* -------------------- 4.0 INTERFACE -------------------- */
 
-/* 4.1 Font size
------------------------------------------------------------------------------ */
-.mini,.medium,.large,
-.big,.enormous	{ /* TEST font-weight: normal; */ position: relative;}
+/*
+-----------------------------------------------------------
+4.1 TYPE
+-----------------------------------------------------------
+*/
 
-.mini			{ font-size: 0.625em;/*10px*/ top: 8px; line-height: 1.100em; margin-bottom: 11px;}
-.medium			{ font-size: 0.813em;/*13px*/ top: 2px; line-height:1.695em; margin-bottom:22px;}
-.large			{ font-size: 1.375em;/*22px*/ top: 21px; line-height: .9997em; margin-bottom: 44px;}
-.big			{ font-size: 2.250em;/*36px*/ top: 28px; line-height: 1.222em; margin-bottom: 44px;}
-.enormous		{ font-size: 3.875em;/*62px*/ top: 10px; line-height: 1.0644em; margin-bottom:44px;}
+// 4.1.1 Font size ----------------------------------------
+
+.mini,
+.medium,
+.large,
+.big,
+.enormous {
+	// TEST font-weight: normal;
+	position: relative;
+}
+.mini {
+	top: 8px;
+	font-size: 0.625em; //10px
+	line-height: 1.100em;
+	margin-bottom: @baseline/2;
+}
+.medium {
+	top: 2px;
+	font-size: 0.813em; //13px
+	line-height:1.695em;
+	margin-bottom: 0;
+}
+.large {
+	top: 21px;
+	font-size: 1.375em; //22px
+	line-height: .9997em;
+	margin-bottom: @baseline;
+}
+.big {
+	top: 28px;
+	font-size: 2.250em; //36px
+	line-height: 1.222em;
+	margin-bottom: @baseline;
+}
+.enormous {
+	 top: 10px;
+	 font-size: 3.875em; //62px
+	 line-height: 1.0644em;
+	 margin-bottom: @baseline;
+}
+
+// 4.1.2 Text align ---------------------------------------
+
+.textalignr { text-align: right;}
+.textalignl { text-align: left;}
+.textalignj { text-align: justify;}
+.textalignc { text-align: center;}
 
 
-/* 4.2 Text colors: Grey scale
------------------------------------------------------------------------------ */
-.white  		{ color: @color-white;}
-.light			{ color: @color-light;}
-.lightgrey		{ color: @color-lightgrey;}
-.mediumgrey		{ color: @color-mediumgrey;}
-.darkgrey		{ color: @color-darkgrey;}
-.almostblack	{ color: @color-almostblack;}
-.black			{ color: @color-black;}
+/*
+-----------------------------------------------------------
+4.2 COLOR
+-----------------------------------------------------------
+*/
 
-/* 4.2.1 Background colors: Grey scale
------------------------------------------------------------------------------ */
-.backwhite       { background-color: @color-white;}
-.backlight       { background-color: @color-light;}
-.backlightgrey   { background-color: @color-lightgrey;}
-.backmediumgrey  { background-color: @color-mediumgrey;}
-.backdarkgrey    { background-color: @color-darkgrey;}
-.backalmostblack { background-color: @color-almostblack;}
-.backblack       { background-color: @color-black;}
+// 4.2.1 Text colors: Grey scale --------------------------
 
-/* 4.3 Text align
------------------------------------------------------------------------------ */
-.textalignr 	{ text-align: right;}
-.textalignl 	{ text-align: left;}
-.textalignj 	{ text-align: justify;}
-.textalignc 	{ text-align: center;}
+.white { color: @color-white;}
+.light { color: @color-light;}
+.lightgrey { color: @color-lightgrey;}
+.mediumgrey { color: @color-mediumgrey;}
+.darkgrey { color: @color-darkgrey;}
+.almostblack { color: @color-almostblack;}
+.black { color: @color-black;}
 
-/* 4.4 Notices
------------------------------------------------------------------------------ */
+
+// 4.2.2 Background colors: Grey scale --------------------
+
+.bg-white       { background-color: @color-white;}
+.bg-light       { background-color: @color-light;}
+.bg-lightgrey   { background-color: @color-lightgrey;}
+.bg-mediumgrey  { background-color: @color-mediumgrey;}
+.bg-darkgrey    { background-color: @color-darkgrey;}
+.bg-almostblack { background-color: @color-almostblack;}
+.bg-black       { background-color: @color-black;}
+
+
+// 4.2.3 Color notices ------------------------------------
+
 .emphasized,
 .correct,
-.erased 		{
-	margin-bottom:12px; /* baseline adjust */
-	padding:7px 10px;
+.erased {
+	padding: @baseline/2;
 }
-.emphasized 	{ background-color: #f7f716; color: @color-emphasized;}
-.correct 		{ background-color: #75ea8e; color: @color-correct;}
-.erased  		{ background-color: #d31313; color: @color-erased;}
+.emphasized {
+	background-color: @bg-emphasized;
+	color: @color-emphasized;
+}
+.correct {
+	background-color: @bg-correct;
+	color: @color-correct;
+}
+.erased {
+	background-color: @bg-erased;
+	color: @color-erased;
+}
 
-/* 4.5 Decoration
------------------------------------------------------------------------------ */
+
 /*
-   Round equal
-   .round(10);
-   pass as a number (radius)
+-----------------------------------------------------------
+4.3 DECORATION
+-----------------------------------------------------------
 */
+
+// 4.3.1 Equal round --------------------------------------
+// pass as a number (radius)
+// .round(10);
+
 .round(@radius:10px) {
-	-webkit-border-radius: @radius*1px; /* Saf3-4, iOS 1-3.2, Android ≤1.6 */
-		-moz-border-radius: @radius*1px; /* FF1-3.6 */
-			border-radius: @radius*1px; /* Opera 10.5, IE9, Saf5, Chrome, FF4, iOS 4, Android 2.1+ */
+	-webkit-border-radius: @radius*1px;	// Saf3-4, iOS 1-3.2, Android ≤1.6
+		-moz-border-radius: @radius*1px;// FF1-3.6
+			border-radius: @radius*1px;	// Opera 10.5, IE9, Saf5, Chrome, FF4, iOS 4, Android 2.1+
 }
 
-/*
-   Round corners
-   .round-corners(5,5,5,5);
-   pass as a number (top-lef, top-right, bottom-right, bottom-left)
-*/
+
+// 4.3.2 Round corners -----------------------------------
+// pass as a number (top-lef, top-right, bottom-right, bottom-left)
+// .round-corners(5,5,5,5);
+
 .round-corners(@tl:5px,@tr:5px,@br:0px,@bl:0px) {
 	-webkit-border-top-left-radius: @tl*1px;
 	-webkit-border-top-right-radius: @tr*1px;
@@ -120,27 +176,41 @@
 			border-bottom-left-radius: @bl*1px;
 }
 
-/*
-   Gradient
-   .gradient(#999, #CCC);
-   pass as #HEX number( #top-color, #bottom-color)
-*/
-.gradient(@bcolor:#999, @tcolor:#CCC) {
+
+// 4.3.3 Vertical gradient -------------------------------
+// pass as #HEX number(#top-color, #bottom-color)
+// .gradient(#CCC, #999);
+
+.gradient-vertical (@tcolor:@color-lightgrey, @bcolor:@color-mediumgrey) {
 	background-color: @bcolor;
-	background: -webkit-gradient(linear, left top, left bottom, from(@bcolor), to(@tcolor)); /* Saf4+, Chrome */
-	background: -webkit-linear-gradient(bottom, @bcolor, @tcolor); /* Chrome 10+, Saf5.1+, iOS 5+ */
-	background:    -moz-linear-gradient(bottom, @bcolor, @tcolor); /* FF3.6 */
-	background:     -ms-linear-gradient(bottom, @bcolor, @tcolor); /* IE10 */
-	background:      -o-linear-gradient(bottom, @bcolor, @tcolor); /* Opera 11.10+ */
-	background:         linear-gradient(to bottom, @bcolor, @tcolor);
+	background: -webkit-gradient(linear, left top, left bottom, from(@tcolor), to(@bcolor)); /* Saf4+, Chrome */
+	background: -webkit-linear-gradient(bottom, @tcolor, @bcolor); /* Chrome 10+, Saf5.1+, iOS 5+ */
+	background:    -moz-linear-gradient(bottom, @tcolor, @bcolor); /* FF3.6 */
+	background:     -ms-linear-gradient(bottom, @tcolor, @bcolor); /* IE10 */
+	background:      -o-linear-gradient(bottom, @tcolor, @bcolor); /* Opera 11.10+ */
+	background:         linear-gradient(to bottom, @tcolor, @bcolor);
 }
 
-/*
-   Gradient radial
-   .gradient-radial(#999, #CCC);
-   pass as #HEX number( #color-in, #color-out)
-*/
-.gradient-radial(@color-in: @color; @color-out: @color-alt) {
+
+// 4.3.4 Horizontal gradient -------------------------------
+// pass as #HEX number(#color-left, #color-right)
+// .gradient-horizontal(#999, #CCC);
+
+.gradient-horizontal (@lcolor:@color-mediumgrey, @rcolor:@color-lightgrey) {
+ 	background-color: @lcolor;
+	background-image: -webkit-gradient(linear, left top, right top, from(@lcolor), to(@rcolor));
+	background-image: -webkit-linear-gradient(left, @lcolor, @rcolor);
+	background-image: -moz-linear-gradient(left, @lcolor, @rcolor);
+	background-image: -ms-linear-gradient(left, @lcolor, @rcolor);
+	background-image: -o-linear-gradient(left, @lcolor, @rcolor);
+}
+
+
+// 4.3.5 Radial gradient -------------------------------
+// pass as #HEX number(#color-in, #color-out)
+// .gradient-radial(#CCC, #999);
+
+.gradient-radial (@color-in: @color-lightgrey; @color-out: @color-mediumgrey) {
 	background-image: -webkit-gradient(radial, center center, 0, center center, 460, from(@color-in), to(@color-out));
 	background-image: -webkit-radial-gradient(circle, @color-in, @color-out);
 	background-image: -moz-radial-gradient(circle, @color-in, @color-out);
@@ -148,123 +218,119 @@
 	background-repeat: no-repeat;
 }
 
-/*
-   Shadow
-  .shadow( 0,0,5,5,#999);
-   pass as a number and #HEX number( @shadow-x, @shadow-y, @gaussianx, @gaussiany, #shadow-color)
-*/
-.shadow( @h-shadow:0px, @v-shadow:0px, @blur-shadow:10px, @spread-shadow:0px, @color-shadow:fadeout(@color,20) ){
-	-moz-box-shadow: @h-shadow  @v-shadow @blur-shadow @spread-shadow @color-shadow;
-	-webkit-box-shadow: @h-shadow  @v-shadow @blur-shadow @spread-shadow @color-shadow;
-	-o-box-shadow: @h-shadow  @v-shadow @blur-shadow @spread-shadow @color-shadow;
-	box-shadow: @h-shadow  @v-shadow @blur-shadow @spread-shadow @color-shadow;
+
+// 4.3.6 Box shadow -----------------------------------
+// pass as a number and #HEX number (@shadow-x, @shadow-y, @gaussian, @spread, #shadow-color)
+// .shadow( 0,0,5,5,#999);
+
+.shadow( @h-shadow:0px, @v-shadow:0px, @blur-shadow:10px, @spread-shadow:2px, @color-shadow:fadeout(@color,20) ){
+	-moz-box-shadow: @h-shadow*1px  @v-shadow*1px @blur-shadow*1px @spread-shadow*1px @color-shadow;
+	-webkit-box-shadow: @h-shadow*1px  @v-shadow*1px @blur-shadow*1px @spread-shadow*1px @color-shadow;
+	-o-box-shadow: @h-shadow*1px  @v-shadow*1px @blur-shadow*1px @spread-shadow*1px @color-shadow;
+	box-shadow: @h-shadow*1px  @v-shadow*1px @blur-shadow*1px @spread-shadow*1px @color-shadow;
 }
 
-/* 4.6 User interface
------------------------------------------------------------------------------ */
+
+/*
+-----------------------------------------------------------
+4.4 USER INTERFACE
+-----------------------------------------------------------
+*/
 
 /* Tabs */
 .tabs {
+	.clearfix;
 	list-style-type:none;
-	margin:0;
-	border-bottom: 1px solid #999;
+	margin-left:0;
+	border-bottom: 1px solid @color-tab-alt;
 
 	>li {
 		float:left;
 		margin-bottom:-1px !important;
-		margin-right:3px;
 		>a {
 			display:block;
+			margin-right:2px;
 			margin-top:0px;
 			padding:7px 15px 3px;
 			color: @color-tab;
-			.round-corners(8,8,0,0);
+			border: 1px solid transparent;
+			border-bottom: none;
+			.round-corners(4,4,0,0);
+			&:hover,
+			&:focus 	{
+				background-color: @color-tab-bg;
+				text-decoration:none;
+				color: @color-tab-bg-alt;
+			}
 		}
-		>a:hover ,
-		a:focus {
-			background-color: @color-tab-bk;
-			text-decoration:none;
-			color: @color-tab-alt;
-		}
-	}
-	>li.active {
-		a {
-			margin-top:-1px;
-			border: 1px solid #999;
-			border-bottom: 1px solid #FFF;
-			background-color:transparent;
-			color: @color-tab-alt;
+		&.active {
+			>a {
+				border-color: @color-tab-alt;
+				border-bottom: 1px solid #FFF;
+				color: @color-tab;
 
-			&:hover{
-				color:@color-tab;
-				background-color:transparent;
+				&:hover{
+					color:@color-tab-alt;
+					background-color:transparent;
+				}
 			}
 		}
 	}
 
 	// Tab display on top
 	&.tab-top{
-		border-bottom:none;
-		border-top: 1px solid #999;
+		border-color: transparent;
+		border-top: 1px solid @color-tab-alt;
 		>li{
-			>a{
-				.round-corners(0,0,8,8);
 				margin-top:0px;
+			>a{
+				.round-corners(0,0,4,4);
 			}
 			&.active a {
 				margin-top:-1px;
-				border: 1px solid #999;
-				border-top: 1px solid #FFF;
+				border-color: @color-tab-alt;
+				border-top-color: #FFF;
 				background-color:transparent;
 			}
 		}
 	}
 	// Tab display on right
 	&.tab-right{
-		border-bottom:none;
-		border-top:none;
-		border-right: 1px solid #999;
+		border-color: transparent;
+		border-right: 1px solid @color-tab-alt;
 		display:inline-block;
 		>li{
 			float:none;
-			margin-right:0;
-			margin-bottom:3px !important;
 			text-align:right;
-
 			>a{
-				.round-corners(8,0,0,8);
-				margin-top:0px;
+				margin-right:0;
+				margin-bottom:2px !important;
+				.round-corners(4,0,0,4);
 			}
 			&.active a {
 				margin-right:-1px;
-				border: 1px solid #999;
-				border-right: 1px solid #FFF;
-				background-color:transparent;
+				border-color: @color-tab-alt;
+				border-right-color: #FFF;
 			}
 		}
 	}
 
 	// Tab display on left
 	&.tab-left{
-		border-top:none;
-		border-right:none;
-		border-bottom:none;
-		border-left: 1px solid #999;
+		border-color: transparent;
+		border-left: 1px solid @color-tab-alt;
 		display:inline-block;
 		>li{
 			float:none;
-			margin-right:0;
-			margin-bottom:3px !important;
-
 			>a{
-				.round-corners(0,8,8,0);
-				margin-top:0px;
+				margin-right:0;
+				.round-corners(0,4,4,0);
+				margin-bottom:2px !important;
 			}
 			&.active a {
 				margin-left:-1px;
-				border: 1px solid #999;
-				border-left: 1px solid #FFF;
-				background-color:transparent;
+				border-color: @color-tab-alt;
+				border-left-color:#FFF;
 			}
 		}
 	}
@@ -272,17 +338,46 @@
 	// Tab Menu
 	&.menu{
 		border:none;
+		>li{
+			display:inline-block;
+
+			>a{
+				border:none;
+				margin-right:2px;
+				background-color:@color-tab-bg-alt;
+				.round(4);
+
+				&:hover{
+					background-color: @color-tab-bg;
+				}
+			}
+
+			&.active {
+				a {
+					//margin-left:-1px;
+					border: none;
+					background-color: @color-tab-alt;
+					color:@color-tab-bg-alt;
+
+					&:hover{
+						background-color: @color-tab;
+						//color:@color-tab-bg;
+					}
+				}
+			}
+		}
 
 		// Tab Menu Pill
 		&.pill {
+			//border:none;
 			>li {
-				margin:0 1px 0 0;
 				a {
 					.round(0);
+					margin-right:1px;
 				}
 				&.active a {
-					margin:0;
-					background-color:@color-tab-bk-alt;
+					//margin:0;
+					//background-color:@color-tab-alt;
 				}
 
 				&:first-child {
@@ -298,35 +393,6 @@
 				}
 			}
 		}
-
-		>li{
-			display:inline;
-			margin-right:5px;
-
-			>a{
-				.round(10);
-				margin-top:0px;
-				background-color:@color-tab-bk;
-
-
-				&:hover{
-					background-color: @color-tab-bk-alt;
-				}
-			}
-
-			&.active {
-				a {
-					margin-left:-1px;
-					border: none;
-					background-color: @color-tab-bk-alt;
-
-					&:hover{
-						background-color: @color-tab;
-						color:@color-tab-bk;
-					}
-				}
-			}
-		}
 	}
 
 	// Tab display as block
@@ -338,24 +404,22 @@
 			>a {
 				margin:0;
 				padding:7px;
-				border: 1px solid #999;
+				border: 1px solid @color-tab-alt;
 				.round-corners(0,0,0,0);
 			}
-		}
-		>li.active {
-			a {
-				border-right: 1px solid #999;
-				border-left: 1px solid #999;
-				background-color: @color-tab-bk;
+			&.active {
+				a {
+					background-color: @color-tab-alt;
+					color:@color-tab-bg-alt;
 
-				&:hover{
-					background-color: @color-tab-bk-alt;
-					color:@color-tab-alt;
+					&:hover{
+						background-color: @color-tab;
+						color:@color-tab-bg-alt;
+					}
 				}
 			}
 		}
 	}
-	.clearfix;
 }
 
 /* Buttom */
@@ -391,7 +455,7 @@
 			display: block;
 			padding: 6px 0 3px 45px;
 			position: relative;
-			background-color: @color-tab-bk;
+			background-color: @color-tab-bg;
 			&:after{
 				position: absolute;
 				top: 50%;
@@ -403,7 +467,7 @@
 				height: 0;
 				margin-top: -50px;
 				border-bottom: 50px solid transparent;
-				border-left: 30px solid @color-tab-bk;
+				border-left: 30px solid @color-tab-bg;
 				border-top: 50px solid transparent;
 			}
 			&:before{
@@ -421,7 +485,7 @@
 				border-top: 50px solid transparent;
 			}
 			&:hover {
-				background-color: @color-tab-bk-alt;
+				background-color: @color-tab-bg-alt;
 				text-decoration:none;
 				color:@color-tab-alt;
 				/*
@@ -432,7 +496,7 @@
 				*/
 			}
 			&:hover:after {
-				border-left-color: @color-tab-bk-alt !important;
+				border-left-color: @color-tab-bg-alt !important;
 			}
 		}
 		&:first-child a{
