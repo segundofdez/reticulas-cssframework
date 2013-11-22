@@ -33,8 +33,6 @@ body{
 }
 
 
-a { color:@color-link;}
-
 ul{
 	margin-left:0;
 	margin-right: 0;
@@ -109,6 +107,23 @@ h2{
 	.shadow();
 }
 
+//Responsive tabs
+.tabs-responsive{
+	.tabs();
+	@media only screen and (max-width: 480px),
+	only screen and (max-device-width: 480px){
+		.tabs;
+    	.tabs &.stacked;
+	}
+}
+
+.btn{
+	//padding: 5px 90px;
+}
+
+.breadcrumb{
+	font-size: 14px;
+}
 
 /* STATES
 ----------------------------------------------------------- */

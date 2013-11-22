@@ -4,7 +4,7 @@
  * @description     Basic aspect forms
  *                  Thanks to html5-boilerplate - https://github.com/h5bp/
  *
- * @version         1.5
+ * @version         2.0.0
  *
  * @License         MIT License
  *
@@ -38,9 +38,9 @@
 /* Form - fieldset - legend
 -------------------------------------------------------------- */
 
-legend { 
-	font-weight: bold; 
-	*margin-left: -7px; 
+legend {
+	font-weight: bold;
+	*margin-left: -7px;
 	white-space: normal;
 }
 
@@ -54,17 +54,17 @@ label { cursor: pointer; }
 * 2. Remove margins in FF3/4 S5 Chrome
 * 3. Define consistent vertical alignment display in all browsers
 */
-button, 
-input, 
-select, 
-textarea { 
-	font-size: 100%; 
-	margin:0; 
-	vertical-align: baseline; 
-	*vertical-align: middle; 
+button,
+input,
+select,
+textarea {
+	font-size: 100%;
+	margin:0;
+	vertical-align: baseline;
+	*vertical-align: middle;
 	}
 
-textarea { 
+textarea {
 	overflow: auto;
 	vertical-align: top;
 	resize: vertical;
@@ -82,60 +82,60 @@ button, input { line-height: normal; }
 * 3. Correct inner spacing displayed oddly in IE7 (doesn't effect IE6)
 */
 button,
-input[type="button"], 
-input[type="reset"], 
-input[type="submit"] { 
-	cursor: pointer; 
-	-webkit-appearance: button; 
-	*overflow: visible; 
+input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+	cursor: pointer;
+	-webkit-appearance: button;
+	*overflow: visible;
 	}
-	
-/* 
-* Opera bug on cursor. Remember define :hover 
+
+/*
+* Opera bug on cursor. Remember define :hover
 
 input[type="button"], input[type="reset"], input[type="submit"]
 */
 
-	
+
 /*
 * Re-set default cursor for disabled elements
 
-button[disabled], 
+button[disabled],
 input[disabled] { cursor: default; }
-*/	
+*/
 
 /*
 * Consistent box sizing and appearance
 */
-input[type="checkbox"], 
-input[type="radio"] { 
-	box-sizing: border-box; 
-	padding: 0; 
-	*width: 13px; 
-	*height: 13px; 
+input[type="checkbox"],
+input[type="radio"] {
+	box-sizing: border-box;
+	padding: 0;
+	*width: 13px;
+	*height: 13px;
 	}
-	
-input[type="search"] { 
-	-webkit-appearance: textfield; 
-	-moz-box-sizing: content-box; 
-	-webkit-box-sizing: content-box; 
-	box-sizing: content-box; 
+
+input[type="search"] {
+	-webkit-appearance: textfield;
+	-moz-box-sizing: content-box;
+	-webkit-box-sizing: content-box;
+	box-sizing: content-box;
 	}
-input[type="search"]::-webkit-search-decoration, 
+input[type="search"]::-webkit-search-decoration,
 input[type="search"]::-webkit-search-cancel-button { -webkit-appearance: none; }
 
 
 /*
 * Remove inner padding and border in FF3/4: h5bp.com/l
 */
-button::-moz-focus-inner, 
+button::-moz-focus-inner,
 input::-moz-focus-inner { border: 0; padding: 0; }
 
 
-/* Colors for form validity 
-input:valid, 
+/* Colors for form validity
+input:valid,
 textarea:valid { background-color: #ddf0dd;}
-input:invalid, 
+input:invalid,
 textarea:invalid { background-color: #f0dddd; }
 */
 
@@ -143,9 +143,9 @@ textarea:invalid { background-color: #f0dddd; }
 -------------------------------------------------------------- */
 .error,
 .notice,
-.accepted    { 
+.accepted    {
 	border:1px solid;
-	line-height: normal; 
+	line-height: normal;
 	margin-bottom:12px; /*baseline adjust*/
 	padding:7px 10px;
 }

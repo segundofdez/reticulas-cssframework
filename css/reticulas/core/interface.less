@@ -3,7 +3,7 @@
  *
  * @description     Extend base.css with some interface elements
  *
- * @version         2.0
+ * @version         2.0.0
  *
  * @License         MIT License
  *
@@ -237,7 +237,8 @@
 -----------------------------------------------------------
 */
 
-/* Tabs */
+// 4.4.1 Tabs ---------------------------------------------
+// .tabs();
 .tabs {
 	.clearfix;
 	list-style-type:none;
@@ -277,12 +278,12 @@
 		}
 	}
 
-	// Tab display on top
+	// 4.4.1.2 Tabs top ------------------------------------
 	&.tab-top{
 		border-color: transparent;
 		border-top: 1px solid @color-tab-alt;
 		>li{
-				margin-top:0px;
+			margin-top:0px;
 			>a{
 				.round-corners(0,0,4,4);
 			}
@@ -294,7 +295,8 @@
 			}
 		}
 	}
-	// Tab display on right
+
+	// 4.4.1.3 Tabs right ----------------------------------
 	&.tab-right{
 		border-color: transparent;
 		border-right: 1px solid @color-tab-alt;
@@ -315,7 +317,7 @@
 		}
 	}
 
-	// Tab display on left
+	// 4.4.1.4 Tabs left -----------------------------------
 	&.tab-left{
 		border-color: transparent;
 		border-left: 1px solid @color-tab-alt;
@@ -335,7 +337,7 @@
 		}
 	}
 
-	// Tab Menu
+	// 4.4.1.5 Tabs menu ----------------------------------
 	&.menu{
 		border:none;
 		>li{
@@ -344,11 +346,12 @@
 			>a{
 				border:none;
 				margin-right:2px;
-				background-color:@color-tab-bg-alt;
+				background-color:@color-tab-bg;
+				color:@color-tab-bg-alt;
 				.round(4);
 
 				&:hover{
-					background-color: @color-tab-bg;
+					background-color: @color-tab;
 				}
 			}
 
@@ -356,8 +359,8 @@
 				a {
 					//margin-left:-1px;
 					border: none;
-					background-color: @color-tab-alt;
-					color:@color-tab-bg-alt;
+					background-color: @color-tab;
+					color: @color-tab-bg-alt;
 
 					&:hover{
 						background-color: @color-tab;
@@ -367,7 +370,7 @@
 			}
 		}
 
-		// Tab Menu Pill
+		// 4.4.1.6 Tabs menu pill ------------------------
 		&.pill {
 			//border:none;
 			>li {
@@ -395,26 +398,28 @@
 		}
 	}
 
-	// Tab display as block
+	// 4.4.1.7 Tabs stacked -----------------------------
 	&.stacked{
 		border: none;
 		clear:both;
 		>li{
 			float:none;
+			text-align:left;
+			display: block;
 			>a {
-				margin:0;
+				margin:0 !important;
 				padding:7px;
 				border: 1px solid @color-tab-alt;
-				.round-corners(0,0,0,0);
+				.round-corners(0,0,0,0) !important;
 			}
 			&.active {
 				a {
-					background-color: @color-tab-alt;
+					background-color: @color-tab;
 					color:@color-tab-bg-alt;
 
 					&:hover{
 						background-color: @color-tab;
-						color:@color-tab-bg-alt;
+						color:@color-tab-alt;
 					}
 				}
 			}
@@ -422,81 +427,74 @@
 	}
 }
 
-/* Buttom */
+// 4.4.2 Button ----------------------------------------
 .btn {
 	display: inline-block;
-	padding: 5px 10px 5px 10px;
-	text-align: center;
 	border:none;
-	//text-shadow: 0 1px 1px rgba(255,255,255,.75);
+	text-align: center;
 	vertical-align: middle;
-	.gradient();
+	padding: 5px 10px;
+	.gradient-vertical();
+	color:@color;
 	.round(5);
 
 	&:hover {
 		text-decoration:none;
-		.gradient(#666);
+		.gradient-vertical(@color-darkgrey);
 	}
 }
 
 
-/* Breadcrumb */
-.breadcrumb { /* ul */
+// 4.4.3 Breadcrumb ------------------------------------
+.breadcrumb {
 	list-style: none;
 	margin: 0;
-	margin-bottom:14px;
 	overflow: hidden;
-	font-size:75%;
-
 	li {
 		float: left;
 		margin: 0 !important;
 		a {
 			display: block;
-			padding: 6px 0 3px 45px;
+			padding: 7px 0px 7px 40px;
 			position: relative;
-			background-color: @color-tab-bg;
+			background-color: @color;
+			line-height: 1em;
 			&:after{
-				position: absolute;
-				top: 50%;
-				z-index: 2;
-				width: 0;
 				content: " ";
 				display: block;
+				position: absolute;
+				top: 50%;
 				left: 100%;
+				z-index: 2;
+				width: 0;
 				height: 0;
-				margin-top: -50px;
-				border-bottom: 50px solid transparent;
-				border-left: 30px solid @color-tab-bg;
-				border-top: 50px solid transparent;
+				margin-top: -30px;
+				border-bottom: 30px solid transparent;
+				border-left: 30px solid @color;
+				border-top: 30px solid transparent;
 			}
 			&:before{
 				content: " ";
 				display: block;
-				height: 0;
-				left: 100%;
-				margin-top: -50px;
-				margin-left: 3px;
 				position: absolute;
 				top: 50%;
+				left: 100%;
+				width: 0;
+				height: 0;
+				margin-top: -30px;
+				margin-left: 2px;
 				z-index: 1;
-				border-bottom: 50px solid transparent;
-				border-left: 30px solid #FFF;
-				border-top: 50px solid transparent;
+				border-bottom: 30px solid transparent;
+				border-left: 30px solid @color-white;
+				border-top: 30px solid transparent;
 			}
 			&:hover {
-				background-color: @color-tab-bg-alt;
+				background-color: @color-alt;
 				text-decoration:none;
-				color:@color-tab-alt;
-				/*
-				-webkit-transition:all .0s linear;
-				-moz-transition:all .0s linear;
-				-o-transition:all .0s linear;
-				transition:all .0s linear;
-				*/
-			}
-			&:hover:after {
-				border-left-color: @color-tab-bg-alt !important;
+				color:@color;
+				&:after {
+					border-left-color: @color-alt !important;
+				}
 			}
 		}
 		&:first-child a{

@@ -6,6 +6,7 @@ UPDATES:
 ENHANCEMENT:
  ✔ Enhancement new colors on notices @done (13-11-20 21:28)
  ✔ Enhancement on tabs @done (13-11-21 02:02)
+ ✔ Enhancement on breadrumbs @done (13-11-22 00:11)
 
 NEW:
  ✔ Add new color @color-light: #F5F5F5; @done (13-11-20 00:57)
@@ -17,6 +18,7 @@ NEW:
  ✔ Add new color @bg-erased; @done (13-11-20 21:20)
  ✔ Add new .gradient-radial( #color-in, #color-out); @done (13-11-20 23:14)
  ✔ Add new .gradient-horizontal(#color-left, #color-right); @done (13-11-20 23:45)
+ ✔ Add new .font-size(16); @done (13-11-22 00:36)
 
 CHANGES:
  ✔ Change @tabcolor > @color-tab @done (13-11-20 01:22)

@@ -3,7 +3,7 @@
  *
  * @description     Extend base.css with some utilities and helpers
  *
- * @version         1.5
+ * @version         2.0.0
  *
  * @License         MIT License
  *
@@ -34,17 +34,25 @@
    DEALINGS IN THE SOFTWARE.
 */
 
+/* -------------------- 3.0 UTILITIES -------------------- */
 
-/* 3. UTILITIES */
+/*
+-----------------------------------------------------------
+3.1 Float elements
+-----------------------------------------------------------
+*/
 
-/* 3.1 Float elements
------------------------------------------------------------------------------ */
-.floatr 		{ float:right;}
-.floatl 		{ float:left;}
+.floatr { float:right;}
+.floatl { float:left;}
 
-/* 3.2 Clear - clearfix
------------------------------------------------------------------------------ */
-.clear  		{ clear:both;}
+
+/*
+-----------------------------------------------------------
+3.2 Clear - clearfix
+-----------------------------------------------------------
+*/
+
+.clear { clear:both;}
 
 // clearfix http://nicolasgallagher.com/micro-clearfix-hack/
 .clearfix {
@@ -59,16 +67,25 @@
 	//*zoom:1;
 }
 
-/* 3.3 Common
------------------------------------------------------------------------------ */
 
-/* Hide from both screenreaders and browsers: h5bp.com/u */
-.hide { display: none !important; visibility: hidden; }
+/*
+-----------------------------------------------------------
+3.3 Visibility
+-----------------------------------------------------------
+*/
 
-/* Hide visually and from screenreaders, but maintain layout */
-.invisible { visibility: hidden; }
+// Hide from both screenreaders and browsers: h5bp.com/u
+.hide {
+	display: none !important;
+	visibility: hidden;
+}
 
-/* Hide only visually, but have it available for screenreaders: h5bp.com/v */
+// Hide visually and from screenreaders, but maintain layout
+.invisible {
+	visibility: hidden;
+}
+
+// Hide only visually, but have it available for screenreaders: h5bp.com/v
 .visuallyhide {
 	border: 0;
 	clip: rect(0, 0, 0,0);
@@ -80,7 +97,14 @@
 	width: 1px;
 }
 
-/* replace text for images - remember to specify height and width */
+
+/*
+-----------------------------------------------------------
+3.4 Image replacement
+-----------------------------------------------------------
+*/
+
+// Replace text for images - remember to specify height and width
 .imageback {
 	display:block;
 	background-color:transparent;
@@ -93,17 +117,46 @@
 	text-align: left;
 	text-indent: -9999px;
 	direction: ltr;
-	}
-	.imageback a {
+	a {
 		width:100%;
 		height:100%;
 		display:block;
 		text-decoration:none;
-		}
+	}
+}
 
-/* Center an element */
-.boxcenter { margin:0 auto !important; float:none;}
+/*
+-----------------------------------------------------------
+3.5 Helpers
+-----------------------------------------------------------
+*/
 
-/* See baseline */
-.baseline { background-image:url(../reticulas/core/baseline-22.gif); background-position:0 -5px;}
+// Center an element
+.boxcenter {
+	margin:0 auto !important;
+	float:none;
+}
 
+// See baseline
+.baseline {
+	background-image:url(../reticulas/core/baseline-22.gif);
+	background-position:0 -5px;
+}
+
+
+/*
+-----------------------------------------------------------
+3.6 Font size
+-----------------------------------------------------------
+*/
+
+// Set value in px
+//.font-size(16);
+.font-size(@sizeValue) {
+  @remValue: @sizeValue / 16;
+  @pxValue: (@sizeValue);
+  @lineheight: @pxValue*1.375;
+  font-size: ~"@{pxValue}px";
+  font-size: ~"@{remValue}rem";
+  line-height: ~"@{lineheight}px";
+}
