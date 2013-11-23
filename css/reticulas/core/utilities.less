@@ -41,17 +41,23 @@
 3.1 Float elements
 -----------------------------------------------------------
 */
-
 .floatr { float:right;}
 .floatl { float:left;}
 
-
+p img.left {
+	margin:0.32em 1.5em 1.2em 0;
+	padding:0;
+	float:left;
+}
+p img.right {
+	margin:0.32em 0 1.2em 1.5em;
+	float:right;
+}
 /*
 -----------------------------------------------------------
 3.2 Clear - clearfix
 -----------------------------------------------------------
 */
-
 .clear { clear:both;}
 
 // clearfix http://nicolasgallagher.com/micro-clearfix-hack/
@@ -66,26 +72,23 @@
 	}
 	//*zoom:1;
 }
-
-
 /*
 -----------------------------------------------------------
 3.3 Visibility
 -----------------------------------------------------------
 */
-
-// Hide from both screenreaders and browsers: h5bp.com/u
+// 3.3.1 Hide from both screenreaders and browsers: h5bp.com/u
 .hide {
 	display: none !important;
 	visibility: hidden;
 }
 
-// Hide visually and from screenreaders, but maintain layout
+// 3.3.2 Hide visually and from screenreaders, but maintain layout
 .invisible {
 	visibility: hidden;
 }
 
-// Hide only visually, but have it available for screenreaders: h5bp.com/v
+// 3.3.3 Hide only visually, but have it available for screenreaders: h5bp.com/v
 .visuallyhide {
 	border: 0;
 	clip: rect(0, 0, 0,0);
@@ -96,15 +99,12 @@
 	position: absolute;
 	width: 1px;
 }
-
-
 /*
 -----------------------------------------------------------
 3.4 Image replacement
 -----------------------------------------------------------
 */
-
-// Replace text for images - remember to specify height and width
+// 3.4.1 Replace text for images - remember to specify height and width
 .imageback {
 	display:block;
 	background-color:transparent;
@@ -125,19 +125,20 @@
 	}
 }
 
+
 /*
 -----------------------------------------------------------
 3.5 Helpers
 -----------------------------------------------------------
 */
 
-// Center an element
+// 3.5.1 Center an element --------------------------------
 .boxcenter {
 	margin:0 auto !important;
 	float:none;
 }
 
-// See baseline
+// 3.5.2 See baseline -------------------------------------
 .baseline {
 	background-image:url(../reticulas/core/baseline-22.gif);
 	background-position:0 -5px;
@@ -150,13 +151,13 @@
 -----------------------------------------------------------
 */
 
-// Set value in px
+// 3.6.1 Set value in px ----------------------------------
 //.font-size(16);
 .font-size(@sizeValue) {
-  @remValue: @sizeValue / 16;
-  @pxValue: (@sizeValue);
-  @lineheight: @pxValue*1.375;
-  font-size: ~"@{pxValue}px";
-  font-size: ~"@{remValue}rem";
-  line-height: ~"@{lineheight}px";
+	@remValue: @sizeValue / 16;
+	@pxValue: (@sizeValue);
+	@lineheight: @pxValue*1.375;
+	font-size: ~"@{pxValue}px";
+	font-size: ~"@{remValue}rem";
+	line-height: ~"@{lineheight}px";
 }

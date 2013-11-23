@@ -1,5 +1,5 @@
 /**
- * RETICULAS CSSFRAMEWORK - form.css
+ * RETICULAS CSSFRAMEWORK - form.less
  *
  * @description     Basic aspect forms
  *                  Thanks to html5-boilerplate - https://github.com/h5bp/
@@ -143,18 +143,35 @@ textarea:invalid { background-color: #f0dddd; }
 -------------------------------------------------------------- */
 .error,
 .notice,
-.accepted    {
+.accepted {
 	border:1px solid;
-	line-height: normal;
-	margin-bottom:12px; /*baseline adjust*/
-	padding:7px 10px;
+	//line-height: normal;
+	//margin-bottom:12px; /*baseline adjust*/
+	padding: @baseline/2.2;
 }
 
-.error       { background:#FBE3E4; color:#8a1f11; border-color:#FBC2C4;}
-.notice      { background:#FFF6BF; color:#514721; border-color:#FFD324;}
-.accepted    { background:#E6EFC2; color:#264409; border-color:#C6D880;}
-
-.error a     { color:#8a1f11;}
-.notice a    { color:#514721;}
-.accepted a  { color:#264409;}
+.error {
+	background:@bg-error;
+	color: @color-error;
+	border-color: @color-error;
+	a {
+		color: @color-error;
+	}
+}
+.notice {
+	background:@bg-notice;
+	color: @color-notice;
+	border-color: @color-notice;
+	a {
+		color: @color-notice;
+	}
+}
+.accepted {
+	background:@bg-accepted;
+	color:@color-accepted;
+	border-color: @color-accepted;
+	a {
+		color: @color-accepted;
+	}
+}
 

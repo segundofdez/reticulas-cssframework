@@ -3,7 +3,7 @@
  *
  * @description     Make your own fluid grid - WORKING TO IMPROVE GRID SYSTEM!!
  *
- * @version         1.5
+ * @version         2.0.0
  *
  * @License 		MIT License
  *
@@ -39,7 +39,6 @@
 	/* Older FF */
 	/* IE8 */
 	/* CSS3 */
-	
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
 	-ms-box-sizing: border-box;
@@ -78,20 +77,20 @@
 
 
 .wrapper,
-.wrappernested{ 
+.wrappernested{
 	display: block;
 	clear:both;
 	width:100%;
 	//overflow:hidden;
-	
+
 	max-width:@wrapper;
 
 	margin-right: auto;
 	margin-left: auto;
-	.clearfix;	
+	.clearfix;
 }
 
-.wrappernested{ 
+.wrappernested{
 	max-width: @wrappernested;
 }
 
@@ -117,7 +116,7 @@
 	margin-right: @fluid-gutter-width;
 }
 
-.inner { 
+.inner {
 	padding-left:@total-width*((@gutter-width*.5)/@gridsystem-width);
 	padding-right:@total-width*((@gutter-width*.5)/@gridsystem-width);
 }
@@ -127,7 +126,7 @@
 	margin-right:@total-width*((@gutter-width*.5)/@gridsystem-width);
 }
 
-//Solve  padding problem on diferents indents
+// Solve padding problem on diferents indents
 .innerwrapper {
 	padding-left:@total-width*(((@gutter-width*.5)/@gridsystem-width)/@fluid-gutter-width);
 	padding-right:@total-width*(((@gutter-width*.5)/@gridsystem-width)/@fluid-gutter-width);

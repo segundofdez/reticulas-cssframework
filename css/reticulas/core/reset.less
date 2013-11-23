@@ -1,19 +1,19 @@
 /**
- * RETICULAS CSSFRAMEWORK - reset.css
+ * RETICULAS CSSFRAMEWORK - reset.less
  *
- * @description     Removes default styling tags of HTML
- *                  Based on Eric Meyer's work and Nicolas gallaghe:
- *                  http://meyerweb.com/eric/tools/css/reset/
- *                  http://necolas.github.com/normalize.css/
+ * @description   Removes default styling tags of HTML
+ *                Based on Eric Meyer's work and Nicolas gallaghe:
+ *                http://meyerweb.com/eric/tools/css/reset/
+ *                http://necolas.github.com/normalize.css/
  *
- * @version         2.0.0
+ * @version       2.0.0
  *
- * @License         MIT License
+ * @License       MIT License
  *
- * @link            http://cssframework.reticulas.com
- * @info            http://segundofdez.com - @segundo_fdez | http://sond3.com - @sond3
+ * @link          http://cssframework.reticulas.com
+ * @info          http://segundofdez.com - @segundo_fdez | http://sond3.com - @sond3
  *
- * =======================================================================
+ * ==========================================================================
  *
  * Copyright (c) 2013, Segundo Fdez (@segundo_fdez) - hello@reticulas.com
  * http://cssframework.reticulas.com | http://segundofdez.com | http://sond3.com
@@ -37,31 +37,44 @@
    DEALINGS IN THE SOFTWARE.
 */
 
-/* 1. RESET */
+/*
+-----------------------------------------------------------------------------
+2.0 RESET
+-----------------------------------------------------------------------------
+*/
 
-/* 1.1 Root element
------------------------------------------------------------------------------ */
+/*
+-----------------------------------------------------------------------------
+2.1 Root element
+-----------------------------------------------------------------------------
+*/
 html,
-
-/* 1.2 Sections
------------------------------------------------------------------------------ */
+/*
+-----------------------------------------------------------------------------
+2.2 Sections
+-----------------------------------------------------------------------------
+*/
 body,
 section, nav, article, aside,
 h1, h2, h3, h4, h5, h6,
 hgroup, header,
 footer, address,
-
-/* 1.3 Grouping content
------------------------------------------------------------------------------ */
+/*
+-----------------------------------------------------------------------------
+2.3 Grouping content
+-----------------------------------------------------------------------------
+*/
 p, pre,
 blockquote,
 ol, ul, li,
 dl, dt, dd,
 figure, figcaption,
 div,
-
-/* 1.4 Text-level semantics
------------------------------------------------------------------------------ */
+/*
+-----------------------------------------------------------------------------
+2.4 Text-level semantics
+-----------------------------------------------------------------------------
+*/
 a,
 em, strong,
 small,s,
@@ -70,32 +83,44 @@ time, code, var, samp, kbd,
 sub, sup,
 i, b, u,
 mark, ruby, span,
-
-/* 1.5  Edits
------------------------------------------------------------------------------ */
+/*
+-----------------------------------------------------------------------------
+2.5  Edits
+-----------------------------------------------------------------------------
+*/
 ins, del,
-
-/* 1.6 Embedded content
------------------------------------------------------------------------------ */
+/*
+-----------------------------------------------------------------------------
+2.6 Embedded content
+-----------------------------------------------------------------------------
+*/
 img,
 iframe,object,
 video, audio,
 canvas,
-
-/* 1.7 Tabular data
------------------------------------------------------------------------------ */
+/*
+-----------------------------------------------------------------------------
+2.7 Tabular data
+-----------------------------------------------------------------------------
+*/
 table, caption, tbody, thead, tfoot, tr, td, th,
-
-/* 1.8 Forms
------------------------------------------------------------------------------ */
+/*
+-----------------------------------------------------------------------------
+2.8 Forms
+-----------------------------------------------------------------------------
+*/
 form, fieldset, legend, label, output,
-
-/* 1.9 Interactive elements
------------------------------------------------------------------------------ */
+/*
+-----------------------------------------------------------------------------
+2.9 Interactive elements
+-----------------------------------------------------------------------------
+*/
 details, summary, menu,
-
-/* OBSOLETE FEATURES
------------------------------------------------------------------------------ */
+/*
+-----------------------------------------------------------------------------
+2.10 Obsolete features
+-----------------------------------------------------------------------------
+*/
 applet {
    margin: 0;
    padding: 0;
@@ -109,26 +134,44 @@ applet {
    */
 }
 
-/* HTML5 DISPLAY-ROLE RESET FOR OLDER BROWSERS */
-
-/* 1.2 Sections
------------------------------------------------------------------------------ */
+/*
+-----------------------------------------------------------------------------
+2.2.1 Sections - Html5 display-role reset for older browsers
+-----------------------------------------------------------------------------
+*/
 section, nav, article,
 aside, hgroup, header, footer,
-
-/* 1.3 Grouping content
------------------------------------------------------------------------------ */
+/*
+-----------------------------------------------------------------------------
+2.3.1 Grouping content - Html5 display-role reset for older browsers
+-----------------------------------------------------------------------------
+*/
 figure, figcaption,
-
-/* 1.9 Interactive elements
------------------------------------------------------------------------------ */
-details, menu     { display: block;}
-
-ol, ul            { list-style: none;}
-blockquote, q     { quotes: none;}
-
+/*
+-----------------------------------------------------------------------------
+2.9.1 Interactive elements - Html5 display-role reset for older browsers
+-----------------------------------------------------------------------------
+*/
+details, menu { display: block;}
+/*
+-----------------------------------------------------------------------------
+2.3.1 Grouping content - Html5 display-role reset for older browsers
+-----------------------------------------------------------------------------
+*/
+ol, ul { list-style: none;}
+/*
+-----------------------------------------------------------------------------
+2.3.1 Grouping content - Html5 display-role reset for older browsers
+2.4.1 Text-level semantics - Html5 display-role reset for older browsers
+-----------------------------------------------------------------------------
+*/
+blockquote, q { quotes: none;}
 blockquote:before,
 blockquote:after,
 q:before, q:after { content: ''; content: none;}
-
-table             { border-collapse: collapse; border-spacing: 0;}
+/*
+-----------------------------------------------------------------------------
+// 2.7.1 Tabular data - Html5 display-role reset for older browsers
+-----------------------------------------------------------------------------
+*/
+table { border-collapse: collapse; border-spacing: 0;}
