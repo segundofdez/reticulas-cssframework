@@ -1,7 +1,10 @@
+//@import "../less/extended/import.less";
+// import reticulas core for test less.js
+
 /**
- * RETICULAS CSSFRAMEWORK - extended/text.less
+ * RETICULAS CSSFRAMEWORK - extended/test.less
  *
- * @description     test for text
+ * @description     test for reticulas
  *
  * @copyright       Copyright (C) 2013, Sond3
  * @info            http://segundofdez.com - @segundo_fdez | http://sond3.com - @sond3
@@ -19,8 +22,11 @@
 
 */
 
-/* See baseline */
-.baseline { background-image:url(../css/reticulas/core/baseline-22.gif); background-position:0 -5px;}
+/* See baseline for php */
+.baseline { background-image:url(../../less/reticulas/core/baseline-22.gif); background-position:0 -5px;}
+
+// See baseline for js
+//.baseline { background-image:url(../less/reticulas/core/baseline-22.gif); background-position:0 -5px;}
 
 /* REDEFINE - Identifier defined within the folder reticulas
 ----------------------------------------------------------- */
@@ -112,8 +118,8 @@ h2{
 	@media only screen and (max-width: 480px),
 	only screen and (max-device-width: 480px){
 		.tabs;
-    	//.tabs.stacked; // LESS JS
-    	.tabs &.stacked; // LESS PHP
+    	.tabs.stacked; // LESS JS
+    	//.tabs &.stacked; // LESS PHP
 	}
 }
 

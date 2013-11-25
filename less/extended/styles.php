@@ -1,7 +1,7 @@
 <?php
 
 header('Content-type: text/css');
-include "../reticulas/libraries/autoload.php";
+include "../../vendor/autoload.php";
 
 $less = new lessc("import.less");
 //$less->setFormatter("compressed");
