@@ -49,7 +49,7 @@ How to use with lessjs
 Link the import.less stylesheets with the rel set to “stylesheet/less”:
 
 ```HTML
-<link rel="stylesheet" href="less/extended/import.less">
+<link rel="stylesheet/less" href="less/extended/import.less">
 ```
 and include the less.js in the ```  <head> ``` element of your page, like so:
 
