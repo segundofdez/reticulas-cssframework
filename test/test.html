@@ -35,15 +35,17 @@
 			<h4>Heading h4</h4>
 			<h5>Heading h5</h5>
 			<h6>Heading h6</h6>
-			<br>
+
+			<h2>3.2 Essential module - Hipertext</h2>
 			<p>Lorem ipsum dolor sit amet, <a href="#">consectetur adipisicing</a> elit, sed do eiusmod
 				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-				quis nostrud exercitation <strong>ullamco laboris</strong> nisi ut aliquip ex ea commodo
+				quis nostrud exercitation <strong>ullamco laboris</strong> <b>nisi ut aliquip</b> ex ea commodo
 				consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-				cillum dolore eu fugiat nulla pariatur. <em>Excepteur sint </em>occaecat cupidatat non
-				proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+				cillum dolore eu fugiat <sup>sup</sup> nulla pariatur<sub>sub</sub> <em>Excepteur sint </em>occaecat cupidatat non
+				proident, <small>sunt in culpa qui officia deserunt mollit anim id est laborum.</small>
 			</p>
 
+			<h2>3.3 Essential module - List</h2>
 			<ul>
 				<li>test unordered list</li>
 				<li>test unordered list</li>
@@ -69,7 +71,169 @@
 			 	<dd>Definition list explanation</dd>
 			</dl>
 
-			<h2>4.1.1 Font size</h2>
+			<h2>3.4 Essential module - Text</h2>
+			<abbr>Abbr</abbr>
+			<address>Address</address>
+			<blockquote>Blockquote</blockquote>
+			<pre>Pre</pre>
+			<cite>cite</cite>
+			<code>Code</code>
+			<var>var</var>
+			<dfn>dfn</dfn>
+
+			<h2>3.5 Extension modules text - Presentation</h2>
+			<p>See first paragraph</p>
+			<hr>
+
+			<h2>3.6 Extension modules text - Edition</h2>
+			<del>del</del>
+			<ins>ins</ins>
+
+			<h2>3.7 Table Module</h2>
+			<table>
+                <caption>
+                    caption
+                </caption>
+
+                <thead>
+                    <tr>
+                        <th rowspan="2" scope="col">AÑO</th>
+                        <th colspan="4" scope="col">Producto</th>
+                    </tr>
+                    <tr>
+                        <th scope="col">Producto A</th>
+                        <th scope="col">Producto B</th>
+                        <th scope="col">Producto C</th>
+                        <th scope="col">Producto D</th>
+                    </tr>
+                </thead>
+
+                <tfoot>
+                    <tr>
+                        <th rowspan="2" scope="col">AÑO</th>
+                        <th scope="col">Producto A</th>
+                        <th scope="col">Producto B</th>
+                        <th scope="col">Producto C</th>
+                        <th scope="col">Producto D</th>
+                    </tr>
+                    <tr>
+                        <th colspan="4" scope="col">Producto</th>
+                    </tr>
+                </tfoot>
+
+                <tbody>
+                    <tr>
+                        <th scope="row">N-3</th>
+
+                        <td>2</td>
+                        <td>6</td>
+                        <td>2</td>
+                        <td>2</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">N-2</th>
+
+                        <td>3</td>
+                        <td>5</td>
+                        <td>8</td>
+                        <td>4</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">N-1</th>
+
+                        <td>4</td>
+                        <td>4</td>
+                        <td>7</td>
+                        <td>3</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">N</th>
+
+                        <td>5</td>
+                        <td>7</td>
+                        <td>6</td>
+                        <td>2</td>
+                    </tr>
+                </tbody>
+            </table>
+
+
+			<h2>4.0 FORM</h2>
+            <form id="dummy" action="#" method="post">
+				<fieldset>
+                    <legend>Simple form</legend>
+                    <div>
+                        <label for="dummy0">Test input</label><br>
+                        <input name="dummy0" id="dummy0" value="" type="text">
+                    </div>
+                    <div>
+                        <label for="dummy2">Test textarea</label><br>
+                        <textarea name="dummy2" id="dummy2" rows="5" cols="20"></textarea>
+                    </div>
+                    <div>
+                        <input value="BUTTON" type="submit">
+                    </div>
+                </fieldset>
+    			<fieldset>
+        		<legend>Select, Radio buttons, Checkboxes</legend>
+                    <div>
+                        <label for="dummy3">Select options</label><br>
+                        <select id="dummy3" name="dummy3">
+                            <option value="1">Select 1</option>
+                            <option value="2">Select 2</option>
+                            <option value="3">Select 3</option>
+                        </select>
+                    </div>
+
+                    <div>
+                        <label for="dummy4">Select group options</label><br>
+                        <select id="dummy4" name="dummy4">
+                            <option>Options</option>
+
+                            <optgroup label="Option 1">
+                                <option>Test 1</option>
+                                <option>Test 2</option>
+                            </optgroup>
+
+                            <optgroup label="Option 1">
+                                <option>Test 3</option>
+                                <option>Test 4</option>
+                            </optgroup>
+                        </select>
+                    </div>
+
+                    <div>
+                    	<label>Radio buttons</label>
+                    	<br>
+                        <input name="example" type="radio">
+    		    		Radio 1<br>
+                        <input name="example" type="radio">
+   		        		Radio 2<br>
+                        <input name="example" type="radio">
+    		    		Radio 3<br>
+                    </div>
+
+                    <div><label>Checkboxes</label><br>
+                        <input type="checkbox">
+    		    		Check 1<br>
+                        <input type="checkbox">
+    		    		Check 2<br>
+                        <input type="checkbox">
+    		    		Check 3<br>
+    				</div>
+                </fieldset>
+            </form>
+            <h2>4.3 Notices form color - accepted - notice - error</h2>
+			<ul>
+				<li class="error"><p>.error; Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolor</p><p>e magna aliqua. <a href="#">Ut enim ad minim veniam,</a> quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p></li>
+
+				<li class="notice"><p>notice; Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. <a href="#">Ut enim ad minim veniam,</a>  quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p></li>
+
+				<li class="accepted"><p>.accepted; Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. <a href="#">Ut enim ad minim veniam,</a>  quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p></li>
+			</ul>
+
+
+			<h2>6.1.1 Font size</h2>
 			<ul>
 				<li class="mini">.mini();</li>
 				<li class="medium">.medium();</li>
@@ -78,7 +242,7 @@
 				<li class="enormous">.enormous();</li>
 			</ul>
 
-			<h2>4.1.2 Text align</h2>
+			<h2>6.1.2 Text align</h2>
 			<ul>
 				<li class="textalignr">.textalignr();</li>
 				<li class="textalignl">.textalignl();</li>
@@ -86,7 +250,7 @@
 				<li class="textalignc">.textalignc();</li>
 			</ul>
 
-			<h2>4.2.1 Text colors: Grey scale</h2>
+			<h2>6.2.1 Text colors: Grey scale </h2>
 			<ul>
 				<li class="white">@color-white; .white();</li>
 				<li class="light">@color-light; .color-light();</li>
@@ -97,7 +261,7 @@
 				<li class="black">@color-black; .black();</li>
 			</ul>
 
-			<h2>4.2.2 Background colors: Grey scale</h2>
+			<h2>6.2.2 Background colors: Grey scale</h2>
 			<ul>
 				<li class="bg-white">.bg-white();</li>
 				<li class="bg-light">.bg-light();</li>
@@ -108,7 +272,7 @@
 				<li class="bg-black">.bg-black();</li>
 			</ul>
 
-			<h2>4.2.3 Notices</h2>
+			<h2>6.2.3 Color notices</h2>
 			<ul>
 				<li class="emphasized">emphasized</li>
 				<li class="correct">correct</li>
@@ -122,37 +286,37 @@
 				<li class="error">error</li>
 			</ul>
 
-			<h2>4.3.1 Equal round</h2>
+			<h2>6.3.1 Equal round</h2>
 			<div class="round">
 				.round(10);
 			</div>
 
-			<h2>4.3.2 Round corners</h2>
+			<h2>6.3.2 Round corners</h2>
 			<div class="round-corners">
 				.round(5,5,0,0);
 			</div>
 
-			<h2>4.3.3 Vertical gradient</h2>
+			<h2>6.3.3 Vertical gradient</h2>
 			<div class="gradient-vertical">
 				.gradient-vertical(#CCC, #999);
 			</div>
 
-			<h2>4.3.4 Horizontal gradient</h2>
+			<h2>6.3.4 Horizontal gradient</h2>
 			<div class="gradient-horizontal">
 				.gradient-horizontal(#999, #CCC);
 			</div>
 
-			<h2>4.3.5 Radial gradient</h2>
+			<h2>6.3.5 Radial gradient</h2>
 			<div class="gradient-radial">
 				.gradient-radial(#CCC, #999);
 			</div>
 
-			<h2>4.3.6 Box shadow</h2>
+			<h2>6.3.6 Box shadow</h2>
 			<div class="shadow">
 				.shadow(0,0,0,0,#333);
 			</div>
 
-			<h2>4.4 Tabs</h2>
+			<h2>6.4.1 Tabs</h2>
 
 			<ul class="tabs">
 				<li class="active"><a href="#">tab1</a></li>
@@ -160,36 +324,42 @@
 				<li><a href="#">tab3</a></li>
 			</ul>
 
+			<h2>6.4.1.2 Tabs top</h2>
 			<ul class="tabs tab-top">
 				<li class="active"><a href="#">tab1</a></li>
 				<li><a href="#">tab2</a></li>
 				<li><a href="#">tab3</a></li>
 			</ul>
 
+			<h2>6.4.1.3 Tabs right</h2>
 			<ul class="tabs tab-right">
 				<li class="active"><a href="#">tab1</a></li>
 				<li><a href="#">tab2</a></li>
 				<li><a href="#">tab3</a></li>
 			</ul>
 
+			<h2>6.4.1.4 Tabs left</h2>
 			<ul class="tabs tab-left">
 				<li class="active"><a href="#">tab1</a></li>
 				<li><a href="#">tab2</a></li>
 				<li><a href="#">tab3</a></li>
 			</ul>
 
+			<h2>6.4.1.5 Tabs menu</h2>
 			<ul class="tabs menu">
 				<li class="active"><a href="#">tab1</a></li>
 				<li><a href="#">tab2</a></li>
 				<li><a href="#">tab3</a></li>
 			</ul>
 
+			<h2>6.4.1.5.1 Tabs menu pill</h2>
 			<ul class="tabs menu pill">
 				<li class="active"><a href="#">tab1</a></li>
 				<li><a href="#">tab2</a></li>
 				<li><a href="#">tab3</a></li>
 			</ul>
 
+			<h2>.4.1.6 Tabs stacked</h2>
 			<ul class="tabs stacked">
 				<li class="active"><a href="#">tab1</a></li>
 				<li><a href="#">tab2</a></li>
@@ -201,8 +371,10 @@
 				<li><a href="#">tab3</a></li>
 			</ul>
 
+			<h2>6.4.2 Button</h2>
 			<p><a class="btn" href="#"> Button</a></p>
 
+			<h2>6.4.3 Breadcrumb</h2>
 			<ul class="breadcrumb">
 				<li><a href="#">brea sdf sda fsad fdcrumb 1</a></li>
 				<li><a href="#">breadcrumb 2</a></li>

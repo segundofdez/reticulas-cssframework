@@ -22,9 +22,6 @@
 
 */
 
-/* See baseline for php */
-.baseline { background-image:url(../../less/reticulas/core/baseline-22.gif); background-position:0 -5px;}
-
 // See baseline for js
 //.baseline { background-image:url(../less/reticulas/core/baseline-22.gif); background-position:0 -5px;}
 
@@ -47,14 +44,14 @@ ul{
 	}
 }
 
-
-// TEST NEW FEATURES
 h1{
 	margin-bottom: 0;
 }
 h2, h3, h4, h5, h6{
 	margin-bottom: @baseline;
 }
+
+
 /* COMMON
 ----------------------------------------------------------- */
 
@@ -118,8 +115,8 @@ h2{
 	@media only screen and (max-width: 480px),
 	only screen and (max-device-width: 480px){
 		.tabs;
-    	.tabs.stacked; // LESS JS
-    	//.tabs &.stacked; // LESS PHP
+    	//.tabs.stacked; // LESS JS
+    	.tabs &.stacked; // LESS PHP
 	}
 }
 

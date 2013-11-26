@@ -49,6 +49,7 @@
 3.1 Root element
 -----------------------------------------------------------------------------
 */
+
 html {
 	overflow-y: scroll; // fix movement on document scroll
 }
@@ -61,11 +62,14 @@ body {
 	// Improved handling of kerning pairs and ligatures in modern
 	text-rendering: optimizeLegibility;
 }
+
+
 /*
 -----------------------------------------------------------------------------
 3.2 Essential module - Hipertext
 -----------------------------------------------------------------------------
 */
+
 a {
 	color: @color-link;
 	text-decoration: none;
@@ -79,11 +83,14 @@ a {
 		outline: 0;
 	}
 }
+
+
 /*
 -----------------------------------------------------------------------------
 3.3 Essential module - List
 -----------------------------------------------------------------------------
 */
+
 dl {
 	margin: 0 0 1.375em 0;
 }
@@ -108,13 +115,15 @@ li ul,
 li ol {
 	margin: 0 1.5em;
 }
+
+
 /*
 -----------------------------------------------------------------------------
 3.4 Essential module - Text
 -----------------------------------------------------------------------------
 */
-abbr,
-acronym {
+//acronym,
+abbr{
 	border-bottom: 1px dotted @color-darkgrey;
 }
 address {
@@ -137,12 +146,12 @@ pre {
 }
 pre,
 code,
-tt,
+//tt, - Obsolete
 var {
 	font: 1em/1.375em 'andale mono', 'lucida console', monospace;
 }
 code,
-tt,
+//tt, - Obsolete
 var {
 	line-height: 1em;
 }
@@ -174,12 +183,12 @@ h4,h5,h6 {
 	position: relative;
 }
 
-h1 { font-size: 3.875em; /*62px*/ top: 10px; line-height: 1.0644em; margin-bottom: 44px;}
-h2 { font-size: 2.750em; /*44px*/ top: 26px; line-height: .9999em;  margin-bottom: 44px;}
-h3 { font-size: 2.250em; /*36px*/ top: 28px; line-height: 1.222em;  margin-bottom: 44px;}
-h4 { font-size: 1.375em; /*22px*/ top: 21px; line-height: .9997em;  margin-bottom: 44px;}
-h5 { font-size: 1.250em; /*16px*/ top: 21px; line-height: 1.100em;  margin-bottom: 44px;}
-h6 { font-size:  .750em; /*12px*/ top: 24px; line-height: 1.8328em; margin-bottom: 44px;}
+h1 { font-size: 3.875em; /*62px*/ top: 10px; line-height: 1.0644em; margin-bottom: @baseline*2;}
+h2 { font-size: 2.750em; /*44px*/ top: 26px; line-height: .9999em;  margin-bottom: @baseline*2;}
+h3 { font-size: 2.250em; /*36px*/ top: 28px; line-height: 1.222em;  margin-bottom: @baseline*2;}
+h4 { font-size: 1.375em; /*22px*/ top: 21px; line-height: .9997em;  margin-bottom: @baseline*2;}
+h5 { font-size: 1.250em; /*16px*/ top: 21px; line-height: 1.100em;  margin-bottom: @baseline*2;}
+h6 { font-size:  .750em; /*12px*/ top: 24px; line-height: 1.8328em; margin-bottom: @baseline*2;}
 
 h1:first-child,
 h2:first-child,
@@ -207,11 +216,14 @@ strong {
 small {
 	font-size: 0.813em; // 13px
 }
+
+
 /*
 -----------------------------------------------------------------------------
 3.5 Extension modules text - Presentation
 -----------------------------------------------------------------------------
 */
+
 sup,
 sub {
 	font-size: 75%;
@@ -231,14 +243,17 @@ hr {
 	height: 1px;
 	border: 0;
 	border-top: 1px solid @color-lightgrey;
-	margin: 1.375em 0;
+	margin: 1.250em 0;
 	padding: 0;
 }
+
+
 /*
 -----------------------------------------------------------------------------
 3.6 Extension modules text - Edition
 -----------------------------------------------------------------------------
 */
+
 del {
 	color: @color-darkgrey;
 }
@@ -246,10 +261,13 @@ ins {
 	background-color: @color-emphasized;
 }
 /*
+
+
 -----------------------------------------------------------------------------
 3.7 Table Module
 -----------------------------------------------------------------------------
 */
+
 table {
 	margin-top:1em;
 	margin-bottom:1.375em;
