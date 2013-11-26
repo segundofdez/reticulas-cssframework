@@ -1,16 +1,16 @@
 /**
  * RETICULAS CSSFRAMEWORK - fluid.less
  *
- * @description     Make your own fluid grid - WORKING TO IMPROVE GRID SYSTEM!!
+ * @description   Make your own fluid grid - WORKING TO IMPROVE GRID SYSTEM!!
  *
- * @version         2.0.0
+ * @version       2.0.0
  *
- * @License 		MIT License
+ * @License       MIT License
  *
- * @link            http://cssframework.reticulas.com
- * @info            http://segundofdez.com - @segundo_fdez | http://sond3.com - @sond3
+ * @link          http://cssframework.reticulas.com
+ * @info          http://segundofdez.com - @segundo_fdez | http://sond3.com - @sond3
  *
- * =======================================================================
+ * ==========================================================================
  *
  * Copyright (c) 2013, Segundo Fdez (@segundo_fdez) - hello@reticulas.com
  * http://cssframework.reticulas.com | http://segundofdez.com | http://sond3.com
@@ -34,6 +34,12 @@
    DEALINGS IN THE SOFTWARE.
 */
 
+/*
+-----------------------------------------------------------------------------
+7.0 FLUID GRID
+-----------------------------------------------------------------------------
+*/
+
 * {
 	/* Older Webkit */
 	/* Older FF */
@@ -45,32 +51,31 @@
 	box-sizing: border-box;
 }
 
-/* Grid Config
------------------------------------------------------------------------------ */
 
-// #page
+/*
+-----------------------------------------------------------------------------
+7.1 GRID CONFIGURATION
+-----------------------------------------------------------------------------
+*/
+
+// 7.1.1 #page --------------------------------------------------------------
 @total-width: 100%;
 
-// TEST GRID
+// 7.1.2 Grid componetns ----------------------------------------------------
 @column-width: 65;
 @gutter-width: 21;
 @columns: 12;
 
-// base grid wrapper width as a number
+// 7.1.3 Base grid wrapper width as a number --------------------------------
 @gridsystem-width:(@column-width*@columns) + (@gutter-width*@columns);
 
-// gutter width %
-// DELETE @variation: parseInt(@total-width*((@gutter-width*.5)/@gridsystem-width));
-
-// gutter width round without decimals %
-// DELETE @variationround: parseInt(round(@total-width*((@gutter-width*.5)/@gridsystem-width)));
-//@fluid-gutter-width-round: round(@total-width*((@gutter-width*.5)/@gridsystem-width));
-
-// wrapper width (px)
+// 7.1.4 Wrapper width (px) -------------------------------------------------
 @wrapper: (@column-width*@columns) + (@gutter-width*@columns)*1px;
 
+// 7.1.5 Wrapper nested width (px) ------------------------------------------
 @wrappernested: @wrapper + @gutter-width;
-// %
+
+// 7.1.6 Column gutter and module (%) ---------------------------------------
 @fluid-column-width: (@total-width/@columns) - @fluid-gutter-width*2;
 @fluid-gutter-width:  @total-width*((@gutter-width*.5)/@gridsystem-width);
 @fluid-module-width: @fluid-column-width + @fluid-gutter-width*2;
@@ -95,8 +100,11 @@
 }
 
 
-/* GRID
----------------------------------------------------------*/
+/*
+-----------------------------------------------------------------------------
+7.2 ROW
+-----------------------------------------------------------------------------
+*/
 
 .row(@r) {
 	display: block;
@@ -108,6 +116,12 @@
 }
 
 
+/*
+-----------------------------------------------------------------------------
+7.2 COLUMN
+-----------------------------------------------------------------------------
+*/
+
 .column(@n, @columns: @columns) {
 	display: inline;
 	float: left;
@@ -116,23 +130,25 @@
 	margin-right: @fluid-gutter-width;
 }
 
+// 7.2.1 Padding left and right --------------------------------------------
 .inner {
 	padding-left:@total-width*((@gutter-width*.5)/@gridsystem-width);
 	padding-right:@total-width*((@gutter-width*.5)/@gridsystem-width);
 }
 
+// 7.2.2 Margin left and right ---------------------------------------------
 .innermargin{
 	margin-left:@total-width*((@gutter-width*.5)/@gridsystem-width);
 	margin-right:@total-width*((@gutter-width*.5)/@gridsystem-width);
 }
 
-// Solve padding problem on diferents indents
+// 7.2.3 Solve padding problem on diferents indents ------------------------
 .innerwrapper {
 	padding-left:@total-width*(((@gutter-width*.5)/@gridsystem-width)/@fluid-gutter-width);
 	padding-right:@total-width*(((@gutter-width*.5)/@gridsystem-width)/@fluid-gutter-width);
 }
 
-
+// 7.2.3 Push --------------------------------------------------------------
 .push(@offset:1) {
 	margin-left: (@total-width*(((@gutter-width+@column-width)*@offset) / @gridsystem-width)) + @fluid-gutter-width;
 }
