@@ -1,10 +1,22 @@
 {
     "name": "reticulas",
     "version": "2.0.0",
-    "ignore": [
-        "test"
-    ],
+    "homepage": "http://cssframework.reticulas.com",
+    "authors": [
+    	"Segundo Fdez <hello@reticulas.com>"
+ 	],
+ 	"description": "Reticulas is a library​ that allows to work faster using css.",
+ 	"keywords": [
+	    "less",
+	    "css",
+	    "cssframework",
+	    "style"
+  	],
+  	"license": "MIT",
+	"ignore": [
+	    ".gitignore"
+  	],
     "dependencies": {
-        "less": "1.5.1"
+        "less": "v1.5.1"
     }
 }
