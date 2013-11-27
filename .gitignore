@@ -1,3 +1,4 @@
 composer.lock
 vendor/*
 bower_components/*
+test/*
