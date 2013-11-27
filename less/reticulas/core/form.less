@@ -1,0 +1,178 @@
+/**
+ * RETICULAS CSSFRAMEWORK - form.less
+ *
+ * @description   Basic aspect forms
+ *                Thanks to html5-boilerplate - https://github.com/h5bp/
+ *
+ * @version       2.0.0
+ *
+ * @License       MIT License
+ *
+ * @link          http://cssframework.reticulas.com
+ * @info          http://segundofdez.com - @segundo_fdez | http://sond3.com - @sond3
+ *
+ * ==========================================================================
+ *
+ * Copyright (c) 2013, Segundo Fdez (@segundo_fdez) - hello@reticulas.com
+ * http://cssframework.reticulas.com | http://segundofdez.com | http://sond3.com
+
+   Permission is hereby granted, free of charge, to any person obtaining a
+   copy of this software and associated documentation files (the "Software"),
+   to deal in the Software without restriction, including without limitation
+   the rights to use, copy, modify, merge, publish, distribute, sublicense,
+   and/or sell copies of the Software, and to permit persons to whom the
+   Software is furnished to do so, subject to the following conditions:
+
+   The above copyright notice and this permission notice shall be included in
+   all copies or substantial portions of the Software.
+
+   THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+   IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+   FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL
+   THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+   LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+   FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
+   DEALINGS IN THE SOFTWARE.
+*/
+
+/*
+-----------------------------------------------------------------------------
+4.0 FORM
+-----------------------------------------------------------------------------
+*/
+
+/*
+-----------------------------------------------------------------------------
+4.1 Lengend and label
+-----------------------------------------------------------------------------
+*/
+
+legend {
+	font-weight: bold;
+	*margin-left: -7px;
+	white-space: normal;
+}
+
+label { cursor: pointer; }
+
+
+/*
+-----------------------------------------------------------------------------
+4.2 Button - input - select - textarea
+-----------------------------------------------------------------------------
+*/
+
+// 4.2.1. Correct font-size not inheriting in all browsers ------------------
+// 4.2.2. Remove margins in FF3/4 S5 Chrome ---------------------------------
+// 4.2.3. Define consistent vertical alignment display in all browsers ------
+button,
+input,
+select,
+textarea {
+	font-size: 100%;
+	margin:0;
+	vertical-align: baseline;
+	*vertical-align: middle;
+	}
+
+textarea {
+	overflow: auto;
+	vertical-align: top;
+	resize: vertical;
+}
+
+// 4.2.4 Define line-height as normal to match FF3/4
+// (set using !important in the UA stylesheet)
+button, input { line-height: normal; }
+
+// 4.2.5 Display hand cursor for clickable form elements --------------------
+// 4.2.6 Allow styling of clickable form elements in iOS --------------------
+// 4.2.7 Correct inner spacing displayed oddly in IE7 (doesn't effect IE6) --
+button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+	cursor: pointer;
+	-webkit-appearance: button;
+	*overflow: visible;
+	}
+// Opera bug on cursor. Remember define :hover
+
+// 4.2.x Re-set default cursor for disabled elements ------------------------
+// input[type="button"], input[type="reset"], input[type="submit"]
+// button[disabled],
+// input[disabled] { cursor: default; }
+
+// 4.2.8 Consistent box sizing and appearance -------------------------------
+input[type="checkbox"],
+input[type="radio"] {
+	box-sizing: border-box;
+	padding: 0;
+	*width: 13px;
+	*height: 13px;
+	}
+
+input[type="search"] {
+	-webkit-appearance: textfield;
+	-moz-box-sizing: content-box;
+	-webkit-box-sizing: content-box;
+	box-sizing: content-box;
+	}
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button {
+	-webkit-appearance: none;
+}
+
+// Remove inner padding and border in FF3/4: h5bp.com/l
+button::-moz-focus-inner,
+input::-moz-focus-inner { border: 0; padding: 0; }
+
+
+/*
+-----------------------------------------------------------------------------
+4.3 Notices form color - accepted - notice - error
+-----------------------------------------------------------------------------
+*/
+
+// 4.3.x Colors for form validity -------------------------------------------
+// input:valid,
+// textarea:valid { background-color: @bg-accepted;}
+// input:invalid,
+// textarea:invalid { background-color: @bg-error; }
+
+.accepted,
+.notice,
+.error {
+	border:1px solid;
+	//line-height: normal;
+	//margin-bottom:12px; /*baseline adjust*/
+	padding: @baseline/2.2;
+	p:last-child{
+		margin-bottom: 0;
+	}
+}
+
+.accepted {
+	background:@bg-accepted;
+	color:@color-accepted;
+	border-color: @color-accepted;
+	a {
+		color: @color-accepted;
+	}
+}
+.notice {
+	background:@bg-notice;
+	color: @color-notice;
+	border-color: @color-notice;
+	a {
+		color: @color-notice;
+	}
+}
+.error {
+	background:@bg-error;
+	color: @color-error;
+	border-color: @color-error;
+	a {
+		color: @color-error;
+	}
+}

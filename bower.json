@@ -1,0 +1,10 @@
+{
+    "name": "reticulas",
+    "version": "2.0.0",
+    "ignore": [
+        "test"
+    ],
+    "dependencies": {
+        "less": "1.5.1"
+    }
+}

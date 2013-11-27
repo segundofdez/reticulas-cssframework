@@ -10,31 +10,51 @@ Distributed under the MIT license: http://www.opensource.org/licenses/mit-licens
 More Info: http://cssframework.reticulas.com
 
 
-Install 
+Install
 -------
-1.  Download the latest stable version of reticulas.
-2.  Reticulas use [lessphp][0], a compiler for LESS written in PHP. You can install it using [composer][1]. 
-   
-   Inside the css folder execute
+1.  Download the latest stable version of reticulas or install with bower:
+   ```bash
+   bower install reticulas 2.0.0
+   ```
+
+3.  Reticulas use less. You can use [lessphp][0], a compiler for LESS written in PHP or [lessjs][2] if you want to use for client-side (modern browsers only).
+
+   You can install [lessphp][0] using [composer][1]. Inside the root directory execute:
    ```bash
    composer install
    ```
-   This creates a directory called "libraries" inside "core" with all the necessary stuff.
+   This creates a directory called "vendor" inside "root" with all the necessary stuff.
 
-3.  **If you don´t use [composer][1], you must to add [lessphp][0] manually:**
-   * After download the latest stable version of reticulas, inside "core" create the directory structure "libraries/leafo/lessphp"
-   * Download [lessphp][0]. Copy the file 'lessc.inc.php' and paste inside "libraries/leafo/lessphp"
+
+4.  **If you don´t use [composer][1], and want to use [lessphp][0] you must to add manually:**
+   * After download the latest stable version of reticulas, inside "root" create the directory structure "vendor/leafo/lessphp"
+   * Download [lessphp][0]. Copy the file 'lessc.inc.php' and paste inside "vendor/leafo/lessphp"
    * To finish, you need to edit the file 'styles.php' (inside the folder "extended") and replace the line with the new route
 
    ```php
-   include "../reticulas/libraries/leafo/lessphp/lessc.inc.php";
+   include "../../vendor/leafo/lessphp/lessc.inc.php";
    ```
+5.  **If you don´t use [bower][3], and want to use [lessjs][2] you must to add manually:**
+   * After download the latest stable version of reticulas, inside "root" create the directory structure "vendor/lessjs"
+   * Download [lessjs][2]. Copy the file 'less.js' and paste inside "vendor/lessjs"
 
-How to use
-----------
-Put in your html document.
+How to use with lessphp
+-----------------------
+Link the styles.php:
 ```HTML
-<link rel="stylesheet" href="css/extended/styles.php">
+<link rel="stylesheet" href="less/extended/styles.php">
+```
+How to use with lessjs
+----------------------
+Link the import.less stylesheets with the rel set to “stylesheet/less”:
+
+```HTML
+<link rel="stylesheet/less" href="less/extended/import.less">
+```
+and include the less.js in the ```  <head> ``` element of your page, like so:
+
+```HTML
+<script src="vendor/lessjs/less.js" type="text/javascript"></script>
 ```
 
 what's inside
@@ -45,11 +65,12 @@ what's inside
       <ul>
          <li><strong>core</strong>
             <ul>
-               <li>reset.css (reset for html5 elements)</li>
-               <li>base.css (basic styles for type, tables, lists...)</li>
-               <li>form.css (basic form styles)</li>
-               <li>interface.less (round corners, gradients, tabs...)</li>
+               <li>variables.less (general variables)</li>
+               <li>reset.less (reset for html5 elements)</li>
+               <li>base.less (basic styles for type, tables, lists...)</li>
+               <li>form.less (basic form styles)</li>
                <li>utilities.less (utilities for image replacement, clearfix, float... )</li>
+               <li>interface.less (round corners, gradients, tabs...)</li>
             </ul>
          </li>
       </ul>
@@ -62,9 +83,6 @@ what's inside
             </ul>
          </li>
       </ul>
-      <ul>
-         <li><strong>libraries</strong></li>
-      </ul>
    </li>
    <li><strong>extended</strong>
       <ul>
@@ -73,9 +91,15 @@ what's inside
          <li>reticulas.less (add your own styles)</li>
       </ul>
    </li>
+   <li><strong>vendor</strong></li>
+   <li><strong>bower_components
+
+   </strong></li>
 </ul>
 
 
 [0]:http://leafo.net/lessphp/
 [1]:http://getcomposer.org/
+[2]:http://lesscss.org/
+[3]:http://bower.io/
 
