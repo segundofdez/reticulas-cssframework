@@ -15,8 +15,5 @@
   	"license": "MIT",
 	"ignore": [
 	    ".gitignore"
-  	],
-    "dependencies": {
-        "less": "v1.5.1"
-    }
+  	]
 }
