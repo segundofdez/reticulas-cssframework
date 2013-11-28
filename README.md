@@ -17,8 +17,6 @@ Download the latest stable version of reticulas css framework or install with [b
 bower install reticulas-cssframework
 ```
 
-Install
--------
 If you prefer a basic template ready to work go to https://github.com/segundofdez/reticulas-template
 
 what's inside
