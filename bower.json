@@ -6,14 +6,14 @@
     "Segundo Fdez <hello@reticulas.com>"
  	],
  	"description": "Reticulas is a library​ that allows to work faster using css.",
- 	"keywords": [
-	    "less",
-	    "css",
-	    "cssframework",
-	    "style"
-  	],
-  	"license": "MIT",
-	"ignore": [
-	    ".gitignore"
-  	]
+  "keywords": [
+    "less",
+    "css",
+    "cssframework",
+    "style"
+  ],
+  "license": "MIT",
+  "ignore": [
+    ".gitignore"
+  ]
 }
