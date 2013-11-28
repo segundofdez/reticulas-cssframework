@@ -1,9 +1,9 @@
 {
-    "name": "reticulas",
-    "version": "2.0.0",
-    "homepage": "http://cssframework.reticulas.com",
-    "authors": [
-    	"Segundo Fdez <hello@reticulas.com>"
+  "name": "reticulas",
+  "version": "2.0.0",
+  "homepage": "http://cssframework.reticulas.com",
+  "authors": [
+    "Segundo Fdez <hello@reticulas.com>"
  	],
  	"description": "Reticulas is a library​ that allows to work faster using css.",
  	"keywords": [
