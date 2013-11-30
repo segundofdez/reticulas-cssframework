@@ -1,0 +1,295 @@
+/**
+ * RETICULAS CSSFRAMEWORK - _base.scss
+ *
+ * $description   Basics adjustments:
+ *                text, list, table.
+ *                Default value browser 16px (100 * 16px = 16px)
+ *                Based on Nicolas gallaghe work:
+ *                http://necolas.github.com/normalize.css/
+ *
+ * $version       2.0.0
+ *
+ * $License       MIT License
+ *
+ * $link          http://cssframework.reticulas.com
+ * $info          http://segundofdez.com - $segundo_fdez | http://sond3.com - $sond3
+ *
+ * ==========================================================================
+ *
+ * Copyright (c) 2013, Segundo Fdez ($segundo_fdez) - hello$reticulas.com
+ * http://cssframework.reticulas.com | http://segundofdez.com | http://sond3.com
+
+   Permission is hereby granted, free of charge, to any person obtaining a
+   copy of this software and associated documentation files (the "Software"),
+   to deal in the Software without restriction, including without limitation
+   the rights to use, copy, modify, merge, publish, distribute, sublicense,
+   and/or sell copies of the Software, and to permit persons to whom the
+   Software is furnished to do so, subject to the following conditions:
+
+   The above copyright notice and this permission notice shall be included in
+   all copies or substantial portions of the Software.
+
+   THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+   IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+   FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL
+   THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+   LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+   FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
+   DEALINGS IN THE SOFTWARE.
+*/
+
+/*
+-----------------------------------------------------------------------------
+3.0 BASE
+-----------------------------------------------------------------------------
+*/
+
+/*
+-----------------------------------------------------------------------------
+3.1 Root element
+-----------------------------------------------------------------------------
+*/
+
+html {
+	overflow-y: scroll; // fix movement on document scroll
+}
+body {
+	font-size: 100%; // 16px
+	color: $color;
+	font-family: sans-serif;
+	line-height: 1.375em; // baseline 22px
+
+	// Improved handling of kerning pairs and ligatures in modern
+	text-rendering: optimizeLegibility;
+}
+
+
+/*
+-----------------------------------------------------------------------------
+3.2 Essential module - Hipertext
+-----------------------------------------------------------------------------
+*/
+
+a {
+	color: $color-link;
+	text-decoration: none;
+	&:hover,
+	&:focus{
+		color: $color-alt;
+		text-decoration: underline;
+	}
+	&:hover,
+	&:active {
+		outline: 0;
+	}
+}
+
+
+/*
+-----------------------------------------------------------------------------
+3.3 Essential module - List
+-----------------------------------------------------------------------------
+*/
+
+dl {
+	margin: 0 0 1.375em 0;
+}
+dl dt {
+	font-weight: bold;
+}
+dd {
+	margin-left: 1.5em;
+}
+
+ul,
+ol {
+	margin: 0 1.5em 1.375em 1.5em;
+}
+ul {
+	list-style-type: disc;
+}
+ol {
+	list-style-type: decimal;
+}
+li ul,
+li ol {
+	margin: 0 1.5em;
+}
+
+
+/*
+-----------------------------------------------------------------------------
+3.4 Essential module - Text
+-----------------------------------------------------------------------------
+*/
+//acronym,
+abbr{
+	border-bottom: 1px dotted $color-darkgrey;
+}
+address {
+	margin: 0 0 1.375em 0;
+	font-style: italic;
+}
+
+blockquote {
+	font-style:italic;
+	margin:1.375em;
+	color: $color-darkgrey;
+}
+
+// cite
+pre {
+	margin: 1.375em 0;
+	white-space: pre;
+	white-space: pre-wrap;
+	word-wrap: break-word;
+}
+pre,
+code,
+//tt, - Obsolete
+var {
+	font: 1em/1.375em 'andale mono', 'lucida console', monospace;
+}
+code,
+//tt, - Obsolete
+var {
+	line-height: 1em;
+}
+
+/*
+pre, code,
+kbd, samp {
+	font-family: monospace, monospace;
+	_font-family: 'courier new', monospace;
+	font-size: 1em;
+}
+*/
+// kdb
+// q
+// samp
+// span
+
+dfn,
+em {
+	font-style: italic;
+}
+dfn {
+	font-weight: bold;
+}
+
+h1,h2,h3,
+h4,h5,h6 {
+	font-weight: normal;
+	position: relative;
+}
+
+h1 { font-size: 3.875em; /*62px*/ top: 10px; line-height: 1.0644em; margin-bottom: $baseline*2;}
+h2 { font-size: 2.750em; /*44px*/ top: 26px; line-height: .9999em;  margin-bottom: $baseline*2;}
+h3 { font-size: 2.250em; /*36px*/ top: 28px; line-height: 1.222em;  margin-bottom: $baseline*2;}
+h4 { font-size: 1.375em; /*22px*/ top: 21px; line-height: .9997em;  margin-bottom: $baseline*2;}
+h5 { font-size: 1.250em; /*16px*/ top: 21px; line-height: 1.100em;  margin-bottom: $baseline*2;}
+h6 { font-size:  .750em; /*12px*/ top: 24px; line-height: 1.8328em; margin-bottom: $baseline*2;}
+
+h1:first-child,
+h2:first-child,
+h3:first-child,
+h4:first-child {
+	margin-top: 0;
+}
+
+h1 img, h2 img,
+h3 img, h4 img,
+h5 img, h6 img {
+	margin:0;
+}
+
+p {
+	margin:0 0 1.375em 0;
+	// include? word-wrap: break-word;
+}
+
+b,
+strong {
+	font-weight:bold;
+}
+
+small {
+	font-size: 0.813em; // 13px
+}
+
+
+/*
+-----------------------------------------------------------------------------
+3.5 Extension modules text - Presentation
+-----------------------------------------------------------------------------
+*/
+
+sup,
+sub {
+	font-size: 75%;
+	line-height:0;
+	position: relative;
+	vertical-align: baseline;
+}
+sup {
+	top: -0.5em;
+}
+sub {
+	bottom: -0.25em;
+}
+
+hr {
+	display: block;
+	height: 1px;
+	border: 0;
+	border-top: 1px solid $color-lightgrey;
+	margin: 1.250em 0;
+	padding: 0;
+}
+
+
+/*
+-----------------------------------------------------------------------------
+3.6 Extension modules text - Edition
+-----------------------------------------------------------------------------
+*/
+
+del {
+	color: $color-darkgrey;
+}
+ins {
+	background-color: $bg-emphasized;
+}
+/*
+
+
+-----------------------------------------------------------------------------
+3.7 Table Module
+-----------------------------------------------------------------------------
+*/
+
+table {
+	margin-top:1em;
+	margin-bottom:1.375em;
+	width:100%;
+}
+caption {
+	background: $color-almostblack;
+	color: $color-white;
+	font-weight:bold;
+}
+th {
+	font-weight:bold;
+}
+thead th {
+	background: $color-lightgrey;
+}
+th,
+td,
+caption {
+	padding:3px 5px;
+	border:1px solid $color-almostblack;
+}
+tfoot {
+	font-style: italic;
+}

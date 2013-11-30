@@ -1,0 +1,180 @@
+/**
+ * RETICULAS CSSFRAMEWORK - _utilities.sass
+ *
+ * $description   Extend reticulas base with some utilities and helpers
+ *
+ * $version       2.0.0
+ *
+ * $License       MIT License
+ *
+ * $link          http://cssframework.reticulas.com
+ * $info          http://segundofdez.com - $segundo_fdez | http://sond3.com - $sond3
+ *
+ * ==========================================================================
+ *
+ * Copyright (c) 2013, Segundo Fdez ($segundo_fdez) - hello$reticulas.com
+ * http://cssframework.reticulas.com | http://segundofdez.com | http://sond3.com
+
+   Permission is hereby granted, free of charge, to any person obtaining a
+   copy of this software and associated documentation files (the "Software"),
+   to deal in the Software without restriction, including without limitation
+   the rights to use, copy, modify, merge, publish, distribute, sublicense,
+   and/or sell copies of the Software, and to permit persons to whom the
+   Software is furnished to do so, subject to the following conditions:
+
+   The above copyright notice and this permission notice shall be included in
+   all copies or substantial portions of the Software.
+
+   THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+   IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+   FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL
+   THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+   LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+   FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
+   DEALINGS IN THE SOFTWARE.
+*/
+
+/*
+-----------------------------------------------------------------------------
+5.0 UTILITIES
+-----------------------------------------------------------------------------
+*/
+
+/*
+-----------------------------------------------------------------------------
+5.1 Float elements
+-----------------------------------------------------------------------------
+*/
+.floatr { float:right;}
+.floatl { float:left;}
+
+p img.left {
+	margin:0.32em 1.5em 1.2em 0;
+	padding:0;
+	float:left;
+}
+p img.right {
+	margin:0.32em 0 1.2em 1.5em;
+	float:right;
+}
+
+
+/*
+-----------------------------------------------------------------------------
+5.2 Clear - clearfix
+-----------------------------------------------------------------------------
+*/
+
+// 5.2.1 Clear float --------------------------------------------------------
+.clear { clear:both;}
+
+// 5.2.2 clearfix http://nicolasgallagher.com/micro-clearfix-hack/ ----------
+.clearfix {
+	&:before,
+	&:after {
+	    content:"";
+	    display:table;
+	}
+	&:after {
+	    clear:both;
+	}
+}
+
+
+/*
+-----------------------------------------------------------------------------
+5.3 Visibility
+-----------------------------------------------------------------------------
+*/
+
+// 5.3.1 Hide from both screenreaders and browsers: h5bp.com/u --------------
+.hide {
+	display: none !important;
+	visibility: hidden;
+}
+
+// 5.3.2 Hide visually and from screenreaders, but maintain layout ----------
+.invisible {
+	visibility: hidden;
+}
+
+// 3.3.3 Hide only visually, but available for screenreaders: h5bp.com/v ----
+.visuallyhide {
+	border: 0;
+	clip: rect(0, 0, 0, 0);
+	height: 1px;
+	margin: -1px;
+	overflow: hidden;
+	padding: 0;
+	position: absolute;
+	width: 1px;
+}
+
+
+/*
+-----------------------------------------------------------------------------
+5.4 Image replacement
+-----------------------------------------------------------------------------
+*/
+
+// 3.4.1 Replace text for images - remember to specify height and width -----
+.imageback {
+	display:block;
+	background-color:transparent;
+	background-repeat:no-repeat;
+	font-size:0px !important;
+	margin:0;
+	padding:0;
+	border:0;
+	overflow:hidden;
+	text-align: left;
+	text-indent: -9999px;
+	direction: ltr;
+	a {
+		width:100%;
+		height:100%;
+		display:block;
+		text-decoration:none;
+	}
+}
+
+
+/*
+-----------------------------------------------------------------------------
+5.5 Helpers
+-----------------------------------------------------------------------------
+*/
+
+// 5.5.1 Center an element --------------------------------------------------
+.boxcenter {
+	margin:0 auto !important;
+	float:none;
+}
+
+// 5.5.2 See baseline -------------------------------------------------------
+.baseline {
+	background-image:url(../vendor/reticulas-cssframework/sass/core/baseline-22.gif);
+	background-position:0 -6px;
+}
+
+
+/*
+-----------------------------------------------------------------------------
+5.6 Font size
+-----------------------------------------------------------------------------
+*/
+
+// 3.6.1 Set value in px ----------------------------------------------------
+//.font-size(16);
+@mixin font-size($sizeValue: 1) {
+  font-size: ($sizeValue) + px;
+  font-size: ($sizeValue / 16) + rem;
+  line-height: ($sizeValue * 1.375) + px;
+}
+
+
+
+
+
+
+
