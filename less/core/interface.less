@@ -198,7 +198,7 @@
 // 6.3.5 Radial gradient -----------------------------------------------------
 // pass as #HEX number(#color-in, #color-out)
 // .gradient-radial(#CCC, #999);
-.gradient-radial (@color-in: @color-lightgrey; @color-out: @color-mediumgrey) {
+.gradient-radial (@color-in: @color-lightgrey, @color-out: @color-mediumgrey) {
 	background-image: -webkit-gradient(radial, center center, 0, center center, 460, from(@color-in), to(@color-out));
 	background-image: -webkit-radial-gradient(circle, @color-in, @color-out);
 	background-image: -moz-radial-gradient(circle, @color-in, @color-out);
