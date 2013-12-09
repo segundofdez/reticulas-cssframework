@@ -99,6 +99,14 @@
 	max-width: @wrappernested;
 }
 
+// TEST FOR EXPAND - NOT IMPLEMENTED YET
+//.wrapper{
+	//@media only screen and (max-width: @wrappernested),
+	//only screen and (max-device-width: @wrappernested){
+	//	.inner();
+	//}
+//}
+
 
 /*
 -----------------------------------------------------------------------------
@@ -142,13 +150,25 @@
 	margin-right:@total-width*((@gutter-width*.5)/@gridsystem-width);
 }
 
-// 7.2.3 Solve padding problem on diferents indents ------------------------
+// 7.2.3 Expand content on wrapper for columns adjust ----------------------
+.expand{
+	.clearfix();
+	margin-left: -@fluid-gutter-width;
+	width: (@fluid-column-width*@columns) + ((@fluid-gutter-width*2)*@columns) + @fluid-gutter-width*2;
+}
+
+// 7.2.4 Solve padding problem on diferents indents - OBSOLETE -------------
 .innerwrapper {
 	padding-left:@total-width*(((@gutter-width*.5)/@gridsystem-width)/@fluid-gutter-width);
 	padding-right:@total-width*(((@gutter-width*.5)/@gridsystem-width)/@fluid-gutter-width);
 }
 
-// 7.2.3 Push --------------------------------------------------------------
+// 7.2.5 Push columns ------------------------------------------------------
 .push(@offset:1) {
 	margin-left: (@total-width*(((@gutter-width+@column-width)*@offset) / @gridsystem-width)) + @fluid-gutter-width;
+}
+
+// 7.2.6 Push rows ---------------------------------------------------------
+.push-r(@offset:1) {
+	margin-left: (@total-width*(((@gutter-width+@column-width)*@offset) / @gridsystem-width));
 }
