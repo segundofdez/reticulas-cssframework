@@ -1,7 +1,7 @@
 Reticulas cssframework
 ===================
 
-Reticulas is a css framework to work faster using style sheets. For now it's written with [less][1].
+Reticulas is a css framework to work faster using style sheets. For now it's written with [less][1] and [sass][3].
 
 2009-2013.<br>
 Copyright (c) Segundo Fdez: http://segundofdez.com - [@segundo_fdez](https://twitter.com/segundo_fdez) | Sond3: http://sond3.com - [@sond3](https://twitter.com/sond3)<br>
@@ -51,4 +51,5 @@ what's inside
 [0]:http://leafo.net/lessphp/
 [1]:http://lesscss.org/
 [2]:http://bower.io/
+[3]:http://sass-lang.com/
 

@@ -3,7 +3,7 @@
  *
  * $description   Extend reticulas base with user interface components
  *
- * $version       2.1.0
+ * $version       2.1.1
  *
  * $License       MIT License
  *
@@ -359,10 +359,8 @@
 					@include round(0);
 					margin-right:1px;
 				}
-				&.active a {
-					//margin:0;
-					//background-color:$color-tab-alt;
-				}
+				//&.active a {
+				//}
 
 				&:first-child {
 					a {
