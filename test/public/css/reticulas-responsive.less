@@ -1,0 +1,239 @@
+/**
+ * RETICULAS CSSFRAMEWORK - reticulas.less
+ *
+ * @description   Modifies or extends reticulas-cssframework
+ *                with classes or IDs - reticulas tests
+ *
+ * @link          Copyright (c) 2014, Sond3
+ * @info          http://segundofdez.com - @segundo_fdez | http://sond3.com - @sond3
+ *
+ * ==========================================================================
+*/
+
+/*
+-----------------------------------------------------------------------------
+1.0 BASE Identifier defined within the folder reticulas
+-----------------------------------------------------------------------------
+*/
+
+// 1.1 Variables - change this values if you want diferent values ----------
+//@color: @color-almostblack;
+//@color-alt: @color-mediumgrey;
+
+//@color-link: #36B389;
+//@color-link-alt: #226F54;
+
+
+// 1.2 Redefine values ------------------------------------------------------
+body{
+	.baseline;
+}
+ul{
+	margin: 0;
+	li{
+		list-style-type: none;
+		margin-bottom: 10px;
+	}
+}
+
+li:nth-child(odd) {
+    background-color: #CCC;
+}
+li:nth-child(even) {
+    background-color: #999;
+}
+
+// See baseline -------------------------------------------------------
+.baseline {
+	background-image:url(../../../less/core/baseline-22.gif);
+	//background-position:0 3px;
+}
+
+// TEST MEDIA AUTO MEDIA QUERIES CUTS
+
+@screen-mini: 320px;
+@screen-s: 480px;
+@screen-m: 960px;
+@screen-l: 1280px;
+
+.wrapper,
+.wrappernested{
+	@media only screen and (max-width: @screen-l){
+		@column-width: 65;
+		@gutter-width: 25;
+		.wrapper;
+		.inner;
+	}
+	@media only screen and (max-width: @screen-m){
+		@column-width: 35;
+		@gutter-width: 31;
+		.wrapper;
+	}
+	@media only screen and (max-width: @screen-s){
+		@column-width: 24;
+		@gutter-width: 10;
+		.wrapper;
+	}
+}
+
+.row(@r){
+	@media only screen and (max-width: @screen-l){
+		width: (@fluid-module-width*2);
+	}
+	@media only screen and (max-width: @screen-m){
+		width: (@fluid-module-width*4);
+	}
+	@media only screen and (max-width: @screen-s){
+		width: (@fluid-module-width*6);
+	}
+	@media only screen and (max-width: @screen-mini){
+		width: (@fluid-module-width*12);
+	}
+}
+
+.column(@n){
+	@media only screen and (max-width: @screen-l){
+		width:  (@fluid-module-width*2) - (@fluid-gutter-width*2);
+	}
+	@media only screen and (max-width: @screen-m){
+		width:  (@fluid-module-width*4) - (@fluid-gutter-width*2);
+	}
+	@media only screen and (max-width: @screen-s){
+		width:  (@fluid-module-width*12) - (@fluid-gutter-width*2);
+	}
+}
+
+/*
+-----------------------------------------------------------------------------
+2.0 COMMON
+-----------------------------------------------------------------------------
+*/
+
+
+/*
+-----------------------------------------------------------------------------
+3.0 IMAGES
+-----------------------------------------------------------------------------
+*/
+
+/*
+-----------------------------------------------------------------------------
+4.0 LAYOUT
+-----------------------------------------------------------------------------
+*/
+#page {
+	.clearfix();
+	//width:@total-width;
+}
+
+.header{
+	.wrapper();
+}
+.testrow{
+	ul{
+		.wrapper();
+		//.clearfix;
+		li{
+			.row(1);
+		}
+	}
+}
+.testcolumn{
+		.wrapper();
+	ul{
+		.expand;
+		li{
+			.column(1);
+		}
+	}
+}
+.wrappertest{
+	.wrappernested;
+}
+
+/*
+-----------------------------------------------------------------------------
+5.0 MODULES
+-----------------------------------------------------------------------------
+*/
+
+
+/*
+-----------------------------------------------------------------------------
+6.0 STATES
+-----------------------------------------------------------------------------
+*/
+
+
+/*
+-----------------------------------------------------------------------------
+7.0 EXTENDED - THEME
+-----------------------------------------------------------------------------
+*/
+
+
+/*
+-----------------------------------------------------------------------------
+8.0 MEDIA QUERIES
+-----------------------------------------------------------------------------
+*/
+
+/*
+
+@media only screen and (max-width: 1680px),
+only screen and (max-device-width: 1680px){
+
+}
+
+@media only screen and (max-width: 1280px),
+only screen and (max-device-width: 1280px){
+
+}
+
+@media only screen and (max-width: 1024px),
+only screen and (max-device-width: 1024px){
+
+}
+
+@media only screen and (max-width: 640px),
+only screen and (max-device-width: 640px){
+
+}
+
+// Smartphone - portrait and land
+@media only screen and (min-device-width: 320px)
+and (max-device-width : 480px) {
+
+}
+
+// Smartphone - land
+@media only screen and (min-width: 321px) {
+
+}
+
+// Smartphone - portrait
+@media only screen and (max-width: 320px) {
+
+}
+
+// iPad - portrait and land
+@media only screen and (min-device-width: 768px)
+and (max-device-width: 1024px) {
+
+}
+
+// iPad - land
+@media only screen and (min-device-width: 768px)
+and (max-device-width: 1024px)
+and (orientation: landscape) {
+
+}
+
+// iPad - portrait
+@media only screen and (min-device-width: 768px)
+and (max-device-width: 1024px)
+and (orientation: portrait) {
+
+}
+
+*/
