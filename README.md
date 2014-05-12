@@ -3,7 +3,7 @@ Reticulas cssframework
 
 Reticulas is a css framework to work faster using style sheets. For now it's written with [less][1] and [sass][3].
 
-2009-2013.<br>
+2009-2014.<br>
 Copyright (c) Segundo Fdez: http://segundofdez.com - [@segundo_fdez](https://twitter.com/segundo_fdez) | Sond3: http://sond3.com - [@sond3](https://twitter.com/sond3)<br>
 Distributed under the MIT license: http://www.opensource.org/licenses/mit-license.php
 
