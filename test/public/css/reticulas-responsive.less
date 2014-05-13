@@ -70,7 +70,7 @@ li:nth-child(even) {
 		.wrapper;
 	}
 	@media only screen and (max-width: @screen-s){
-		@column-width: 24;
+		@column-width: 28;
 		@gutter-width: 10;
 		.wrapper;
 		padding-left: 10px;
@@ -87,12 +87,49 @@ li:nth-child(even) {
 	*/
 	@media only screen and (max-width: @screen-m){
 		width: (@fluid-module-width*4);
+
 	}
 	@media only screen and (max-width: @screen-s){
 		width: (@fluid-module-width*6);
 	}
 	@media only screen and (max-width: @screen-mini){
 		width: (@fluid-module-width*12);
+	}
+}
+.row(10){
+	@media only screen and (max-width: @screen-m){
+		width: (@fluid-module-width*8);
+	}
+	@media only screen and (max-width: @screen-s){
+		width: (@fluid-module-width*6);
+	}
+	@media only screen and (max-width: @screen-mini){
+		width: (@fluid-module-width*12);
+	}
+}
+.row(9){
+	@media only screen and (min-width: @screen-s){
+		width: (@fluid-module-width*9);
+	}
+}
+.row(8){
+	@media only screen and (min-width: @screen-s){
+		width: (@fluid-module-width*8);
+	}
+}
+.row(7){
+	@media only screen and (min-width: @screen-s){
+		width: (@fluid-module-width*7);
+	}
+}
+.row(5){
+	@media only screen and (min-width: @screen-s){
+		width: (@fluid-module-width*5);
+	}
+}
+.row(3){
+	@media only screen and (min-width: @screen-s){
+		width: (@fluid-module-width*3);
 	}
 }
 
@@ -137,6 +174,17 @@ li:nth-child(even) {
 .header{
 	.wrapper();
 }
+.testrow,
+.testcolumn,
+.wrappertest{
+	li{
+		padding: 10px;
+	}
+}
+
+.test div{
+	padding: 10px;
+}
 .testrow{
 	ul{
 		.wrapper();
@@ -151,12 +199,50 @@ li:nth-child(even) {
 	ul{
 		.expand;
 		li{
-			.column(1.5);
+			.column(3);
 		}
 	}
 }
 .wrappertest{
 	.wrappernested;
+}
+
+.test{
+	.clearfix;
+	margin-bottom: 10px;
+	.uno{
+		.row(4);
+		background-color: #CCC
+	}
+	.dos{
+		.row(8);
+		background-color: #FFF000;
+	}
+	.tres{
+		.row(5);
+		background-color: #FF0099;
+	}
+	.cuatro{
+		.row(7);
+		background-color: #CCDD00;
+	}
+	.cinco{
+		.row(3);
+		background-color: #DD0022;
+	}
+	.seis{
+		.row(9);
+		background-color: #990099;
+	}
+	.siete{
+		.row(2);
+		background-color: #FF4411;
+	}
+	.ocho{
+		.row(10);
+		background-color: #99CC00;
+	}
+
 }
 
 /*
