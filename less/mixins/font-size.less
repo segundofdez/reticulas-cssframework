@@ -1,7 +1,7 @@
 /**
- * RETICULAS CSSFRAMEWORK - variables.less
+ * RETICULAS CSSFRAMEWORK - font-size.less
  *
- * @description   Generic variables values
+ * @description   Adds font-size and convert to rem and pixels values
  *
  * @version       3.0.0
  *
@@ -34,51 +34,26 @@
  * DEALINGS IN THE SOFTWARE.
 */
 
-/*
------------------------------------------------------------------------------
-1.0 VARIABLES
------------------------------------------------------------------------------
-*/
 
 /*
------------------------------------------------------------------------------
-1.1 Browsers and version support
------------------------------------------------------------------------------
-*/
+ * YOU WRITE
+ * -----------------------------------------------------------------------------
+ * span {
+ *     .font-size(16);
+ * }
+ *
+ * CONVERTS TO:
+ * -----------------------------------------------------------------------------
+ * span {
+ *     font-size:16px;
+ *     font-size(1rem);
+ * }
+ * -----------------------------------------------------------------------------
+ */
 
-/* -ms- */
-@explorer: 10;
-
-/* -moz- */
-@firefox: 30;
-
-/* -webkit- */
-@chrome:30;
-@safari: 7;
-@android: 4.4;
-@ios: 7.1;
-
-/* -o- */
-@opera: 22;
-
-/*
------------------------------------------------------------------------------
-1.2 Media queries break points
------------------------------------------------------------------------------
-*/
-/* xtra small */
-@screen-xs: 320px;
-
-/* small */
-@screen-s: 480px;
-
-/* medium */
-@screen-m: 800px;
-
-/* large */
-@screen-l: 1024px;
-
-/* xtra large*/
-@screen-xl: 1440px;
-
-
+.font-size(@sizeValue) {
+	@remValue: @sizeValue / 16;
+	@pxValue: (@sizeValue);
+	font-size: ~"@{pxValue}px";
+	font-size: ~"@{remValue}rem";
+}

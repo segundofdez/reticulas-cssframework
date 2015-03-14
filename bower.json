@@ -16,5 +16,8 @@
   "license": "MIT",
   "ignore": [
     ".gitignore"
-  ]
+  ],
+  "dependencies": {
+    "normalize-css":"^3.0.2"
+  }
 }

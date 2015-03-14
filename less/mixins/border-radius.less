@@ -1,7 +1,7 @@
 /**
- * RETICULAS CSSFRAMEWORK - variables.less
+ * RETICULAS CSSFRAMEWORK - border-radius.less
  *
- * @description   Generic variables values
+ * @description   Adds border-radius with or without vendors
  *
  * @version       3.0.0
  *
@@ -34,51 +34,35 @@
  * DEALINGS IN THE SOFTWARE.
 */
 
-/*
------------------------------------------------------------------------------
-1.0 VARIABLES
------------------------------------------------------------------------------
-*/
 
 /*
------------------------------------------------------------------------------
-1.1 Browsers and version support
------------------------------------------------------------------------------
-*/
+ * YOU WRITE
+ * -----------------------------------------------------------------------------
+ * span {
+ *     .border-radius(10)
+ * }
+ *
+ * CONVERTS TO:
+ * -----------------------------------------------------------------------------
+ * span {
+ *     -moz-border-radius: 10px; // if is necessary
+ *     -webkit-border-radius: 10px; // if is necessary
+ *     border-radius:10px;
+ * }
+ * -----------------------------------------------------------------------------
+ */
 
-/* -ms- */
-@explorer: 10;
+.border-radius (@radius:8px)
+when (@firefox < 4) {
+   -moz-border-radius: @radius*1px;
+}
 
-/* -moz- */
-@firefox: 30;
+.border-radius (@radius:8px)
+when (@chrome <  5) , (@safari < 5) , (@opera < 10.5) , (@android < 2.2) , (@ios < 4.1) {
+   -webkit-border-radius: @radius*1px;
+}
 
-/* -webkit- */
-@chrome:30;
-@safari: 7;
-@android: 4.4;
-@ios: 7.1;
-
-/* -o- */
-@opera: 22;
-
-/*
------------------------------------------------------------------------------
-1.2 Media queries break points
------------------------------------------------------------------------------
-*/
-/* xtra small */
-@screen-xs: 320px;
-
-/* small */
-@screen-s: 480px;
-
-/* medium */
-@screen-m: 800px;
-
-/* large */
-@screen-l: 1024px;
-
-/* xtra large*/
-@screen-xl: 1440px;
-
-
+.border-radius (@radius:8px)
+when (@explorer >=  9) , (@firefox >= 4) , (@chrome >= 5) , (@safari >= 5) , (@opera >= 10.5) , (@android >= 2.2) , (@ios >= 4.1) {
+   border-radius: @radius*1px;
+}

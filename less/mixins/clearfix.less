@@ -1,7 +1,7 @@
 /**
- * RETICULAS CSSFRAMEWORK - variables.less
+ * RETICULAS CSSFRAMEWORK - clearfix.less
  *
- * @description   Generic variables values
+ * @description   Contain floats without resorting
  *
  * @version       3.0.0
  *
@@ -34,51 +34,34 @@
  * DEALINGS IN THE SOFTWARE.
 */
 
-/*
------------------------------------------------------------------------------
-1.0 VARIABLES
------------------------------------------------------------------------------
-*/
 
 /*
------------------------------------------------------------------------------
-1.1 Browsers and version support
------------------------------------------------------------------------------
-*/
+ * YOU WRITE
+ * -----------------------------------------------------------------------------
+ * span {
+ *     .clearfix;
+ * }
+ *
+ * CONVERTS TO:
+ * -----------------------------------------------------------------------------
+ * span:before,
+ * span:after {
+ *     content:" ";
+ *     display:table;
+ * }
+ * span:after{}
+ *     clear:both;
+ * }
+ * -----------------------------------------------------------------------------
+ */
 
-/* -ms- */
-@explorer: 10;
-
-/* -moz- */
-@firefox: 30;
-
-/* -webkit- */
-@chrome:30;
-@safari: 7;
-@android: 4.4;
-@ios: 7.1;
-
-/* -o- */
-@opera: 22;
-
-/*
------------------------------------------------------------------------------
-1.2 Media queries break points
------------------------------------------------------------------------------
-*/
-/* xtra small */
-@screen-xs: 320px;
-
-/* small */
-@screen-s: 480px;
-
-/* medium */
-@screen-m: 800px;
-
-/* large */
-@screen-l: 1024px;
-
-/* xtra large*/
-@screen-xl: 1440px;
-
-
+.clearfix() {
+   &:before,
+   &:after {
+       content:" ";
+       display:table;
+   }
+   &:after {
+       clear:both;
+   }
+}

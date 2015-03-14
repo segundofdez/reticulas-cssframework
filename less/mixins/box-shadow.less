@@ -1,0 +1,75 @@
+/**
+ * RETICULAS CSSFRAMEWORK - box-shadow.less
+ *
+ * @description   Adds box-shadow with or without vendors
+ *
+ * @version       3.0.0
+ *
+ * @License       MIT License
+ *
+ * @link          http://cssframework.reticulas.com
+ * @info          http://segundofdez.com - @segundo_fdez | http://sond3.com - @sond3
+ *
+ * =============================================================================
+ *
+ * Copyright (c) 2014, Segundo Fdez (@segundo_fdez) - hello@reticulas.com
+ * http://cssframework.reticulas.com | http://segundofdez.com | http://sond3.com
+ *
+ * Permission is hereby granted, free of charge, to any person obtaining a
+ * copy of this software and associated documentation files (the "Software"),
+ * to deal in the Software without restriction, including without limitation
+ * the rights to use, copy, modify, merge, publish, distribute, sublicense,
+ * and/or sell copies of the Software, and to permit persons to whom the
+ * Software is furnished to do so, subject to the following conditions:
+ *
+ *  The above copyright notice and this permission notice shall be included in
+ * all copies or substantial portions of the Software.
+ *
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL
+ * THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+ * FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
+ * DEALINGS IN THE SOFTWARE.
+*/
+
+
+/*
+ * YOU WRITE
+ * -----------------------------------------------------------------------------
+ * span {
+ *     // pass as a number and #HEX number (@shadow-x, @shadow-y, @gaussian, @spread, #shadow-color)
+ *     .box-shadow( 0,0,5,5,#999);
+ * }
+ *
+ * CONVERTS TO:
+ * -----------------------------------------------------------------------------
+ * span {
+ *     -moz-box-shadow( 0,0,5px,5px,#999); // if is necessary
+ *     -o-box-shadow( 0,0,5px,5px,#999); // if is necessary
+ *     -webkit-box-shadow( 0,0,5px,5px,#999); // if is necessary
+ *     box-shadow( 0,0,5px,5px,#999);
+ * }
+ * -----------------------------------------------------------------------------
+ */
+.box-shadow( @h-shadow:0px, @v-shadow:0px, @blur-shadow:10px, @spread-shadow:2px, @color-shadow:#ccc )
+   when (@firefox < 4){
+   -moz-box-shadow: @h-shadow*1px  @v-shadow*1px @blur-shadow*1px @spread-shadow*1px @color-shadow;
+}
+
+// Check this vendor on opera
+.box-shadow( @h-shadow:0px, @v-shadow:0px, @blur-shadow:10px, @spread-shadow:2px, @color-shadow:#ccc )
+   when (@opera < 10.5){
+   -o-box-shadow: @h-shadow*1px  @v-shadow*1px @blur-shadow*1px @spread-shadow*1px @color-shadow;
+}
+
+.box-shadow( @h-shadow:0px, @v-shadow:0px, @blur-shadow:10px, @spread-shadow:2px, @color-shadow:#ccc )
+   when (@chrome <  10) , (@safari < 5.1)  , (@android < 4) , (@ios < 5) {
+   -webkit-box-shadow: @h-shadow*1px  @v-shadow*1px @blur-shadow*1px @spread-shadow*1px @color-shadow;
+}
+
+.box-shadow( @h-shadow:0px, @v-shadow:0px, @blur-shadow:10px, @spread-shadow:2px, @color-shadow:#ccc )
+   when (@explorer >=  9) , (@firefox >= 4) , (@chrome >= 10) , (@safari >= 5.1) , (@opera >= 10.5) , (@android >= 4) , (@ios >= 5) {
+   box-shadow: @h-shadow*1px  @v-shadow*1px @blur-shadow*1px @spread-shadow*1px @color-shadow;
+}

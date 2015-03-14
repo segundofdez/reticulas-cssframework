@@ -121,33 +121,33 @@ ul{
 
 // 6.3.3 Vertical gradient ---------------------------------------------------
 // pass as #HEX number(#top-color, #bottom-color)
-// .gradient-vertical(#CCC, #999);
-.gradient-vertical (@tcolor:#ccc, @bcolor:#333)
+// .vertical-gradient(#CCC, #999);
+.vertical-gradient (@tcolor:#ccc, @bcolor:#333)
 	when (@explorer < 10) , (@firefox < 3.6) , (@chrome < 10) , (@safari < 5.1) , (@opera < 11.1) , (@android < 4) , (@ios < 5) {
 	background-color: @bcolor;
 }
 
-.gradient-vertical (@tcolor:#ccc, @bcolor:#333)
+.vertical-gradient (@tcolor:#ccc, @bcolor:#333)
 	when (@firefox < 16){
 	background-image: -moz-linear-gradient(bottom, @tcolor, @bcolor);
 }
 
-.gradient-vertical (@tcolor:#ccc, @bcolor:#333)
+.vertical-gradient (@tcolor:#ccc, @bcolor:#333)
 	when (@opera < 12.1) {
 	background-image: -o-linear-gradient(bottom, @tcolor, @bcolor);
 }
-.gradient-vertical (@tcolor:#ccc, @bcolor:#333)
+.vertical-gradient (@tcolor:#ccc, @bcolor:#333)
 	when (@explorer < 10) {
 	background: -ms-linear-gradient(bottom, @tcolor, @bcolor);
 }
 
-.gradient-vertical (@tcolor:#ccc, @bcolor:#333)
+.vertical-gradient (@tcolor:#ccc, @bcolor:#333)
 	when (@chrome <  26) , (@safari < 6.1)  , (@android < 4.4) , (@ios < 7) {
 	background-image: -webkit-gradient(linear, left top, left bottom, from(@tcolor), to(@bcolor));
 	background-image: -webkit-linear-gradient(bottom, @tcolor, @bcolor);
 }
 
-.gradient-vertical (@tcolor:#ccc, @bcolor:#333)
+.vertical-gradient (@tcolor:#ccc, @bcolor:#333)
 	when (@explorer >=  10) , (@firefox >= 16) , (@chrome >= 26) , (@safari >= 6.1) , (@opera >= 12.1) , (@android >= 4.4) , (@ios >= 7) {
 	background-image: linear-gradient(to bottom, @tcolor, @bcolor);
 }
@@ -155,35 +155,35 @@ ul{
 
 // 6.3.4 Horizontal gradient -------------------------------------------------
 // pass as #HEX number(#color-left, #color-right)
-// .gradient-horizontal(#999, #CCC);
+// .horizontal-gradient(#999, #CCC);
 
-.gradient-horizontal (@lcolor:#333, @rcolor:#ccc)
+.horizontal-gradient (@lcolor:#333, @rcolor:#ccc)
 	when (@explorer < 10) , (@firefox < 3.6) , (@chrome < 10) , (@safari < 5.1) , (@opera < 11.1) , (@android < 4) , (@ios < 5) {
 	background-color: @lcolor;
 }
 
-.gradient-horizontal (@lcolor:#333, @rcolor:#ccc)
+.horizontal-gradient (@lcolor:#333, @rcolor:#ccc)
 	when (@firefox < 16){
 	background-image: -moz-linear-gradient(left, @lcolor, @rcolor);
 }
 
-.gradient-horizontal (@lcolor:#333, @rcolor:#ccc)
+.horizontal-gradient (@lcolor:#333, @rcolor:#ccc)
 	when (@opera < 12.1) {
 	background-image: -o-linear-gradient(left, @lcolor, @rcolor);
 }
 
-.gradient-horizontal (@lcolor:#333, @rcolor:#ccc)
+.horizontal-gradient (@lcolor:#333, @rcolor:#ccc)
 	when (@explorer < 10) {
 	background-image: -ms-linear-gradient(left, @lcolor, @rcolor);
 }
 
-.gradient-horizontal (@lcolor:#333, @rcolor:#ccc)
+.horizontal-gradient (@lcolor:#333, @rcolor:#ccc)
 	when (@chrome <  26) , (@safari < 6.1)  , (@android < 4.4) , (@ios < 7) {
 	background-image: -webkit-gradient(linear, left top, right top, from(@lcolor), to(@rcolor));
 	background-image: -webkit-linear-gradient(left, @lcolor, @rcolor);
 }
 
-.gradient-horizontal (@lcolor:#333, @rcolor:#ccc)
+.horizontal-gradient (@lcolor:#333, @rcolor:#ccc)
 	when (@explorer >=  10) , (@firefox >= 16) , (@chrome >= 26) , (@safari >= 6.1) , (@opera >= 12.1) , (@android >= 4.4) , (@ios >= 7) {
 	background-image: linear-gradient(to left, @rcolor, @lcolor);
 }
@@ -191,24 +191,24 @@ ul{
 
 // 6.3.5 Radial gradient -----------------------------------------------------
 // pass as #HEX number(#color-in, #color-out)
-// .gradient-radial(#CCC, #999);
-.gradient-radial (@color-in: #ccc, @color-out: #333)
+// .radial-gradient(#CCC, #999);
+.radial-gradient (@color-in: #ccc, @color-out: #333)
 	when (@explorer < 10) , (@firefox < 3.6) , (@chrome < 10) , (@safari < 5.1) , (@opera < 11.1) , (@android < 4) , (@ios < 5) {
 	background-color: @color-out;
 }
 
-.gradient-radial (@color-in: #ccc, @color-out: #333)
+.radial-gradient (@color-in: #ccc, @color-out: #333)
 	when (@firefox < 16){
 	background-image: -moz-radial-gradient(circle, @color-in, @color-out);
 }
 
-.gradient-radial (@color-in: #ccc, @color-out: #333)
+.radial-gradient (@color-in: #ccc, @color-out: #333)
 	when (@chrome <  26) , (@safari < 6.1)  , (@android < 4.4) , (@ios < 7) {
 	background-image: -webkit-gradient(radial, center center, 0, center center, 460, from(@color-in), to(@color-out));
 	background-image: -webkit-radial-gradient(circle, @color-in, @color-out);
 }
 
-.gradient-radial (@color-in: #ccc, @color-out: #333)
+.radial-gradient (@color-in: #ccc, @color-out: #333)
 	when (@explorer >=  10) , (@firefox >= 16) , (@chrome >= 26) , (@safari >= 6.1) , (@opera >= 12.1) , (@android >= 4.4) , (@ios >= 7) {
 	background-image: radial-gradient(circle, @color-in, @color-out);
 	background-repeat: no-repeat;
@@ -296,14 +296,14 @@ ul{
 	.round-corners(10,10,0,0);
 }
 .test-l-g-v{
-	.gradient-vertical(#0c62a8,#042445);
+	.vertical-gradient(#0c62a8,#042445);
 }
 
 .test-l-g-h{
-	.gradient-horizontal(#0c62a8,#042445);
+	.horizontal-gradient(#0c62a8,#042445);
 }
 .test-l-g-r{
-	.gradient-radial(#0c62a8,#042445);
+	.radial-gradient(#0c62a8,#042445);
 }
 .test-b-s{
 	.box-shadow(0,0,12,2,#0c62a8);
