@@ -3,5 +3,3 @@ vendor/*
 bower_components/*
 bin/node_modules/*
 build/*
-styleguide/*
-less/main.less

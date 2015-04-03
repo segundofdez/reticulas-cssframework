@@ -36,7 +36,7 @@
 
 /*
 -----------------------------------------------------------------------------
-7.0 FLUID GRID
+FLUID GRID
 -----------------------------------------------------------------------------
 */
 
@@ -54,28 +54,28 @@
 
 /*
 -----------------------------------------------------------------------------
-7.1 GRID CONFIGURATION
+GRID CONFIGURATION
 -----------------------------------------------------------------------------
 */
 
-// 7.1.1 #page --------------------------------------------------------------
+// #page --------------------------------------------------------------
 @total-width: 100%;
 
-// 7.1.2 Grid componetns ----------------------------------------------------
+// Grid componetns ----------------------------------------------------
 @column-width: 65;
 @gutter-width: 21;
 @columns: 12;
 
-// 7.1.3 Base grid wrapper width as a number --------------------------------
+// Base grid wrapper width as a number --------------------------------
 @gridsystem-width:(@column-width*@columns) + (@gutter-width*@columns);
 
-// 7.1.4 Wrapper width (px) -------------------------------------------------
+// Wrapper width (px) -------------------------------------------------
 @wrapper: (@column-width*@columns) + (@gutter-width*@columns)*1px;
 
-// 7.1.5 Wrapper nested width (px) ------------------------------------------
+// Wrapper nested width (px) ------------------------------------------
 @wrappernested: @wrapper + @gutter-width;
 
-// 7.1.6 Column gutter and module (%) ---------------------------------------
+// Column gutter and module (%) ---------------------------------------
 @fluid-column-width: (@total-width/@columns) - @fluid-gutter-width*2;
 @fluid-gutter-width:  @total-width*((@gutter-width*.5)/@gridsystem-width);
 @fluid-module-width: @fluid-column-width + @fluid-gutter-width*2;
@@ -86,7 +86,6 @@
 	display: block;
 	clear:both;
 	width:100%;
-	//overflow:hidden;
 
 	max-width:@wrapper;
 
@@ -99,18 +98,9 @@
 	max-width: @wrappernested;
 }
 
-// TEST FOR EXPAND - NOT IMPLEMENTED YET
-//.wrapper{
-	//@media only screen and (max-width: @wrappernested),
-	//only screen and (max-device-width: @wrappernested){
-	//	.inner();
-	//}
-//}
-
-
 /*
 -----------------------------------------------------------------------------
-7.2 ROW
+ROW
 -----------------------------------------------------------------------------
 */
 
@@ -126,7 +116,7 @@
 
 /*
 -----------------------------------------------------------------------------
-7.2 COLUMN
+COLUMN
 -----------------------------------------------------------------------------
 */
 
@@ -138,37 +128,37 @@
 	margin-right: @fluid-gutter-width;
 }
 
-// 7.2.1 Padding left and right --------------------------------------------
+// Padding left and right --------------------------------------------
 .inner {
 	padding-left:@total-width*((@gutter-width*.5)/@gridsystem-width);
 	padding-right:@total-width*((@gutter-width*.5)/@gridsystem-width);
 }
 
-// 7.2.2 Margin left and right ---------------------------------------------
+// Margin left and right ---------------------------------------------
 .innermargin{
 	margin-left:@total-width*((@gutter-width*.5)/@gridsystem-width);
 	margin-right:@total-width*((@gutter-width*.5)/@gridsystem-width);
 }
 
-// 7.2.3 Expand content on wrapper for columns adjust ----------------------
+// Expand content on wrapper for columns adjust ----------------------
 .expand{
 	.clearfix();
 	margin-left: -@fluid-gutter-width;
 	width: (@fluid-column-width*@columns) + ((@fluid-gutter-width*2)*@columns) + @fluid-gutter-width*2;
 }
 
-// 7.2.4 Solve padding problem on diferents indents - OBSOLETE -------------
+// Solve padding problem on diferents indents - OBSOLETE -------------
 .innerwrapper {
 	padding-left:@total-width*(((@gutter-width*.5)/@gridsystem-width)/@fluid-gutter-width);
 	padding-right:@total-width*(((@gutter-width*.5)/@gridsystem-width)/@fluid-gutter-width);
 }
 
-// 7.2.5 Push columns ------------------------------------------------------
+// Push columns ------------------------------------------------------
 .push(@offset:1) {
 	margin-left: (@total-width*(((@gutter-width+@column-width)*@offset) / @gridsystem-width)) + @fluid-gutter-width;
 }
 
-// 7.2.6 Push rows ---------------------------------------------------------
+// Push rows ---------------------------------------------------------
 .push-r(@offset:1) {
 	margin-left: (@total-width*(((@gutter-width+@column-width)*@offset) / @gridsystem-width));
 }

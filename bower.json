@@ -5,11 +5,10 @@
   "authors": [
     "Segundo Fdez <hello@reticulas.com>"
  	],
- 	"description": "Reticulas is a library​ that allows to work faster using style sheets.",
+ 	"description": "Reticulas less",
   "keywords": [
     "less",
-    "css",
-    "cssframework"
+    "css"
   ],
   "license": "MIT",
   "ignore": [

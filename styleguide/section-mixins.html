@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<!--[if lte IE 6]>            <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if IEMobile 7]>          <html class="no-js iem7" lang="en"> <![endif]-->
+<!--[if (IE 7)&(!IEMobile)]>  <html class="no-js lt-ie9 lt-ie8" lang="en"> <![endif]-->
+<!--[if IE 8]>                <html class="no-js lt-ie9" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|(gt IEMobile 7)]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>KSS: Living Style Guide</title>
+
+  <meta name="description" content="">
+  <meta name="generator" content="kss-node">
+  <meta name="viewport" content="width=device-width">
+
+  <link rel="stylesheet" href="public/kss.css">
+  <link rel="stylesheet" href="../build/main.min.css">
+
+</head>
+<body id="kss-node">
+
+<div class="kss-sidebar kss-style">
+  <header class="kss-header">
+    <h1 class="kss-doc-title">kss-node<br>Style Guide</h1>
+  </header>
+  <nav class="kss-nav">
+    <ul class="kss-nav__menu">
+      <li class="kss-nav__menu-item">
+        <a href="./">
+          <span class="kss-nav__ref">0</span
+          ><span class="kss-nav__name">Overview</span>
+        </a>
+      </li>
+      <li class="kss-nav__menu-item">
+        <a href="section-core.html">
+          <span class="kss-nav__ref">1</span
+          ><span class="kss-nav__name">Core</span>
+        </a>
+      </li>
+      <li class="kss-nav__menu-item">
+        <a href="section-grid.html">
+          <span class="kss-nav__ref">2</span
+          ><span class="kss-nav__name">Grid</span>
+        </a>
+      </li>
+      <li class="kss-nav__menu-item">
+        <a href="section-mixins.html">
+          <span class="kss-nav__ref">3</span
+          ><span class="kss-nav__name">Mixins</span>
+        </a>
+        <ul class="kss-nav__menu-child">
+            <li class="kss-nav__menu-item">
+              <a href="section-mixins.html#kssref-mixins.border-radius">
+                <span class="kss-nav__ref">3.1</span
+                ><span class="kss-nav__name">.border-radius(@radius);</span>
+              </a>
+            </li>
+            <li class="kss-nav__menu-item">
+              <a href="section-mixins.html#kssref-mixins.box-shadow">
+                <span class="kss-nav__ref">3.2</span
+                ><span class="kss-nav__name">.box-shadow(@h-shadow, @v-shadow, @blur-shadow, @spread-shadow @color-shadow);</span>
+              </a>
+            </li>
+            <li class="kss-nav__menu-item">
+              <a href="section-mixins.html#kssref-mixins.font-size">
+                <span class="kss-nav__ref">3.3</span
+                ><span class="kss-nav__name">.font-size(@sizeValue);</span>
+              </a>
+            </li>
+            <li class="kss-nav__menu-item">
+              <a href="section-mixins.html#kssref-mixins.horizontal-gradient">
+                <span class="kss-nav__ref">3.4</span
+                ><span class="kss-nav__name">.horizontal-gradient (@lcolor, @rcolor)</span>
+              </a>
+            </li>
+            <li class="kss-nav__menu-item">
+              <a href="section-mixins.html#kssref-mixins.radial-gradient">
+                <span class="kss-nav__ref">3.5</span
+                ><span class="kss-nav__name">.radial-gradient (@color-in, @color-out)</span>
+              </a>
+            </li>
+            <li class="kss-nav__menu-item">
+              <a href="section-mixins.html#kssref-mixins.round-coners">
+                <span class="kss-nav__ref">3.6</span
+                ><span class="kss-nav__name">.round-corners(@tl, @tr, @br, bl);</span>
+              </a>
+            </li>
+            <li class="kss-nav__menu-item">
+              <a href="section-mixins.html#kssref-mixins.vertical-gradient">
+                <span class="kss-nav__ref">3.7</span
+                ><span class="kss-nav__name">.vertical-gradient (@tcolor, @bcolor)</span>
+              </a>
+            </li>
+        </ul>
+      </li>
+      <li class="kss-nav__menu-item">
+        <a href="section-purecss.html">
+          <span class="kss-nav__ref">4</span
+          ><span class="kss-nav__name">Purecss</span>
+        </a>
+      </li>
+    </ul>
+  </nav>
+</div>
+<article role="main" class="kss-main">
+
+      <div     id="kssref-mixins" class="kss-section kss-section--depth-1">
+
+    <div class="kss-style">
+      <h1 class="kss-title kss-title--level-1">
+        <a class="kss-title__permalink" href="#kssref-mixins">
+          <span class="kss-title__ref">3</span
+          >Mixins
+          <span class="kss-title__permalink-hash">#permalink</span>
+        </a>
+      </h1>
+
+
+      <div class="kss-description">
+        <p>Less mixins used in reticulas.</p>
+
+      </div>
+    </div>
+
+
+      </div>
+      <section id="kssref-mixins.border-radius" class="kss-section kss-section--depth-2">
+
+    <div class="kss-style">
+      <h2 class="kss-title kss-title--level-2">
+        <a class="kss-title__permalink" href="#kssref-mixins.border-radius">
+          <span class="kss-title__ref">3.1</span
+          >.border-radius(@radius);
+          <span class="kss-title__permalink-hash">#permalink</span>
+        </a>
+      </h2>
+
+
+      <div class="kss-description">
+        <p>Creates specified border radius.</p>
+
+      </div>
+    </div>
+
+      <div class="kss-modifier__wrapper">
+        <div class="kss-modifier__heading kss-style">
+          Example
+        </div>
+        <div class="kss-modifier__example">
+          <div class="border-radius">border-radius</div>
+        </div>
+      </div>
+
+      <div class="kss-markup kss-style">
+        <pre class="prettyprint linenums lang-html"><code data-language="html">&lt;div class=&quot;border-radius&quot;&gt;border-radius&lt;/div&gt;</code></pre>
+      </div>
+
+      </section>
+      <section id="kssref-mixins.box-shadow" class="kss-section kss-section--depth-2">
+
+    <div class="kss-style">
+      <h2 class="kss-title kss-title--level-2">
+        <a class="kss-title__permalink" href="#kssref-mixins.box-shadow">
+          <span class="kss-title__ref">3.2</span
+          >.box-shadow(@h-shadow, @v-shadow, @blur-shadow, @spread-shadow @color-shadow);
+          <span class="kss-title__permalink-hash">#permalink</span>
+        </a>
+      </h2>
+
+
+      <div class="kss-description">
+        <p>Creates box shadow.</p>
+
+      </div>
+    </div>
+
+      <div class="kss-modifier__wrapper">
+        <div class="kss-modifier__heading kss-style">
+          Example
+        </div>
+        <div class="kss-modifier__example">
+          <div class="box-shadow">box-shadow</div>
+        </div>
+      </div>
+
+      <div class="kss-markup kss-style">
+        <pre class="prettyprint linenums lang-html"><code data-language="html">&lt;div class=&quot;box-shadow&quot;&gt;box-shadow&lt;/div&gt;</code></pre>
+      </div>
+
+      </section>
+      <section id="kssref-mixins.font-size" class="kss-section kss-section--depth-2">
+
+    <div class="kss-style">
+      <h2 class="kss-title kss-title--level-2">
+        <a class="kss-title__permalink" href="#kssref-mixins.font-size">
+          <span class="kss-title__ref">3.3</span
+          >.font-size(@sizeValue);
+          <span class="kss-title__permalink-hash">#permalink</span>
+        </a>
+      </h2>
+
+
+      <div class="kss-description">
+        <p>Font size number. Values rem and px fallback .</p>
+
+      </div>
+    </div>
+
+      <div class="kss-modifier__wrapper">
+        <div class="kss-modifier__heading kss-style">
+          Example
+        </div>
+        <div class="kss-modifier__example">
+          <div class="font-size">.font-size(21);</div>
+        </div>
+      </div>
+
+      <div class="kss-markup kss-style">
+        <pre class="prettyprint linenums lang-html"><code data-language="html">&lt;div class=&quot;font-size&quot;&gt;.font-size(21);&lt;/div&gt;</code></pre>
+      </div>
+
+      </section>
+      <section id="kssref-mixins.horizontal-gradient" class="kss-section kss-section--depth-2">
+
+    <div class="kss-style">
+      <h2 class="kss-title kss-title--level-2">
+        <a class="kss-title__permalink" href="#kssref-mixins.horizontal-gradient">
+          <span class="kss-title__ref">3.4</span
+          >.horizontal-gradient (@lcolor, @rcolor)
+          <span class="kss-title__permalink-hash">#permalink</span>
+        </a>
+      </h2>
+
+
+      <div class="kss-description">
+        <p>Creates horizontal gradients.</p>
+
+      </div>
+    </div>
+
+      <div class="kss-modifier__wrapper">
+        <div class="kss-modifier__heading kss-style">
+          Example
+        </div>
+        <div class="kss-modifier__example">
+          <div class="horizontal-gradient">horizontal-gradient</div>
+        </div>
+      </div>
+
+      <div class="kss-markup kss-style">
+        <pre class="prettyprint linenums lang-html"><code data-language="html">&lt;div class=&quot;horizontal-gradient&quot;&gt;horizontal-gradient&lt;/div&gt;</code></pre>
+      </div>
+
+      </section>
+      <section id="kssref-mixins.radial-gradient" class="kss-section kss-section--depth-2">
+
+    <div class="kss-style">
+      <h2 class="kss-title kss-title--level-2">
+        <a class="kss-title__permalink" href="#kssref-mixins.radial-gradient">
+          <span class="kss-title__ref">3.5</span
+          >.radial-gradient (@color-in, @color-out)
+          <span class="kss-title__permalink-hash">#permalink</span>
+        </a>
+      </h2>
+
+
+      <div class="kss-description">
+        <p>Creates radial gradients.</p>
+
+      </div>
+    </div>
+
+      <div class="kss-modifier__wrapper">
+        <div class="kss-modifier__heading kss-style">
+          Example
+        </div>
+        <div class="kss-modifier__example">
+          <div class="radial-gradient">radial-gradient</div>
+        </div>
+      </div>
+
+      <div class="kss-markup kss-style">
+        <pre class="prettyprint linenums lang-html"><code data-language="html">&lt;div class=&quot;radial-gradient&quot;&gt;radial-gradient&lt;/div&gt;</code></pre>
+      </div>
+
+      </section>
+      <section id="kssref-mixins.round-coners" class="kss-section kss-section--depth-2">
+
+    <div class="kss-style">
+      <h2 class="kss-title kss-title--level-2">
+        <a class="kss-title__permalink" href="#kssref-mixins.round-coners">
+          <span class="kss-title__ref">3.6</span
+          >.round-corners(@tl, @tr, @br, bl);
+          <span class="kss-title__permalink-hash">#permalink</span>
+        </a>
+      </h2>
+
+
+      <div class="kss-description">
+        <p>Creates specified border radius.</p>
+
+      </div>
+    </div>
+
+      <div class="kss-modifier__wrapper">
+        <div class="kss-modifier__heading kss-style">
+          Example
+        </div>
+        <div class="kss-modifier__example">
+          <div class="round-corners">round-coners</div>
+        </div>
+      </div>
+
+      <div class="kss-markup kss-style">
+        <pre class="prettyprint linenums lang-html"><code data-language="html">&lt;div class=&quot;round-corners&quot;&gt;round-coners&lt;/div&gt;</code></pre>
+      </div>
+
+      </section>
+      <section id="kssref-mixins.vertical-gradient" class="kss-section kss-section--depth-2">
+
+    <div class="kss-style">
+      <h2 class="kss-title kss-title--level-2">
+        <a class="kss-title__permalink" href="#kssref-mixins.vertical-gradient">
+          <span class="kss-title__ref">3.7</span
+          >.vertical-gradient (@tcolor, @bcolor)
+          <span class="kss-title__permalink-hash">#permalink</span>
+        </a>
+      </h2>
+
+
+      <div class="kss-description">
+        <p>Creates vertical gradients.</p>
+
+      </div>
+    </div>
+
+      <div class="kss-modifier__wrapper">
+        <div class="kss-modifier__heading kss-style">
+          Example
+        </div>
+        <div class="kss-modifier__example">
+          <div class="vertical-gradient">vertical-gradient</div>
+        </div>
+      </div>
+
+      <div class="kss-markup kss-style">
+        <pre class="prettyprint linenums lang-html"><code data-language="html">&lt;div class=&quot;vertical-gradient&quot;&gt;vertical-gradient&lt;/div&gt;</code></pre>
+      </div>
+
+      </section>
+</article>
+
+<!-- SCRIPTS -->
+<script src="public/kss.js"></script>
+<script src="public/prettify.js"></script>
+<script>
+  prettyPrint();
+</script>
+
+
+
+<!-- Automatically generated using <a href="https://github.com/kss-node/kss-node">kss-node</a>. -->
+</body>
+</html>
