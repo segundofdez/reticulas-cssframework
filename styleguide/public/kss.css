@@ -47,19 +47,19 @@
   font-size: 40px;
 }
 .kss-style h2 {
-  font-size: 34px;
+  font-size: 36px;
 }
 .kss-style h3 {
-  font-size: 32px;
+  font-size: 34px;
 }
 .kss-style h4 {
-  font-size: 30px;
+  font-size: 32px;
 }
 .kss-style h5 {
-  font-size: 28px;
+  font-size: 30px;
 }
 .kss-style h6 {
-  font-size: 24px;
+  font-size: 28px;
 }
 .kss-style blockquote {
   color: #666666;
@@ -181,16 +181,14 @@
   }
 }
 #kss-node {
+  background: #fff;
   margin: 0;
   padding: 20px;
-  background: #fff;
-  display: flex;
-  flex-direction: column;
 }
 @media screen and (min-width: 769px) {
   #kss-node {
-    flex-direction: row;
     padding: 0;
+    display: flex;
   }
   #kss-node .kss-main,
   #kss-node .kss-sidebar {
@@ -199,19 +197,22 @@
 }
 @media screen and (min-width: 769px) {
   #kss-node .kss-main {
+    width: 80%;
     padding: 0 30px;
   }
 }
 #kss-node .kss-sidebar {
+  width: 100%;
   border-bottom: 1px solid #ddd;
-  background-color: transparent;
 }
 @media screen and (min-width: 769px) {
   #kss-node .kss-sidebar {
     background-color: #f5f5f5;
     max-width: 250px;
-    padding: 0 20px;
+    min-height: 100vh;
+    border-right: 1px solid #ddd;
     border-bottom: 0;
+    padding: 0 20px;
   }
 }
 #kss-node .kss-doc-title {
@@ -229,19 +230,23 @@
   }
 }
 #kss-node .kss-nav__menu {
-  margin-top: 12px;
-  margin-bottom: 12px;
   padding: 0;
   list-style-type: none;
+  font-size: .875rem;
+  line-height: 1.3em;
 }
 #kss-node .kss-nav__menu-item {
   display: inline-block;
-  padding-right: 24px;
+  margin-bottom: .5em;
+  margin-right: 1em;
 }
 @media screen and (min-width: 769px) {
   #kss-node .kss-nav__menu-item {
     display: list-item;
-    padding-right: 0;
+    margin-right: 0;
+  }
+  #kss-node .kss-nav__menu-item:last-child {
+    margin-bottom: 0;
   }
 }
 #kss-node .kss-nav__menu-child {
@@ -260,6 +265,7 @@
 #kss-node .kss-nav__ref {
   color: #333;
   font-weight: bold;
+  margin-right: .25em;
 }
 #kss-node .kss-nav__ref:after {
   content: ' ';
@@ -291,8 +297,6 @@
 }
 #kss-node .kss-title {
   margin-bottom: 0;
-  border-bottom: 1px solid #ddd;
-  padding-bottom: .25em;
 }
 #kss-node .kss-title__ref {
   display: block;
@@ -343,11 +347,11 @@
   display: table-cell;
 }
 #kss-node .kss-modifier__wrapper {
-  border: 1px solid #ddd;
-  padding: 0 0 15px 0;
+  border: 1px solid #ccc;
+  padding: 10px;
 }
 #kss-node .kss-modifier__heading {
-  margin-bottom: 10px;
+  margin: -10px -10px 10px -10px;
   padding: 10px;
   border-bottom: 1px solid #ccc;
   background-color: #eee;
@@ -367,13 +371,15 @@
 }
 #kss-node .kss-modifier__example {
   clear: left;
+  padding: 1px 0;
+  margin: 0 0 23px 0;
 }
 #kss-node .kss-modifier__example:last-child {
   margin: 0;
 }
 #kss-node .kss-markup {
-  margin: 0;
-  border: 1px solid #ddd;
+  margin: -1px 0 24px 0;
+  border: 1px solid #999;
 }
 #kss-node .kss-markup pre {
   margin: 0;

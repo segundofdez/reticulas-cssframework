@@ -35,8 +35,8 @@ gulp.task('styles', function () {
   return gulp.src(less_src_import)
     .pipe(less())
     .on('error', swallowError)
-    //.pipe(autoprefixer('last 2 version', 'safari 5', 'ie 8', 'ie 9', 'opera 12.1'))
-    //.pipe(minifycss(minOpts))
+    .pipe(autoprefixer('last 2 version', 'safari 5', 'ie 8', 'ie 9', 'opera 12.1'))
+    .pipe(minifycss(minOpts))
     .pipe(rename('main.min.css'))
     .pipe(gulp.dest(less_dest_folder))
     .pipe(notify("Less Compiled, Prefixed and Minified"));

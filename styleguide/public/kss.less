@@ -61,11 +61,11 @@
   }
 
   h1 { font-size: @kss-font-size * 2.5;   }
-  h2 { font-size: @kss-font-size * 2.125;  }
-  h3 { font-size: @kss-font-size * 2; }
-  h4 { font-size: @kss-font-size * 1.875; }
-  h5 { font-size: @kss-font-size * 1.75; }
-  h6 { font-size: @kss-font-size * 1.5;  }
+  h2 { font-size: @kss-font-size * 2.25;  }
+  h3 { font-size: @kss-font-size * 2.125; }
+  h4 { font-size: @kss-font-size * 2;     }
+  h5 { font-size: @kss-font-size * 1.875; }
+  h6 { font-size: @kss-font-size * 1.75;  }
 
   blockquote {
     color: @kss-colors-quotes;
@@ -162,45 +162,39 @@
 // ------------------------------------------------------------------------------
 
 #kss-node {
-  margin: 0;
-  padding: 20px;
-  background: #fff;
-  display: flex;
-  flex-direction:column;
-  @media screen and (min-width: 769px) {
-   flex-direction:row;
-    padding: 0;
-    .kss-main,
-    .kss-sidebar {
-      //float: left;
-      //margin-right: -100%;
-      box-sizing: border-box;
-    }
-  }
+	background: #fff;
+	margin: 0;
+	padding: 20px;
 
-  .kss-main {
-    //width: 100%;
-    //margin: 0 auto;
+	@media screen and (min-width: 769px) {
+		padding: 0;
+		display: flex;
+		.kss-main,
+		.kss-sidebar {
+			box-sizing: border-box;
+		}
+	}
 
-    @media screen and (min-width: 769px) {
-      //width: 80%;
-      //margin-left: 20%;
-      padding: 0 30px;
-    }
-  }
+	.kss-main {
+		@media screen and (min-width: 769px) {
+		  width: 80%;
+		  padding: 0 30px;
+		}
+	}
 
-  .kss-sidebar {
-    border-bottom:1px solid #ddd;
-    background-color: transparent;
+	.kss-sidebar {
+		width: 100%;
+		border-bottom:1px solid #ddd;
 
-    @media screen and (min-width: 769px) {
-
-      background-color: #f5f5f5;
-      max-width: 250px;
-      padding: 0 20px;
-      border-bottom: 0;
-    }
-  }
+		@media screen and (min-width: 769px) {
+			background-color: #f5f5f5;
+			max-width: 250px;
+			min-height: 100vh;
+			border-right:1px solid #ddd;
+			border-bottom: 0;
+			padding: 0 20px;
+		}
+	}
 }
 
 // ------------------------------------------------------------------------------
@@ -225,19 +219,26 @@
   }
 
   .kss-nav__menu {
-    margin-top: (@kss-vertical-rhythm/2);
-    margin-bottom: (@kss-vertical-rhythm/2);
+    //margin-top: (@kss-vertical-rhythm/2);
+    //margin-bottom: (@kss-vertical-rhythm/2);
     padding: 0;
     list-style-type: none;
+    font-size: .875rem;
+    line-height: 1.3em;
   }
 
   .kss-nav__menu-item {
     display: inline-block;
-    padding-right: @kss-vertical-rhythm;
+    margin-bottom: .5em;
+    margin-right: 1em;
+    //padding-right: @kss-vertical-rhythm;
 
     @media screen and (min-width: 769px) {
       display: list-item;
-      padding-right: 0;
+      margin-right: 0;
+      &:last-child{
+      	margin-bottom: 0;
+      }
     }
   }
 
@@ -257,6 +258,7 @@
   .kss-nav__ref {
     color: #333;
     font-weight: bold;
+    margin-right: .25em;
 
     &:after {
       content: ' ';
@@ -281,8 +283,6 @@
 
   .kss-title {
     margin-bottom: 0;
-    border-bottom: 1px solid #ddd;
-    padding-bottom: .25em;
   }
   .kss-title__ref {
     display: block;
@@ -336,12 +336,11 @@
   }
 
   .kss-modifier__wrapper {
-    border: 1px solid #ddd;
-    padding: 0 0 15px 0;
+    border: 1px solid #ccc;
+    padding: 10px;
   }
   .kss-modifier__heading {
-   // margin: -10px -10px 10px -10px;
-    margin-bottom: 10px;
+    margin: -10px -10px 10px -10px;
     padding: 10px;
     border-bottom: 1px solid #ccc;
     background-color: #eee;
@@ -361,8 +360,8 @@
   }
   .kss-modifier__example {
     clear: left;
-    //padding: 1px 0; // Contain the example's margins.
-   // margin: 0 0 (@kss-vertical-rhythm - 1px) 0;
+    padding: 1px 0; // Contain the example's margins.
+    margin: 0 0 (@kss-vertical-rhythm - 1px) 0;
 
     &:last-child {
       margin: 0;
@@ -370,9 +369,8 @@
   }
 
   .kss-markup {
-    margin: 0;
-    border: 1px solid #ddd;
-    //border-left: 5px solid @kss-colors-link;
+    margin: -1px 0 @kss-vertical-rhythm 0;
+    border: 1px solid #999;
   }
   .kss-markup pre {
     margin: 0;
