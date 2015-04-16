@@ -1,7 +1,6 @@
 # Reticulas cssframework
 
 [![Author](http://img.shields.io/badge/author-@segundofdez-blue.svg?style=flat-square)](https://twitter.com/segundo_fdez)
-[![Latest Version](https://img.shields.io/github/release/segundofdez/reticulas-cssframework.svg?style=flat-square)](https://github.com/segundofdez/reticulas-cssframework/releases)
 
 [![GitHub tag](https://img.shields.io/github/tag/segundofdez/reticulas-cssframework.svg?style=flat-square)](https://github.com/segundofdez/reticulas-cssframework/tags)
 
