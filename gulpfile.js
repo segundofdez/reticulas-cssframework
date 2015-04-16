@@ -19,15 +19,15 @@ function swallowError (error) {
 * Task watch and styles
 */
 gulp.task('site-less', function () {
-    gulp.watch('../less/**/*.less', ['styles']);
+    gulp.watch('less/**/*.less', ['styles']);
 });
 
 /**
 * Task styles: errors, autoprefixer, minified, rename, notify
 */
 gulp.task('styles', function () {
-  var less_src_import = '../less/main.less';
-  var less_dest_folder = '../build/';
+  var less_src_import = 'less/main.less';
+  var less_dest_folder = 'build/';
   var minOpts = {processImport:false};
 
   gulp.src(less_dest_folder + '/main.min.css', {read: false});
