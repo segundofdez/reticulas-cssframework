@@ -1,6 +1,6 @@
 /.gitattributes export-ignore
 /.gitignore export-ignore
-/styleguide/* export-ignore
+/styleguide export-ignore
 /less/main.less export-ignore
 /less/pure-css.less export-ignore
 /less/styleguide.md export-ignore
