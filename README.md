@@ -1,7 +1,7 @@
 # Reticulas cssframework
 
 [![Author](http://img.shields.io/badge/author-@segundofdez-blue.svg?style=flat-square)](https://twitter.com/segundo_fdez)
-[![Latest Version](https://github.com/segundofdez/reticulas-cssframework/releases/sliminit.svg?style=flat-square)](https://github.com/segundofdez/reticulas-cssframework/releases)
+[![Latest Version](https://img.shields.io/github/release/segundofdez/reticulas-cssframework.svg?style=flat-square)](https://github.com/segundofdez/reticulas-cssframework/releases)
 [![Software License](https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square)](LICENSE.md)
 
 Reticulas is a library written with [less][1] with mixins, and pure css helpers.
