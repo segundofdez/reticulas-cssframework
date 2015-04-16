@@ -6,8 +6,6 @@
 
 Reticulas is a library with mixins, and pure css helpers written in [less][1].
 
-More Info: http://cssframework.reticulas.com
-
 
 ## Install
 
@@ -15,6 +13,13 @@ Download the latest stable version of reticulas css framework or install with [b
 ```bash
 bower install reticulas-cssframework
 ```
+
+## Documentation
+
+Doc for v2.1.2: http://cssframework.reticulas.com
+
+You can generate documentation with kss-node gulp task
+
 
 ## Tasks
 If you prefer a basic template ready to work go to https://github.com/segundofdez/reticulas-template
