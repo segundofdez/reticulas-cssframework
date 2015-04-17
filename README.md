@@ -21,7 +21,7 @@ You can generate documentation for v.3.0.0 with kss-node gulp task.
 
 
 ## Tasks
-If you prefer a basic template ready to work go to https://github.com/segundofdez/reticulas-template
+If you prefer a basic template with gulp task ready to work go to https://github.com/segundofdez/reticulas-template
 
 
 ## License
