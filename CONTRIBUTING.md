@@ -1,6 +1,6 @@
 # Contributing
 
-Contributions are welcome via **Pull Requests**
+Contributions are welcome via [**Pull Requests**](https://github.com/segundofdez/reticulas-cssframework/pulls)
 
 ## Bugs and issues
 
