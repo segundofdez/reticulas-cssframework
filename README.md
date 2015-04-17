@@ -25,7 +25,7 @@ If you prefer a basic template with gulp tasks ready to work go to https://githu
 
 ## Contributing
 
-Please see [CONTRIBUTING](https://github.com/segundofdez/reticulas-cssframework/blob/devCONTRIBUTING.md) for details.
+Please see [CONTRIBUTING](https://github.com/segundofdez/reticulas-cssframework/blob/dev/CONTRIBUTING.md) for details.
 
 ## License
 Code and documentation Copyright (c) 2009-2015 Segundo Fdez (http://segundofdez.com) Code released under the [the MIT license](https://github.com/segundofdez/reticulas-cssframework/blob/dev/LICENSE.md)
