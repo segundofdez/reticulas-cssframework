@@ -4,7 +4,7 @@
 [![GitHub tag](https://img.shields.io/github/tag/segundofdez/reticulas-cssframework.svg?style=flat-square)](https://github.com/segundofdez/reticulas-cssframework/tags)
 [![Software License](https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square)](LICENSE.md)
 
-Reticulas is a library with mixins, and pure css helpers written in [less][1].
+Reticulas is a library with mixins and helpers written in [less][1].
 
 
 ## Install
