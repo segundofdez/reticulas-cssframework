@@ -26,8 +26,7 @@ If you prefer a basic template ready to work go to https://github.com/segundofde
 
 
 ## License
-
-2009-2015 Copyright (c) Segundo Fdez: http://segundofdez.com - [@segundo_fdez](https://twitter.com/segundo_fdez) | Sond3: http://sond3.com - [@sond3](https://twitter.com/sond3). Distributed under the MIT license: http://www.opensource.org/licenses/mit-license.php
+Code and documentation Copyright (c) 2009-2015 Segundo Fdez (http://segundofdez.com) Code released under the [the MIT license](https://github.com/segundofdez/reticulas-cssframework/blob/dev/LICENSE.md)
 
 [0]:http://leafo.net/lessphp/
 [1]:http://lesscss.org/
