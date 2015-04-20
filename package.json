@@ -28,8 +28,10 @@
 		"gulp-minify-css": "^1.0.0",
 		"gulp-watch": "^4.1.1",
 		"gulp-notify": "^2.2.0",
+		"gulp-sourcemaps": "1.5.2",
 		"gulp-rename": "^1.2.0",
 		"gulp-livereload": "3.8.0",
-		"kss": "2.0.2"
+		"kss": "2.0.2",
+		"gulp-kss": "0.0.2"
 	}
 }
