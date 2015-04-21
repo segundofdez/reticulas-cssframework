@@ -34,7 +34,6 @@ Please see [CONTRIBUTING](https://github.com/segundofdez/reticulas-cssframework/
 
 - <http://segundofdez.com>
 - <https://twitter.com/segundo_fdez>
-- <https://github.com/segundofdez>
 
 **Contributors**
 - <https://github.com/segundofdez/reticulas-cssframework/graphs/contributors>
