@@ -7,7 +7,7 @@ var notify = require('gulp-notify');
 var watch = require('gulp-watch');
 var sourcemaps = require('gulp-sourcemaps');
 var livereload = require('gulp-livereload');
-//var kss = require('gulp-kss');
+//var gulpkss = require('gulp-kss');
 
 /**
 * Gulp errors
@@ -44,3 +44,4 @@ gulp.task('styles', function () {
         .pipe(notify("Less compiled, prefixed and minified"))
         .pipe(livereload())
 });
+
