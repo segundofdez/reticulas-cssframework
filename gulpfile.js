@@ -29,18 +29,18 @@ gulp.task('watch', function () {
 * Task styles: errors, autoprefixer, minified, rename, sourcemap and notify
 */
 gulp.task('styles', function () {
-    var less_src_import = 'less/main.less';
+    var less_src_import = 'less/reticulas.less';
     var less_dest_folder = 'build/';
 
     return gulp.src(less_src_import)
         .pipe(less())
         .on('error', swallowError)
         .pipe(autoprefixer('last 2 version', 'safari 5', 'ie 8', 'ie 9', 'opera 12.1'))
-        .pipe(minifycss())
+        .pipe(minifycss({keepSpecialComments: 0}))
         .pipe(sourcemaps.init())
             .pipe(rename({suffix: '.min'}))
         .pipe(sourcemaps.write("./"))
         .pipe(gulp.dest(less_dest_folder))
-        .pipe(notify("Less Compiled, Prefixed and Minified"))
+        .pipe(notify("Less compiled, prefixed and minified"))
         .pipe(livereload())
 });

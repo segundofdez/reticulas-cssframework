@@ -1,18 +1,21 @@
 {
   "name": "reticulas",
   "version": "3.0.0",
+  "main": "reticulas.less",
   "homepage": "http://cssframework.reticulas.com",
   "authors": [
     "Segundo Fdez <hello@reticulas.com>"
  	],
- 	"description": "Reticulas less",
+ 	"description": "Reticulas is a library with mixins and helper classes written in less",
   "keywords": [
     "less",
     "css"
   ],
   "license": "MIT",
   "ignore": [
-    ".gitignore"
+    ".gitignore",
+    ".gitattributes",
+    "CONTRIBUTING.md"
   ],
   "dependencies": {
     "normalize-css":"^3.0.2"

@@ -1,85 +1,41 @@
-/**
- * RETICULAS CSSFRAMEWORK - fluid.less
- *
- * @description   Make your own fluid grid - WORKING TO IMPROVE GRID SYSTEM!!
- *
- * @version       2.1.2
- *
- * @License       MIT License
- *
- * @link          http://cssframework.reticulas.com
- * @info          http://segundofdez.com - @segundo_fdez | http://sond3.com - @sond3
- *
- * =============================================================================
- *
- * Copyright (c) 2014, Segundo Fdez (@segundo_fdez) - hello@reticulas.com
- * http://cssframework.reticulas.com | http://segundofdez.com | http://sond3.com
- *
- * Permission is hereby granted, free of charge, to any person obtaining a
- * copy of this software and associated documentation files (the "Software"),
- * to deal in the Software without restriction, including without limitation
- * the rights to use, copy, modify, merge, publish, distribute, sublicense,
- * and/or sell copies of the Software, and to permit persons to whom the
- * Software is furnished to do so, subject to the following conditions:
- *
- *  The above copyright notice and this permission notice shall be included in
- * all copies or substantial portions of the Software.
- *
- * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
- * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
- * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL
- * THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
- * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
- * FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
- * DEALINGS IN THE SOFTWARE.
-*/
-
-/*
------------------------------------------------------------------------------
-FLUID GRID
------------------------------------------------------------------------------
-*/
-
 * {
-	/* Older Webkit */
-	/* Older FF */
-	/* IE8 */
-	/* CSS3 */
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
 	-ms-box-sizing: border-box;
 	box-sizing: border-box;
 }
 
-
-/*
------------------------------------------------------------------------------
-GRID CONFIGURATION
------------------------------------------------------------------------------
-*/
-
-// #page --------------------------------------------------------------
+// page
 @total-width: 100%;
 
-// Grid componetns ----------------------------------------------------
+// Grid components
 @column-width: 65;
 @gutter-width: 21;
 @columns: 12;
 
-// Base grid wrapper width as a number --------------------------------
+// Base grid wrapper width as a number
 @gridsystem-width:(@column-width*@columns) + (@gutter-width*@columns);
 
-// Wrapper width (px) -------------------------------------------------
+// Wrapper width (px)
 @wrapper: (@column-width*@columns) + (@gutter-width*@columns)*1px;
 
-// Wrapper nested width (px) ------------------------------------------
+// Wrapper nested width (px)
 @wrappernested: @wrapper + @gutter-width;
 
-// Column gutter and module (%) ---------------------------------------
+// Column gutter and module (%)
 @fluid-column-width: (@total-width/@columns) - @fluid-gutter-width*2;
 @fluid-gutter-width:  @total-width*((@gutter-width*.5)/@gridsystem-width);
 @fluid-module-width: @fluid-column-width + @fluid-gutter-width*2;
 
+
+// .wrapper;
+//
+// Wrapp your content.
+//
+// Markup:
+// <div class="wrapper">content</div>
+//
+// Styleguide grid.wrapper
 
 .wrapper,
 .wrappernested{
@@ -94,33 +50,51 @@ GRID CONFIGURATION
 	.clearfix;
 }
 
+
+// .wrappernested;
+//
+// Wrapp your content with extra gutter.
+//
+// Markup:
+// <div class="wrappernested">content</div>
+//
+// Styleguide grid.wrappernested
+
 .wrappernested{
 	max-width: @wrappernested;
 }
 
-/*
------------------------------------------------------------------------------
-ROW
------------------------------------------------------------------------------
-*/
+
+// row(@r)
+//
+// Add module row
+//
+// Compatible in IE6+, Firefox 2+, Safari 4+.
+//
+// @r - Number to add module row.
+//
+// Styleguide grid.row
 
 .row(@r) {
 	display: block;
 	float:left;
 	width: (@fluid-module-width*@r);
 	//margin: 0 -@fluid-gutter-width*(@variationround*1%);
-	//margin:0;
 	.clearfix;
 }
 
 
-/*
------------------------------------------------------------------------------
-COLUMN
------------------------------------------------------------------------------
-*/
+// .column(@n)
+//
+// Add module column.
+//
+// Compatible in IE6+, Firefox 2+, Safari 4+.
+//
+// @n - Number to add module column.
+//
+// Styleguide grid.column
 
-.column(@n, @columns: @columns) {
+.column(@n) {
 	display: inline;
 	float: left;
 	width:  (@fluid-module-width*@n) - (@fluid-gutter-width*2);
@@ -128,37 +102,93 @@ COLUMN
 	margin-right: @fluid-gutter-width;
 }
 
-// Padding left and right --------------------------------------------
+
+// .inner;
+//
+// Add padding left and right.
+//
+// Markup:
+// <div class="inner">inner padding</div>
+//
+// Styleguide grid.inner
+
 .inner {
 	padding-left:@total-width*((@gutter-width*.5)/@gridsystem-width);
 	padding-right:@total-width*((@gutter-width*.5)/@gridsystem-width);
 }
 
-// Margin left and right ---------------------------------------------
+
+// .innermargin;
+//
+// Add margin left and right.
+//
+// Markup:
+// <div class="innermargin">inner margin</div>
+//
+// Styleguide grid.innermargin
+
 .innermargin{
 	margin-left:@total-width*((@gutter-width*.5)/@gridsystem-width);
 	margin-right:@total-width*((@gutter-width*.5)/@gridsystem-width);
 }
 
-// Expand content on wrapper for columns adjust ----------------------
+
+// .expand;
+//
+// Expand content on wrapper for columns adjust.
+//
+// Markup:
+// <div class="expand">expand</div>
+//
+// Styleguide grid.expand
+
 .expand{
 	.clearfix();
 	margin-left: -@fluid-gutter-width;
 	width: (@fluid-column-width*@columns) + ((@fluid-gutter-width*2)*@columns) + @fluid-gutter-width*2;
 }
 
-// Solve padding problem on diferents indents - OBSOLETE -------------
+
+// .innerwrapper;
+//
+// Solve padding problem on diferents indents - OBSOLETE.
+//
+// Markup:
+// <div class="innerwrapper">innerwrapper</div>
+//
+// Styleguide grid.innerwrapper
+
 .innerwrapper {
 	padding-left:@total-width*(((@gutter-width*.5)/@gridsystem-width)/@fluid-gutter-width);
 	padding-right:@total-width*(((@gutter-width*.5)/@gridsystem-width)/@fluid-gutter-width);
 }
 
-// Push columns ------------------------------------------------------
+
+// push(@offset)
+//
+// Push columns.
+//
+// Compatible in IE6+, Firefox 2+, Safari 4+.
+//
+// @offset - Number to push columns.
+//
+// Styleguide grid.push
+
 .push(@offset:1) {
 	margin-left: (@total-width*(((@gutter-width+@column-width)*@offset) / @gridsystem-width)) + @fluid-gutter-width;
 }
 
-// Push rows ---------------------------------------------------------
+
+// push-r(@offset)
+//
+// Push rows.
+//
+// Compatible in IE6+, Firefox 2+, Safari 4+.
+//
+// @offset - Number to push rows.
+//
+// Styleguide grid.push-r
+
 .push-r(@offset:1) {
 	margin-left: (@total-width*(((@gutter-width+@column-width)*@offset) / @gridsystem-width));
 }

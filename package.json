@@ -1,7 +1,7 @@
 {
 	"name": "reticulas",
 		"version": "3.0.0",
-		"description": "gulp less task reticulas",
+		"description": "Reticulas is a library with mixins and helper classes written in less",
 		"main": "gulpfile.js",
 		"scripts": {
 		"test": "test"
