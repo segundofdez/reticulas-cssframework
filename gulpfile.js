@@ -8,6 +8,7 @@ var watch = require('gulp-watch');
 var sourcemaps = require('gulp-sourcemaps');
 var livereload = require('gulp-livereload');
 //var gulpkss = require('gulp-kss');
+//var gulpconcat = require('gulp-concat');
 
 /**
 * Gulp errors
@@ -36,7 +37,7 @@ gulp.task('styles', function () {
         .pipe(less())
         .on('error', swallowError)
         .pipe(autoprefixer('last 2 version', 'safari 5', 'ie 8', 'ie 9', 'opera 12.1'))
-        .pipe(minifycss({keepSpecialComments: 0}))
+        .pipe(minifycss({keepSpecialComments: 3}))
         .pipe(sourcemaps.init())
             .pipe(rename({suffix: '.min'}))
         .pipe(sourcemaps.write("./"))
@@ -44,4 +45,3 @@ gulp.task('styles', function () {
         .pipe(notify("Less compiled, prefixed and minified"))
         .pipe(livereload())
 });
-
