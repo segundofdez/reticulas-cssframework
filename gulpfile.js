@@ -37,7 +37,7 @@ gulp.task('styles', function () {
         .pipe(less())
         .on('error', swallowError)
         .pipe(autoprefixer('last 2 version', 'safari 5', 'ie 8', 'ie 9', 'opera 12.1'))
-        .pipe(minifycss({keepSpecialComments: 3}))
+        .pipe(minifycss({keepSpecialComments: 0}))
         .pipe(sourcemaps.init())
             .pipe(rename({suffix: '.min'}))
         .pipe(sourcemaps.write("./"))
