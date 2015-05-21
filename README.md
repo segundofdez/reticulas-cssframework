@@ -16,9 +16,9 @@ bower install reticulas-cssframework
 ## Documentation
 
 Documentation for v2.1.2: http://cssframework.reticulas.com
-
+<!--
 You can generate documentation for v.3.0.0 with kss-node gulp task.
-
+-->
 
 ## Tasks
 If you prefer a basic template with gulp tasks ready to work go to https://github.com/segundofdez/reticulas-template
