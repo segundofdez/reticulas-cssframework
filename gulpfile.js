@@ -31,7 +31,7 @@ gulp.task('watch', function () {
 */
 gulp.task('styles', function () {
     var less_src_import = 'less/reticulas.less';
-    var less_dest_folder = 'build/';
+    var less_dest_folder = 'dist/';
 
     return gulp.src(less_src_import)
         .pipe(less())
