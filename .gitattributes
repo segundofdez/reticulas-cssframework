@@ -4,3 +4,5 @@
 /less/styleguide.md export-ignore
 /test export-ignore
 /CONTRIBUTING.md export-ignore
+/package.json export-ignore
+/gulpfile.js export-ignore

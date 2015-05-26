@@ -1,4 +1,4 @@
-
+// Default Mixins values
 .border-radius {
 	.border-radius();
 }
@@ -25,4 +25,48 @@
 
 .font-size {
 	.font-size(21);
+}
+
+
+// Generate grid system columns
+.generate-columns(@columns);
+
+.generate-columns(@n, @i: 1) when (@i =< @n) {
+  .column-@{i} {
+    .column(@i);
+  }
+  .generate-columns(@n, (@i + 1));
+}
+
+
+// Generate grid system rows
+.generate-rows(@columns);
+
+.generate-rows(@n, @i: 1) when (@i =< @n) {
+  .row-@{i} {
+    .row(@i);
+  }
+  .generate-rows(@n, (@i + 1));
+}
+
+
+// Generate grid system push columns
+.generate-push(@columns - 1);
+
+.generate-push(@n, @i: 1) when (@i =< @n) {
+  .push-@{i} {
+    .push(@i);
+  }
+  .generate-push(@n, (@i + 1));
+}
+
+
+// Generate grid system push rows
+.generate-push-r(@columns - 1);
+
+.generate-push-r(@n, @i: 1) when (@i =< @n) {
+  .push-r-@{i} {
+    .push-r(@i);
+  }
+  .generate-push-r(@n, (@i + 1));
 }
