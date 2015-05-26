@@ -1,0 +1,58 @@
+// .round-corners(@tl, @tr, @br, bl);
+//
+// Creates specified border radius.
+//
+// Markup:
+// <div class="round-corners">round-coners</div>
+//
+// Styleguide mixins.round-coners
+
+/*
+ * YOU WRITE
+ * -----------------------------------------------------------------------------
+ * span {
+ *     // pass as a number (top-lef, top-right, bottom-right, bottom-left)
+ *     .round-corners(5,5,5,5);
+ * }
+ *
+ * CONVERTS TO:
+ * -----------------------------------------------------------------------------
+ * span {
+ *     -moz-border-radius-topleft: 5px; // if is necessary
+ *     -moz-border-radius-topright: 5px; // if is necessary
+ *     -moz-border-radius-bottomrigh: 5px; // if is necessary
+ *     -moz-border-radius-bottomleft: 5px; // if is necessary
+ *     -webkit-border-top-left-radius: 5px; // if is necessary
+ *     -webkit-border-top-right-radius: 5px; // if is necessary
+ *     -webkit-border-bottom-right-radius: 5px; // if is necessary
+ *     -webkit-border-bottom-left-radius: 5px; // if is necessary
+ *     border-top-left-radius: 5px;
+ *     border-top-right-radius: 5px;
+ *     border-bottom-right-radius: 5px;
+ *     border-bottom-left-radius: 5px;
+ * }
+ * -----------------------------------------------------------------------------
+ */
+
+.round-corners (@tl:10px, @tr:10px, @br:0px, @bl:0px)
+   when (@firefox < 4) {
+      -moz-border-radius-topleft: @tl*1px;
+      -moz-border-radius-topright: @tr*1px;
+      -moz-border-radius-bottomright: @br*1px;
+      -moz-border-radius-bottomleft: @bl*1px;
+}
+
+.round-corners (@tl:10px, @tr:10px, @br:0px, @bl:0px)
+   when  (@chrome <  5) , (@safari < 5) , (@opera < 10.5) , (@android < 2.2) , (@ios < 4.1) {
+      -webkit-border-top-left-radius: @tl*1px;
+      -webkit-border-top-right-radius: @tr*1px;
+      -webkit-border-bottom-right-radius: @br*1px;
+      -webkit-border-bottom-left-radius: @bl*1px;
+}
+.round-corners (@tl:10px, @tr:10px, @br:0px, @bl:0px)
+   when (@explorer >=  9) , (@firefox >= 4) , (@chrome >= 5) , (@safari >= 5) , (@opera >= 10.5) , (@android >= 2.2) , (@ios >= 4.1) {
+      border-top-left-radius: @tl*1px;
+      border-top-right-radius: @tr*1px;
+      border-bottom-right-radius: @br*1px;
+      border-bottom-left-radius: @bl*1px;
+}

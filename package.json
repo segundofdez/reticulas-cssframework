@@ -1,0 +1,38 @@
+{
+	"name": "reticulas",
+		"version": "3.0.0",
+		"description": "Reticulas is a library with mixins and helper classes written in less",
+		"main": "gulpfile.js",
+		"scripts": {
+		"test": "test"
+	},
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/segundofdez/reticulas-cssframework"
+	},
+	"keywords": [
+		"less",
+		"cssframework",
+		"gulp"
+	],
+	"author": "Segundo Fdez",
+	"license": "MIT",
+	"bugs": {
+		"url": "https://github.com/segundofdez/reticulas-cssframework/issues"
+	},
+	"homepage": "https://github.com/segundofdez/reticulas-cssframework",
+	"devDependencies": {
+		"gulp": "^3.8.11",
+		"gulp-less": "^3.0.1",
+		"gulp-autoprefixer": "^2.1.0",
+		"gulp-minify-css": "^1.0.0",
+		"gulp-watch": "^4.1.1",
+		"gulp-notify": "^2.2.0",
+		"gulp-sourcemaps": "1.5.2",
+		"gulp-rename": "^1.2.0",
+		"gulp-livereload": "3.8.0",
+		"kss": "2.0.2",
+		"gulp-kss": "0.0.2",
+		"gulp-concat": "2.5.2"
+	}
+}

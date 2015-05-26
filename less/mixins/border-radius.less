@@ -1,0 +1,40 @@
+// .border-radius(@radius);
+//
+// Creates specified border radius.
+//
+// Markup:
+// <div class="border-radius">border-radius</div>
+//
+// Styleguide mixins.border-radius
+
+/*
+ * YOU WRITE
+ * -----------------------------------------------------------------------------
+ * span {
+ *     .border-radius(10)
+ * }
+ *
+ * CONVERTS TO:
+ * -----------------------------------------------------------------------------
+ * span {
+ *     -moz-border-radius: 10px; // if is necessary
+ *     -webkit-border-radius: 10px; // if is necessary
+ *     border-radius:10px;
+ * }
+ * -----------------------------------------------------------------------------
+ */
+
+.border-radius (@radius:8px)
+when (@firefox < 4) {
+   -moz-border-radius: @radius*1px;
+}
+
+.border-radius (@radius:8px)
+when (@chrome <  5) , (@safari < 5) , (@opera < 10.5) , (@android < 2.2) , (@ios < 4.1) {
+   -webkit-border-radius: @radius*1px;
+}
+
+.border-radius (@radius:8px)
+when (@explorer >=  9) , (@firefox >= 4) , (@chrome >= 5) , (@safari >= 5) , (@opera >= 10.5) , (@android >= 2.2) , (@ios >= 4.1) {
+   border-radius: @radius*1px;
+}

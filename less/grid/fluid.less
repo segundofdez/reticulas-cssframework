@@ -1,0 +1,194 @@
+* {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-ms-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+// page
+@total-width: 100%;
+
+// Grid components
+@column-width: 65;
+@gutter-width: 21;
+@columns: 12;
+
+// Base grid wrapper width as a number
+@gridsystem-width:(@column-width*@columns) + (@gutter-width*@columns);
+
+// Wrapper width (px)
+@wrapper: (@column-width*@columns) + (@gutter-width*@columns)*1px;
+
+// Wrapper nested width (px)
+@wrappernested: @wrapper + @gutter-width;
+
+// Column gutter and module (%)
+@fluid-column-width: (@total-width/@columns) - @fluid-gutter-width*2;
+@fluid-gutter-width:  @total-width*((@gutter-width*.5)/@gridsystem-width);
+@fluid-module-width: @fluid-column-width + @fluid-gutter-width*2;
+
+
+// .wrapper;
+//
+// Wrapp your content.
+//
+// Markup:
+// <div class="wrapper">content</div>
+//
+// Styleguide grid.wrapper
+
+.wrapper,
+.wrappernested{
+	display: block;
+	clear:both;
+	width:100%;
+
+	max-width:@wrapper;
+
+	margin-right: auto;
+	margin-left: auto;
+	.clearfix;
+}
+
+
+// .wrappernested;
+//
+// Wrapp your content with extra gutter.
+//
+// Markup:
+// <div class="wrappernested">content</div>
+//
+// Styleguide grid.wrappernested
+
+.wrappernested{
+	max-width: @wrappernested;
+}
+
+
+// row(@r)
+//
+// Add module row
+//
+// Compatible in IE6+, Firefox 2+, Safari 4+.
+//
+// @r - Number to add module row.
+//
+// Styleguide grid.row
+
+.row(@r) {
+	display: block;
+	float:left;
+	width: (@fluid-module-width*@r);
+	//margin: 0 -@fluid-gutter-width*(@variationround*1%);
+	.clearfix;
+}
+
+
+// .column(@n)
+//
+// Add module column.
+//
+// Compatible in IE6+, Firefox 2+, Safari 4+.
+//
+// @n - Number to add module column.
+//
+// Styleguide grid.column
+
+.column(@n) {
+	display: inline;
+	float: left;
+	width:  (@fluid-module-width*@n) - (@fluid-gutter-width*2);
+	margin-left: @fluid-gutter-width;
+	margin-right: @fluid-gutter-width;
+}
+
+
+// .inner;
+//
+// Add padding left and right.
+//
+// Markup:
+// <div class="inner">inner padding</div>
+//
+// Styleguide grid.inner
+
+.inner {
+	padding-left:@total-width*((@gutter-width*.5)/@gridsystem-width);
+	padding-right:@total-width*((@gutter-width*.5)/@gridsystem-width);
+}
+
+
+// .innermargin;
+//
+// Add margin left and right.
+//
+// Markup:
+// <div class="innermargin">inner margin</div>
+//
+// Styleguide grid.innermargin
+
+.innermargin{
+	margin-left:@total-width*((@gutter-width*.5)/@gridsystem-width);
+	margin-right:@total-width*((@gutter-width*.5)/@gridsystem-width);
+}
+
+
+// .expand;
+//
+// Expand content on wrapper for columns adjust.
+//
+// Markup:
+// <div class="expand">expand</div>
+//
+// Styleguide grid.expand
+
+.expand{
+	.clearfix();
+	margin-left: -@fluid-gutter-width;
+	width: (@fluid-column-width*@columns) + ((@fluid-gutter-width*2)*@columns) + @fluid-gutter-width*2;
+}
+
+
+// .innerwrapper;
+//
+// Solve padding problem on diferents indents - OBSOLETE.
+//
+// Markup:
+// <div class="innerwrapper">innerwrapper</div>
+//
+// Styleguide grid.innerwrapper
+
+.innerwrapper {
+	padding-left:@total-width*(((@gutter-width*.5)/@gridsystem-width)/@fluid-gutter-width);
+	padding-right:@total-width*(((@gutter-width*.5)/@gridsystem-width)/@fluid-gutter-width);
+}
+
+
+// push(@offset)
+//
+// Push columns.
+//
+// Compatible in IE6+, Firefox 2+, Safari 4+.
+//
+// @offset - Number to push columns.
+//
+// Styleguide grid.push
+
+.push(@offset:1) {
+	margin-left: (@total-width*(((@gutter-width+@column-width)*@offset) / @gridsystem-width)) + @fluid-gutter-width;
+}
+
+
+// push-r(@offset)
+//
+// Push rows.
+//
+// Compatible in IE6+, Firefox 2+, Safari 4+.
+//
+// @offset - Number to push rows.
+//
+// Styleguide grid.push-r
+
+.push-r(@offset:1) {
+	margin-left: (@total-width*(((@gutter-width+@column-width)*@offset) / @gridsystem-width));
+}
