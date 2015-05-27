@@ -1,6 +1,6 @@
 {
   "name": "reticulas",
-  "version": "3.0.1",
+  "version": "3.0.2",
   "main": "reticulas.less",
   "homepage": "http://cssframework.reticulas.com",
   "authors": [
@@ -16,8 +16,5 @@
     ".gitignore",
     ".gitattributes",
     "CONTRIBUTING.md"
-  ],
-  "dependencies": {
-    "normalize-css":"^3.0.2"
-  }
+  ]
 }
