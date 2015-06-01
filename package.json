@@ -1,6 +1,6 @@
 {
-	"name": "reticulas",
-		"version": "3.0.0",
+	"name": "reticulas-cssframework",
+		"version": "3.1.0",
 		"description": "Reticulas is a library with mixins and helper classes written in less",
 		"main": "gulpfile.js",
 		"scripts": {

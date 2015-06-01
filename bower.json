@@ -1,7 +1,7 @@
 {
-  "name": "reticulas",
-  "version": "3.0.2",
-  "main": "reticulas.less",
+  "name": "reticulas-cssframework",
+  "version": "3.1.0",
+  "main": "less/reticulas.less",
   "homepage": "http://cssframework.reticulas.com",
   "authors": [
     "Segundo Fdez <hello@reticulas.com>"
