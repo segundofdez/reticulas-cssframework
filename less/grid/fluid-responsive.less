@@ -1,0 +1,270 @@
+// Generate responsive columns based on break points.
+//
+// Markup:
+// <div class="column-6-l">content</div>
+//
+// Styleguide grid
+
+// columns generation for screen xtra small
+@media screen and (min-width: @screen-xs) {
+	.generate-columns(@columns);
+
+	.generate-columns(@n, @i: 1) when (@i =< @n) {
+		.column-@{i}-xs{
+			.column(@i);
+		}
+		.generate-columns(@n, (@i + 1));
+	}
+}
+
+// columns generation for screen small
+@media screen and (min-width: @screen-s) {
+	.generate-columns(@columns);
+
+	.generate-columns(@n, @i: 1) when (@i =< @n) {
+		.column-@{i}-s{
+			.column(@i);
+		}
+		.generate-columns(@n, (@i + 1));
+	}
+}
+
+// columns generation for screen medium
+@media screen and (min-width: @screen-m) {
+	.generate-columns(@columns);
+
+	.generate-columns(@n, @i: 1) when (@i =< @n) {
+		.column-@{i}-m{
+			.column(@i);
+		}
+		.generate-columns(@n, (@i + 1));
+	}
+}
+
+// columns generation for screen large
+@media screen and (min-width: @screen-l) {
+	.generate-columns(@columns);
+
+	.generate-columns(@n, @i: 1) when (@i =< @n) {
+		.column-@{i}-l{
+			.column(@i);
+		}
+		.generate-columns(@n, (@i + 1));
+	}
+}
+
+// columns generation for screen xtra large
+@media screen and (min-width: @screen-xl) {
+	.generate-columns(@columns);
+
+	.generate-columns(@n, @i: 1) when (@i =< @n) {
+		.column-@{i}-xl{
+			.column(@i);
+		}
+		.generate-columns(@n, (@i + 1));
+	}
+}
+
+
+// Generate responsive rows based on break points.
+//
+// Markup:
+// <div class="row-6-l">content</div>
+//
+// Styleguide grid
+
+// rows generation for screen xtra small
+@media screen and (min-width: @screen-xs) {
+	.generate-rows(@columns);
+
+	.generate-rows(@n, @i: 1) when (@i =< @n) {
+		.row-@{i}-xs{
+			.row(@i);
+		}
+		.generate-rows(@n, (@i + 1));
+	}
+}
+
+// rows generation for screen small
+@media screen and (min-width: @screen-s) {
+	.generate-rows(@columns);
+
+	.generate-rows(@n, @i: 1) when (@i =< @n) {
+		.row-@{i}-s{
+			.row(@i);
+		}
+		.generate-rows(@n, (@i + 1));
+	}
+}
+
+// rows generation for screen medium
+@media screen and (min-width: @screen-m) {
+	.generate-rows(@columns);
+
+	.generate-rows(@n, @i: 1) when (@i =< @n) {
+		.row-@{i}-m{
+			.row(@i);
+		}
+		.generate-rows(@n, (@i + 1));
+	}
+}
+
+// rows generation for screen large
+@media screen and (min-width: @screen-l) {
+	.generate-rows(@columns);
+
+	.generate-rows(@n, @i: 1) when (@i =< @n) {
+		.row-@{i}-l{
+			.row(@i);
+		}
+		.generate-rows(@n, (@i + 1));
+	}
+}
+
+// rows generation for screen xtra large
+@media screen and (min-width: @screen-xl) {
+	.generate-rows(@columns);
+
+	.generate-rows(@n, @i: 1) when (@i =< @n) {
+		.row-@{i}-xl{
+			.row(@i);
+		}
+		.generate-rows(@n, (@i + 1));
+	}
+}
+
+
+// Generate responsive push for columns based on break points.
+//
+// Markup:
+// <div class="push-6-l">content</div>
+//
+// Styleguide grid
+
+// Generate responsive push columns xtra small
+@media screen and (min-width: @screen-xs) {
+	.generate-push(@columns - 1);
+
+	.generate-push(@n, @i: 1) when (@i =< @n) {
+		.push-@{i}-xs{
+			.push(@i);
+		}
+		.generate-push(@n, (@i + 1));
+	}
+}
+
+// Generate responsive push columns small
+@media screen and (min-width: @screen-s) {
+	.generate-push(@columns - 1);
+
+	.generate-push(@n, @i: 1) when (@i =< @n) {
+		.push-@{i}-s{
+			.push(@i);
+		}
+		.generate-push(@n, (@i + 1));
+	}
+}
+
+// Generate responsive push columns medium
+@media screen and (min-width: @screen-m) {
+	.generate-push(@columns - 1);
+
+	.generate-push(@n, @i: 1) when (@i =< @n) {
+		.push-@{i}-m{
+			.push(@i);
+		}
+		.generate-push(@n, (@i + 1));
+	}
+}
+
+// Generate responsive system push columns large
+@media screen and (min-width: @screen-l) {
+	.generate-push(@columns - 1);
+
+	.generate-push(@n, @i: 1) when (@i =< @n) {
+		.push-@{i}-l{
+			.push(@i);
+		}
+		.generate-push(@n, (@i + 1));
+	}
+}
+
+// Generate responsive system push columns xtra large
+@media screen and (min-width: @screen-xl) {
+	.generate-push(@columns - 1);
+
+	.generate-push(@n, @i: 1) when (@i =< @n) {
+		.push-@{i}-xl{
+			.push(@i);
+		}
+		.generate-push(@n, (@i + 1));
+	}
+}
+
+
+// Generate responsive push for rows based on break points.
+//
+// Markup:
+// <div class="push-r-6-l">content</div>
+//
+// Styleguide grid
+
+// Generate responsive push rows xtra small
+@media screen and (min-width: @screen-xs) {
+	.generate-push-r(@columns - 1);
+
+	.generate-push-r(@n, @i: 1) when (@i =< @n) {
+		.push-r-@{i}-xs{
+			.push-r(@i);
+		}
+		.generate-push-r(@n, (@i + 1));
+	}
+}
+
+// Generate responsive push rows small
+@media screen and (min-width: @screen-s) {
+	.generate-push-r(@columns - 1);
+
+	.generate-push-r(@n, @i: 1) when (@i =< @n) {
+		.push-r-@{i}-s{
+			.push-r(@i);
+		}
+		.generate-push-r(@n, (@i + 1));
+	}
+}
+
+// Generate responsive push rows medium
+@media screen and (min-width: @screen-m) {
+	.generate-push-r(@columns - 1);
+
+	.generate-push-r(@n, @i: 1) when (@i =< @n) {
+		.push-r-@{i}-m{
+			.push-r(@i);
+		}
+		.generate-push-r(@n, (@i + 1));
+	}
+}
+
+// Generate responsive push rows large
+@media screen and (min-width: @screen-l) {
+	.generate-push-r(@columns - 1);
+
+	.generate-push-r(@n, @i: 1) when (@i =< @n) {
+		.push-r-@{i}-l{
+			.push-r(@i);
+		}
+		.generate-push-r(@n, (@i + 1));
+	}
+}
+
+// Generate  responsive system push rows extra large
+@media screen and (min-width: @screen-xl) {
+	.generate-push-r(@columns - 1);
+
+	.generate-push-r(@n, @i: 1) when (@i =< @n) {
+		.push-r-@{i}-xl{
+			.push-r(@i);
+		}
+		.generate-push-r(@n, (@i + 1));
+	}
+}

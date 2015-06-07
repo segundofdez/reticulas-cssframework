@@ -8,24 +8,19 @@
 // page
 @total-width: 100%;
 
-// Grid components
-@column-width: 65;
-@gutter-width: 21;
-@columns: 12;
-
 // Base grid wrapper width as a number
-@gridsystem-width:(@column-width*@columns) + (@gutter-width*@columns);
+@gridsystem-width: (@column-width * @columns) + (@gutter-width * @columns);
 
 // Wrapper width (px)
-@wrapper: (@column-width*@columns) + (@gutter-width*@columns)*1px;
+@wrapper: (@column-width * @columns) + (@gutter-width * @columns) * 1px;
 
 // Wrapper nested width (px)
 @wrappernested: @wrapper + @gutter-width;
 
 // Column gutter and module (%)
-@fluid-column-width: (@total-width/@columns) - @fluid-gutter-width*2;
-@fluid-gutter-width:  @total-width*((@gutter-width*.5)/@gridsystem-width);
-@fluid-module-width: @fluid-column-width + @fluid-gutter-width*2;
+@fluid-column-width: (@total-width / @columns) - @fluid-gutter-width * 2;
+@fluid-gutter-width:  @total-width * ((@gutter-width * .5) / @gridsystem-width);
+@fluid-module-width: @fluid-column-width + @fluid-gutter-width * 2;
 
 
 // .wrapper;
@@ -40,11 +35,9 @@
 .wrapper,
 .wrappernested{
 	display: block;
-	clear:both;
-	width:100%;
-
-	max-width:@wrapper;
-
+	clear: both;
+	width: 100%;
+	max-width: @wrapper;
 	margin-right: auto;
 	margin-left: auto;
 	.clearfix;
@@ -77,27 +70,34 @@
 
 .row(@r) {
 	display: block;
-	float:left;
-	width: (@fluid-module-width*@r);
-	//margin: 0 -@fluid-gutter-width*(@variationround*1%);
+	float: left;
+	width: (@fluid-module-width * @r);
 	.clearfix;
+
+	// Center a row on page
+	&.row-center{
+		float: none;
+		clear: both;
+		margin-right: auto;
+		margin-left: auto;
+	}
 }
 
 
-// .column(@n)
+// .column(@c)
 //
 // Add module column.
 //
 // Compatible in IE6+, Firefox 2+, Safari 4+.
 //
-// @n - Number to add module column.
+// @c - Number to add module column.
 //
 // Styleguide grid.column
 
-.column(@n) {
-	display: inline;
+.column(@c) {
+	display: inline-block;
 	float: left;
-	width:  (@fluid-module-width*@n) - (@fluid-gutter-width*2);
+	width: (@fluid-module-width * @c) - (@fluid-gutter-width * 2);
 	margin-left: @fluid-gutter-width;
 	margin-right: @fluid-gutter-width;
 }
@@ -113,8 +113,8 @@
 // Styleguide grid.inner
 
 .inner {
-	padding-left:@total-width*((@gutter-width*.5)/@gridsystem-width);
-	padding-right:@total-width*((@gutter-width*.5)/@gridsystem-width);
+	padding-left: @total-width * ((@gutter-width * .5) / @gridsystem-width);
+	padding-right: @total-width * ((@gutter-width * .5) / @gridsystem-width);
 }
 
 
@@ -128,8 +128,8 @@
 // Styleguide grid.innermargin
 
 .innermargin{
-	margin-left:@total-width*((@gutter-width*.5)/@gridsystem-width);
-	margin-right:@total-width*((@gutter-width*.5)/@gridsystem-width);
+	margin-left: @total-width * ((@gutter-width * .5) / @gridsystem-width);
+	margin-right: @total-width * ((@gutter-width * .5) / @gridsystem-width);
 }
 
 
@@ -143,9 +143,9 @@
 // Styleguide grid.expand
 
 .expand{
-	.clearfix();
 	margin-left: -@fluid-gutter-width;
-	width: (@fluid-column-width*@columns) + ((@fluid-gutter-width*2)*@columns) + @fluid-gutter-width*2;
+	width: (@fluid-column-width * @columns) + ((@fluid-gutter-width * 2) * @columns) + @fluid-gutter-width * 2;
+	&:extend(.clearfix all);
 }
 
 
@@ -159,8 +159,8 @@
 // Styleguide grid.innerwrapper
 
 .innerwrapper {
-	padding-left:@total-width*(((@gutter-width*.5)/@gridsystem-width)/@fluid-gutter-width);
-	padding-right:@total-width*(((@gutter-width*.5)/@gridsystem-width)/@fluid-gutter-width);
+	padding-left: @total-width * (((@gutter-width * .5) / @gridsystem-width) / @fluid-gutter-width);
+	padding-right: @total-width * (((@gutter-width * .5) / @gridsystem-width) / @fluid-gutter-width);
 }
 
 
@@ -175,7 +175,7 @@
 // Styleguide grid.push
 
 .push(@offset:1) {
-	margin-left: (@total-width*(((@gutter-width+@column-width)*@offset) / @gridsystem-width)) + @fluid-gutter-width;
+	margin-left: (@total-width * (((@gutter-width + @column-width) * @offset) / @gridsystem-width)) + @fluid-gutter-width;
 }
 
 
@@ -190,5 +190,5 @@
 // Styleguide grid.push-r
 
 .push-r(@offset:1) {
-	margin-left: (@total-width*(((@gutter-width+@column-width)*@offset) / @gridsystem-width));
+	margin-left: (@total-width * (((@gutter-width + @column-width) * @offset) / @gridsystem-width));
 }
