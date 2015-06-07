@@ -1,6 +1,6 @@
 // Default Mixins values
 .border-radius {
-	.border-radius();
+    .border-radius();
 }
 
 .box-shadow {
@@ -32,10 +32,10 @@
 .generate-columns(@columns);
 
 .generate-columns(@n, @i: 1) when (@i =< @n) {
-  .column-@{i} {
-    .column(@i);
-  }
-  .generate-columns(@n, (@i + 1));
+    .column-@{i} {
+        .column(@i);
+    }
+    .generate-columns(@n, (@i + 1));
 }
 
 
@@ -43,10 +43,10 @@
 .generate-rows(@columns);
 
 .generate-rows(@n, @i: 1) when (@i =< @n) {
-  .row-@{i} {
-    .row(@i);
-  }
-  .generate-rows(@n, (@i + 1));
+    .row-@{i} {
+        .row(@i);
+    }
+    .generate-rows(@n, (@i + 1));
 }
 
 
@@ -54,10 +54,10 @@
 .generate-push(@columns - 1);
 
 .generate-push(@n, @i: 1) when (@i =< @n) {
-  .push-@{i} {
-    .push(@i);
-  }
-  .generate-push(@n, (@i + 1));
+    .push-@{i} {
+        .push(@i);
+    }
+    .generate-push(@n, (@i + 1));
 }
 
 
@@ -65,8 +65,8 @@
 .generate-push-r(@columns - 1);
 
 .generate-push-r(@n, @i: 1) when (@i =< @n) {
-  .push-r-@{i} {
-    .push-r(@i);
-  }
-  .generate-push-r(@n, (@i + 1));
+    .push-r-@{i} {
+        .push-r(@i);
+    }
+    .generate-push-r(@n, (@i + 1));
 }

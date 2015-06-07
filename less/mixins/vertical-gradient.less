@@ -29,31 +29,31 @@
  * -----------------------------------------------------------------------------
  */
 .vertical-gradient (@tcolor:#ccc, @bcolor:#333)
-	when (@explorer < 10) , (@firefox < 3.6) , (@chrome < 10) , (@safari < 5.1) , (@opera < 11.1) , (@android < 4) , (@ios < 5) {
+when (@explorer < 10) , (@firefox < 3.6) , (@chrome < 10) , (@safari < 5.1) , (@opera < 11.1) , (@android < 4) , (@ios < 5) {
 	background-color: @bcolor;
 }
 
 .vertical-gradient (@tcolor:#ccc, @bcolor:#333)
-	when (@firefox < 16){
+when (@firefox < 16){
 	background-image: -moz-linear-gradient(bottom, @tcolor, @bcolor);
 }
 
 .vertical-gradient (@tcolor:#ccc, @bcolor:#333)
-	when (@opera < 12.1) {
+when (@opera < 12.1) {
 	background-image: -o-linear-gradient(bottom, @tcolor, @bcolor);
 }
 .vertical-gradient (@tcolor:#ccc, @bcolor:#333)
-	when (@explorer < 10) {
+when (@explorer < 10) {
 	background: -ms-linear-gradient(bottom, @tcolor, @bcolor);
 }
 
 .vertical-gradient (@tcolor:#ccc, @bcolor:#333)
-	when (@chrome <  26) , (@safari < 6.1)  , (@android < 4.4) , (@ios < 7) {
+when (@chrome <  26) , (@safari < 6.1)  , (@android < 4.4) , (@ios < 7) {
 	background-image: -webkit-gradient(linear, left top, left bottom, from(@tcolor), to(@bcolor));
 	background-image: -webkit-linear-gradient(bottom, @tcolor, @bcolor);
 }
 
 .vertical-gradient (@tcolor:#ccc, @bcolor:#333)
-	when (@explorer >=  10) , (@firefox >= 16) , (@chrome >= 26) , (@safari >= 6.1) , (@opera >= 12.1) , (@android >= 4.4) , (@ios >= 7) {
+when (@explorer >=  10) , (@firefox >= 16) , (@chrome >= 26) , (@safari >= 6.1) , (@opera >= 12.1) , (@android >= 4.4) , (@ios >= 7) {
 	background-image: linear-gradient(to bottom, @tcolor, @bcolor);
 }
