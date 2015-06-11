@@ -13,7 +13,7 @@
 		<link rel="shortcut icon" href="favicon.ico" />
 
 		<!-- Styles-->
-		<link rel="stylesheet" href="../../dist/reticulas.min.css">
+		<link rel="stylesheet" href="../dist/reticulas.min.css">
 		<style>
 		[class^="column-"],
 			[class^="row-"],
@@ -50,6 +50,12 @@
 			.back-blue{
 				background-color: blue;
 				color: white;
+			}
+			.img-back-test{
+				background-image: url("http://lorempixel.com/output/cats-q-c-1920-1920-10.jpg");
+				width: 400px;
+				height: 400px;
+				background-size: 100%;
 			}
 		</style>
 		<!-- /Styles-->
@@ -241,25 +247,45 @@
 				<h2>round-corners</h2>
 				<div class="round-corners example back-blue">round-corners</div>
 
-				<h2>ratio ratio-239-1</h2>
+				<h2>ratio iframe ratio-239-1</h2>
 				<div class="ratio ratio-239-1">
 				  <iframe src="https://player.vimeo.com/video/37879551" width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
 				</div>
 
-				<h2>ratio ratio-16-10</h2>
+				<h2>ratio iframe ratio-16-10</h2>
 				<div class="ratio ratio-16-10">
 				  <iframe src="https://player.vimeo.com/video/37879551" width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
 				</div>
 
-				<h2>ratio ratio-16-9</h2>
+				<h2>ratio iframe ratio-16-9</h2>
 				<div class="ratio ratio-16-9">
 				  <iframe src="https://player.vimeo.com/video/37879551" width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
 				</div>
 
-				<h2>ratio ratio-4-3</h2>
+				<h2>ratio iframe ratio-4-3</h2>
 				<div class="ratio ratio-4-3">
 				  <iframe src="https://player.vimeo.com/video/37879551" width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
 				</div>
+
+				<h2>ratio image ratio-16-9 content-top</h2>
+				<div class="ratio ratio-16-9">
+				 <img class="ratio-content content-top" src="http://lorempixel.com/output/cats-q-c-1920-1920-9.jpg" width="1920" height="1920"  alt="lorempixel">
+				</div>
+
+				<h2>ratio image ratio-16-9 content-middle</h2>
+				<div class="ratio ratio-16-9">
+				 <img class="ratio-content content-middle" src="http://lorempixel.com/output/cats-q-c-1920-1920-7.jpg" width="1920" height="1920"  alt="lorempixel">
+				</div>
+
+				<h2>ratio image ratio-4-3 content-bottom</h2>
+				<div class="ratio ratio-4-3">
+				 <img class="ratio-content content-bottom" src="http://lorempixel.com/output/cats-q-c-1920-1920-8.jpg" width="1920" height="1920"  alt="lorempixel">
+				</div>
+
+				<h2>image-back with link</h2>
+				<h3 class="imageback img-back-test"><a href="#">Test image back</a></h3>
+				<h2>image-back without link</h2>
+				<h3 class="imageback img-back-test">Test image back</h3>
 			</div>
 		</div>
 		<!-- /PAGE -->
