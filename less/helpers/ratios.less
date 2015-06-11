@@ -1,6 +1,6 @@
 // ratios
 //
-// Using consistent ratios on videos
+// Using consistent ratios
 //
 // Markup:
 // <div class="ratio ratio-16-9">
@@ -24,6 +24,29 @@
 	left: 0;
 	width: 100% !important;
 	height: 100% !important;
+}
+
+// Content ratio
+.ratio .ratio-content {
+	position: absolute;
+	left: 0;
+	width: 100%;
+	height: auto;
+}
+
+// With overflow align to top
+.ratio-content.content-top {
+	top:0%;
+}
+
+// With overflow align to middle
+.ratio-content.content-middle {
+	top:-50%;
+}
+
+// With overflow align to bottom
+.ratio-content.content-bottom {
+	bottom:0;
 }
 
 // Some common aspect ratios
