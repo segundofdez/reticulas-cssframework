@@ -31,23 +31,22 @@
  */
 .radial-gradient (@color-in: #ccc, @color-out: #333)
 when (@explorer < 10) , (@firefox < 3.6) , (@chrome < 10) , (@safari < 5.1) , (@opera < 11.1) , (@android < 4) , (@ios < 5) {
-	background-color: @color-out;
+    background-color: @color-out;
 }
 
 .radial-gradient (@color-in: #ccc, @color-out: #333)
 when (@firefox < 16){
-	background-image: -moz-radial-gradient(circle, @color-in, @color-out);
+    background-image: -moz-radial-gradient(circle, @color-in, @color-out);
 }
 
 .radial-gradient (@color-in: #ccc, @color-out: #333)
 when (@chrome <  26) , (@safari < 6.1)  , (@android < 4.4) , (@ios < 7) {
-	background-image: -webkit-gradient(radial, center center, 0, center center, 460, from(@color-in), to(@color-out));
-	background-image: -webkit-radial-gradient(circle, @color-in, @color-out);
+    background-image: -webkit-gradient(radial, center center, 0, center center, 460, from(@color-in), to(@color-out));
+    background-image: -webkit-radial-gradient(circle, @color-in, @color-out);
 }
 
 .radial-gradient (@color-in: #ccc, @color-out: #333)
 when (@explorer >=  10) , (@firefox >= 16) , (@chrome >= 26) , (@safari >= 6.1) , (@opera >= 12.1) , (@android >= 4.4) , (@ios >= 7) {
-	background-image: radial-gradient(circle, @color-in, @color-out);
-	background-repeat: no-repeat;
+    background-image: radial-gradient(circle, @color-in, @color-out);
+    background-repeat: no-repeat;
 }
-

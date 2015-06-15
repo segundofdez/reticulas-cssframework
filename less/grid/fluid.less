@@ -1,8 +1,8 @@
 * {
-	-webkit-box-sizing: border-box;
-	-moz-box-sizing: border-box;
-	-ms-box-sizing: border-box;
-	box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    box-sizing: border-box;
 }
 
 // page
@@ -34,13 +34,13 @@
 
 .wrapper,
 .wrappernested{
-	display: block;
-	clear: both;
-	width: 100%;
-	max-width: @wrapper;
-	margin-right: auto;
-	margin-left: auto;
-	.clearfix;
+    display: block;
+    clear: both;
+    width: 100%;
+    max-width: @wrapper;
+    margin-right: auto;
+    margin-left: auto;
+    .clearfix;
 }
 
 
@@ -54,7 +54,7 @@
 // Styleguide grid.wrappernested
 
 .wrappernested{
-	max-width: @wrappernested;
+    max-width: @wrappernested;
 }
 
 
@@ -69,18 +69,18 @@
 // Styleguide grid.row
 
 .row(@r) {
-	display: block;
-	float: left;
-	width: (@fluid-module-width * @r);
-	.clearfix;
+    display: block;
+    float: left;
+    width: (@fluid-module-width * @r);
+    .clearfix;
 
-	// Center a row on page
-	&.row-center{
-		float: none;
-		clear: both;
-		margin-right: auto;
-		margin-left: auto;
-	}
+    // Center a row on page
+    &.row-center{
+        float: none;
+        clear: both;
+        margin-right: auto;
+        margin-left: auto;
+    }
 }
 
 
@@ -95,11 +95,11 @@
 // Styleguide grid.column
 
 .column(@c) {
-	display: inline-block;
-	float: left;
-	width: (@fluid-module-width * @c) - (@fluid-gutter-width * 2);
-	margin-left: @fluid-gutter-width;
-	margin-right: @fluid-gutter-width;
+    display: inline-block;
+    float: left;
+    width: (@fluid-module-width * @c) - (@fluid-gutter-width * 2);
+    margin-left: @fluid-gutter-width;
+    margin-right: @fluid-gutter-width;
 }
 
 
@@ -113,8 +113,8 @@
 // Styleguide grid.inner
 
 .inner {
-	padding-left: @total-width * ((@gutter-width * .5) / @gridsystem-width);
-	padding-right: @total-width * ((@gutter-width * .5) / @gridsystem-width);
+    padding-left: @total-width * ((@gutter-width * .5) / @gridsystem-width);
+    padding-right: @total-width * ((@gutter-width * .5) / @gridsystem-width);
 }
 
 
@@ -128,8 +128,8 @@
 // Styleguide grid.innermargin
 
 .innermargin{
-	margin-left: @total-width * ((@gutter-width * .5) / @gridsystem-width);
-	margin-right: @total-width * ((@gutter-width * .5) / @gridsystem-width);
+    margin-left: @total-width * ((@gutter-width * .5) / @gridsystem-width);
+    margin-right: @total-width * ((@gutter-width * .5) / @gridsystem-width);
 }
 
 
@@ -143,9 +143,9 @@
 // Styleguide grid.expand
 
 .expand{
-	margin-left: -@fluid-gutter-width;
-	width: (@fluid-column-width * @columns) + ((@fluid-gutter-width * 2) * @columns) + @fluid-gutter-width * 2;
-	&:extend(.clearfix all);
+    margin-left: -@fluid-gutter-width;
+    width: (@fluid-column-width * @columns) + ((@fluid-gutter-width * 2) * @columns) + @fluid-gutter-width * 2;
+    .clearfix;
 }
 
 
@@ -159,8 +159,8 @@
 // Styleguide grid.innerwrapper
 
 .innerwrapper {
-	padding-left: @total-width * (((@gutter-width * .5) / @gridsystem-width) / @fluid-gutter-width);
-	padding-right: @total-width * (((@gutter-width * .5) / @gridsystem-width) / @fluid-gutter-width);
+    padding-left: @total-width * (((@gutter-width * .5) / @gridsystem-width) / @fluid-gutter-width);
+    padding-right: @total-width * (((@gutter-width * .5) / @gridsystem-width) / @fluid-gutter-width);
 }
 
 
@@ -175,7 +175,7 @@
 // Styleguide grid.push
 
 .push(@offset:1) {
-	margin-left: (@total-width * (((@gutter-width + @column-width) * @offset) / @gridsystem-width)) + @fluid-gutter-width;
+    margin-left: (@total-width * (((@gutter-width + @column-width) * @offset) / @gridsystem-width)) + @fluid-gutter-width;
 }
 
 
@@ -190,5 +190,5 @@
 // Styleguide grid.push-r
 
 .push-r(@offset:1) {
-	margin-left: (@total-width * (((@gutter-width + @column-width) * @offset) / @gridsystem-width));
+    margin-left: (@total-width * (((@gutter-width + @column-width) * @offset) / @gridsystem-width));
 }
