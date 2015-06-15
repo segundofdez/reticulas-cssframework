@@ -31,31 +31,31 @@
 
 .horizontal-gradient (@lcolor:#333, @rcolor:#ccc)
 when (@explorer < 10) , (@firefox < 3.6) , (@chrome < 10) , (@safari < 5.1) , (@opera < 11.1) , (@android < 4) , (@ios < 5) {
-	background-color: @lcolor;
+    background-color: @lcolor;
 }
 
 .horizontal-gradient (@lcolor:#333, @rcolor:#ccc)
 when (@firefox < 16){
-	background-image: -moz-linear-gradient(left, @lcolor, @rcolor);
+    background-image: -moz-linear-gradient(left, @lcolor, @rcolor);
 }
 
 .horizontal-gradient (@lcolor:#333, @rcolor:#ccc)
 when (@opera < 12.1) {
-	background-image: -o-linear-gradient(left, @lcolor, @rcolor);
+    background-image: -o-linear-gradient(left, @lcolor, @rcolor);
 }
 
 .horizontal-gradient (@lcolor:#333, @rcolor:#ccc)
 when (@explorer < 10) {
-	background-image: -ms-linear-gradient(left, @lcolor, @rcolor);
+    background-image: -ms-linear-gradient(left, @lcolor, @rcolor);
 }
 
 .horizontal-gradient (@lcolor:#333, @rcolor:#ccc)
 when (@chrome <  26) , (@safari < 6.1)  , (@android < 4.4) , (@ios < 7) {
-	background-image: -webkit-gradient(linear, left top, right top, from(@lcolor), to(@rcolor));
-	background-image: -webkit-linear-gradient(left, @lcolor, @rcolor);
+    background-image: -webkit-gradient(linear, left top, right top, from(@lcolor), to(@rcolor));
+    background-image: -webkit-linear-gradient(left, @lcolor, @rcolor);
 }
 
 .horizontal-gradient (@lcolor:#333, @rcolor:#ccc)
 when (@explorer >=  10) , (@firefox >= 16) , (@chrome >= 26) , (@safari >= 6.1) , (@opera >= 12.1) , (@android >= 4.4) , (@ios >= 7) {
-	background-image: linear-gradient(to left, @rcolor, @lcolor);
+    background-image: linear-gradient(to left, @rcolor, @lcolor);
 }
