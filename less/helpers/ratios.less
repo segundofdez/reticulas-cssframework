@@ -6,7 +6,7 @@
  * Using consistent ratios
  *
  * Html example:
- *
+ * -----------------------------------------------------------------------------
  * <div class="ratio ratio-16-9">
  *     <iframe src="https://player.vimeo.com/video/37879551" width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
  * </div>
@@ -29,8 +29,19 @@
     height: 100% !important;
 }
 
-/* Container for apply ratios if is not an ifram, object or embed inside
+/* Rati content
    ========================================================================== */
+
+/*
+ * Container for apply ratios if is not an ifram, object or embed inside
+ *
+ * Html example:
+ * -----------------------------------------------------------------------------
+ * <div class="ratio ratio-16-9">
+ *     <div class="ratio-content">Example</div>
+ * </div>
+ */
+
 .ratio .ratio-content {
     position: absolute;
     left: 0;
@@ -40,6 +51,16 @@
 
 /* Alignments
    ========================================================================== */
+
+/*
+ * Aling content inside ratio content
+ *
+ * Html example:
+ * -----------------------------------------------------------------------------
+ * <div class="ratio ratio-16-9">
+ *     <div class="ratio-content content-top">Example</div>
+ * </div>
+ */
 
 /* With overflow align to top */
 .ratio-content.content-top {

@@ -1,36 +1,26 @@
-// clearfix
-//
-// Apply clearfix
-//
-// Markup:
-// <div class="clearfix">clearfix</div>
-//
-// Styleguide helpers.clearfix
+/* ==========================================================================
+   Clearfix
+   ========================================================================== */
 
 /*
- * YOU WRITE
- * -----------------------------------------------------------------------------
- * span {
- *     .clearfix;
- * }
+ * Apply clearfix
  *
- * CONVERTS TO:
+ * Html example:
  * -----------------------------------------------------------------------------
- * span:before,
- * span:after {
- *     content:" ";
- *     display:table;
- * }
- * span:after{}
- *     clear:both;
- * }
+ * <div class="clearfix">clearfix</div>
+ *
+ * Less example:
  * -----------------------------------------------------------------------------
+ * <div class="example">clearfix</div>
+ * .example {
+ *     .clearfix();
+ * }
  */
 
 .clearfix {
     &:before,
     &:after {
-        content:" ";
+        content:"";
         display:table;
     }
     &:after {

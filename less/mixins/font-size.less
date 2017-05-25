@@ -1,26 +1,28 @@
-// .font-size(@sizeValue);
-//
-// Font size number. Values rem and px fallback .
-//
-// Markup:
-// <div class="font-size">.font-size(21);</div>
-//
-// Styleguide mixins.font-size
+/* ==========================================================================
+   Font size
+   ========================================================================== */
 
 /*
- * YOU WRITE
+ * Font size number. Values rem and px fallback
+ *
+ * Html example:
  * -----------------------------------------------------------------------------
- * span {
+ * <div class="font-size">.font-size(21);</div>
+ *
+ * Less example:
+ * -----------------------------------------------------------------------------
+ * <div class="example">Example</div>
+ *
+ * .example {
  *     .font-size(16);
  * }
  *
- * CONVERTS TO:
+ * Converts to:
  * -----------------------------------------------------------------------------
- * span {
+ * .example {
  *     font-size: 16px;
  *     font-size: 1rem;
  * }
- * -----------------------------------------------------------------------------
  */
 
 .font-size(@sizeValue) {
