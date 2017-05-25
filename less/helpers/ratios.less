@@ -1,13 +1,16 @@
-// ratios
-//
-// Using consistent ratios
-//
-// Markup:
-// <div class="ratio ratio-16-9">
-//    <iframe src="https://player.vimeo.com/video/37879551" width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-// </div>
-//
-// Styleguide helpers.ratios
+/* ==========================================================================
+   Ratios
+   ========================================================================== */
+
+/*
+ * Using consistent ratios
+ *
+ * Html example:
+ *
+ * <div class="ratio ratio-16-9">
+ *     <iframe src="https://player.vimeo.com/video/37879551" width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+ * </div>
+ */
 
 .ratio {
     position: relative;
@@ -26,7 +29,8 @@
     height: 100% !important;
 }
 
-// Content ratio
+/* Container for apply ratios if is not an ifram, object or embed inside
+   ========================================================================== */
 .ratio .ratio-content {
     position: absolute;
     left: 0;
@@ -34,41 +38,43 @@
     height: auto;
 }
 
-// With overflow align to top
+/* Alignments
+   ========================================================================== */
+
+/* With overflow align to top */
 .ratio-content.content-top {
     top: 0%;
 }
 
-// With overflow align to middle
+/* With overflow align to middle */
 .ratio-content.content-middle {
     top: -50%;
 }
 
-// With overflow align to bottom
+/* With overflow align to bottom */
 .ratio-content.content-bottom {
     bottom: 0;
 }
 
-// Some common aspect ratios
+
+/* Common aspect ratios
+   ========================================================================== */
 
 .ratio-16-10 {
     padding-bottom: 62.5%;
 }
 
-// Widescreen
-
+/* Widescreen */
 .ratio-16-9 {
     padding-bottom: 56.25%;
 }
 
-// Classic tv
-
+/* Classic tv */
 .ratio-4-3 {
     padding-bottom: 75%;
 }
 
-// Anamorphic widescreen
-
+/* Anamorphic widescreen */
 .ratio-239-1 {
     padding-bottom: 41.8410041%;
 }

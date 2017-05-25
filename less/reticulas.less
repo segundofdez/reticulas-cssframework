@@ -1,22 +1,17 @@
-// Modularized normalize less
-//
-// Import normalize.less based on normalize.css (https://github.com/necolas/normalize.css)
-//
-// Styleguide normalize
+/* ==========================================================================
+   Import styles
+   ========================================================================== */
+
+/* Normalize
+   ========================================================================== */
 @import "modularized-normalize-less/normalize.less";
 
-// Core
-//
-// Generic variables.
-//
-// Styleguide core
+/* Variables
+   ========================================================================== */
 @import "core/variables.less";
 
-// Mixins
-//
-// Less mixins used in reticulas.
-//
-// Styleguide mixins
+/* Mixins
+   ========================================================================== */
 @import "mixins/border-radius.less";
 @import "mixins/box-shadow.less";
 @import "mixins/font-size.less";
@@ -25,27 +20,23 @@
 @import "mixins/horizontal-gradient.less";
 @import "mixins/radial-gradient.less";
 
-// Helpers
-//
-// Less helpers used in reticulas.
-//
-// Styleguide helpers
+/* Helpers
+   ========================================================================== */
 @import "helpers/clearfix.less";
 @import "helpers/visibility.less";
 @import "helpers/image-replacement.less";
 @import "helpers/ratios.less";
 
-// Grid
-//
-// Grid for fluid column layout.
-//
-// Styleguide grid
+/* Grid
+   ========================================================================== */
 @import "grid/fluid.less";
 @import "grid/fluid-responsive.less";
 
-// Purecss
-//
-// Styles for generate pure css mixins and grid classes.
-//
-// Styleguide purecss
+/* Just css
+   ========================================================================== */
+
+/*
+ * Conver mixins to css
+ */
+
 @import "pure-css.less";
