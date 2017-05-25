@@ -1,9 +1,6 @@
 /.gitattributes export-ignore
-/.gitignore export-ignore
 /styleguide export-ignore
-/less/styleguide.md export-ignore
 /test export-ignore
-/.bowerrc export-ignore
 /CONTRIBUTING.md export-ignore
 /package.json export-ignore
 /gulpfile.js export-ignore
