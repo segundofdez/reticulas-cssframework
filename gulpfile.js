@@ -7,8 +7,6 @@ var notify = require('gulp-notify');
 var watch = require('gulp-watch');
 var sourcemaps = require('gulp-sourcemaps');
 var livereload = require('gulp-livereload');
-//var gulpkss = require('gulp-kss');
-//var gulpconcat = require('gulp-concat');
 
 /**
 * Gulp errors

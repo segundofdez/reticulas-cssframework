@@ -31,8 +31,6 @@
 		"gulp-sourcemaps": "1.6.0",
 		"gulp-rename": "^1.2.0",
 		"gulp-livereload": "3.8.0",
-		"kss": "2.0.2",
-		"gulp-kss": "0.0.2",
-		"gulp-concat": "2.5.2"
+		"kss": "2.0.2"
 	}
 }
